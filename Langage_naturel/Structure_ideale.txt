@@ -1,0 +1,100 @@
+REPO_NAME/
+├── api/                          # API REST pour la classification
+│   ├── routes/
+│   ├── schemas/
+│   └── services/
+├── configs/                      # Fichiers de configuration
+│   ├── feature_configs/
+│   ├── model_configs/
+│   └── training_configs/
+├── data/                         # Données du projet
+│   ├── benchmark/
+│   │   ├── test_sets/
+│   │   └── validation_sets/
+│   ├── enriched/
+│   │   ├── augmented/
+│   │   └── balanced/
+│   ├── processed/
+│   │   ├── features/
+│   │   ├── signatures/
+│   │   └── vectors/
+│   └── raw/
+│       ├── corpus_initial/
+│       └── jdm_exports/
+├── docs/                         # Documentation
+│   ├── api/
+│   ├── papers/
+│   ├── technical/
+│   └── tutorials/
+├── models/                       # Modèles entraînés
+│   ├── baseline/
+│   │   ├── grasp_it/
+│   │   └── rule_based/
+│   ├── classical/
+│   │   ├── random_forest/
+│   │   ├── svm/
+│   │   └── xgboost/
+│   ├── ensemble/
+│   │   ├── stacking/
+│   │   └── voting/
+│   └── neural/
+│       ├── cnn/
+│       ├── lstm/
+│       ├── mlp/
+│       └── transformers/
+├── notebooks/                    # Jupyter notebooks
+│   ├── analysis/
+│   ├── experiments/
+│   ├── exploration/
+│   └── visualization/
+├── results/                      # Résultats d'évaluation
+│   ├── comparisons/
+│   │   ├── llm_benchmark/
+│   │   └── time_analysis/
+│   ├── figures/
+│   │   ├── diagrams/
+│   │   └── plots/
+│   ├── metrics/
+│   │   ├── confusion_matrices/
+│   │   ├── per_model/
+│   │   └── per_relation/
+│   └── reports/
+│       ├── html/
+│       ├── latex/
+│       └── markdown/
+├── scripts/                      # Scripts utilitaires
+│   ├── data_collection/
+│   ├── deployment/
+│   ├── evaluation/
+│   └── training/
+├── src/                          # Code source principal
+│   ├── evaluation/
+│   │   ├── comparison/
+│   │   ├── metrics/
+│   │   └── visualization/
+│   ├── features/
+│   │   ├── embeddings/
+│   │   ├── signatures/
+│   │   └── vectorizers/
+│   ├── models/
+│   │   ├── classical_ml/
+│   │   ├── deep_learning/
+│   │   ├── metric_learning/
+│   │   └── symbolic/
+│   ├── preprocessing/
+│   │   ├── disambiguation/
+│   │   ├── normalization/
+│   │   └── tokenization/
+│   └── utils/
+│       ├── data_loaders/
+│       ├── jdm_api/
+│       └── logger/
+├── tests/                        # Tests
+│   ├── integration/
+│   ├── performance/
+│   └── unit/
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+└── setup.py
