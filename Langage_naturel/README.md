@@ -36,7 +36,7 @@ Ce projet vise à développer un système capable d'identifier automatiquement l
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/USERNAME/REPO_NAME.git
+git clone https://github.com/Bbzr333/Semestre3_projet
 cd REPO_NAME
 
 # Créer un environnement virtuel
@@ -100,17 +100,24 @@ _Section à compléter au fur et à mesure des expérimentations_
 
 ## 📚 Ressources
 
-- **Corpus** : _[à décrire]_
+- **Corpus** : 
 - **JeuxDeMots** : http://www.jeuxdemots.org/
-- **Articles de référence** : _[à ajouter]_
+- **Articles de référence** : 
+Extraction automatique de règles pour la détermination de types de
+relations sémantiques dans les constructions génitives en français
+H. Guenoune1,2, M. Lafourcade1,2
+1 Université de Montpellier, France
+2 Laboratoire d’Informatique, de Robotique et de Microélectronique de Montpellier, LIRMM
+{hani.guenoune, mathieu.lafourcade}@lirmm.fr
+https://pfia2024.univ-lr.fr/assets/files/Conf%C3%A9rence-IC/IC_2024_paper_20.pdf
 
 ## 👥 Contributeurs
 
-_[Vos noms]_
+Rivals
+Bazireau
 
 ## 📝 Licence
 
-_[À définir]_
 
 ## 🔄 Statut du Projet
 
