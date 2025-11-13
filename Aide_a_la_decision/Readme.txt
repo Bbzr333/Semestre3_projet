@@ -1,5 +1,5 @@
 Algorithme de Mariage Stable = "gale shapley"
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Implanter un programme pour générer des préférences aléatoires des étudiants et des établissements dans un csv.
 	Création d'un script python "preferences.py" qui génère les préférences.
 		Dans le fichier généré, il y a 5 points importants :
@@ -9,7 +9,7 @@ Algorithme de Mariage Stable = "gale shapley"
 			-"rank_students -> même principes que students, mais permet d'aller chercher plus rapidement (sera utile en cas de changement de préférences)
 			-"rank_schools -> même principes que schools, mais permet d'aller chercher plus rapidement (sera utile en cas de changement de préférences)
 			
-	Commande d'exécution : python3 preferences.py --n x --seed y --out /path/to/prefs_x_y.json
+	Commande d'exécution : python3 preferences.py --n x --seed y --out /path/to/x_y_prefs.json
 		-"python3" -> c'est la version que j'utilise
 		-"preferences.py" -> nom du script
 		-"--n x"	-> création pour x étudiants et x établissements
@@ -18,7 +18,7 @@ Algorithme de Mariage Stable = "gale shapley"
 					   nous sera utile pour tester nos résultats
 		-"--out /path/to/prefs_x_y.json"	-> l'endroit ou sortira le fichier des préférences
 
-Pour cette partie, on a réussi sans difficulté a créé un script python qui nous génère un csv contenant x nombre d'étudiants et d'écoles avec leur priorité d'affectation.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Implanter l’algorithme du mariage stable
 	Création d'un script python "gale_shapley" qui nous génère les résultats dans un scv
@@ -40,14 +40,15 @@ Pour cette partie, on a réussi sans difficulté a créé un script python qui n
 			-Dans notre cas, DA_E = étudiants qui sont utilisés en premiers
 			-Dans le cas du DA_S = écoles qui sont priorisés
 			
-	Commande d'exécution : python3 gale_shapley.py --in prefs_5_123.json --mode DA_E --out match1.json
+	Commande d'exécution : python3 gale_shapley.py --in 5_123_prefs.json --mode DA_E --out 5_123_E_match.json
 		-"gale_shapley.py" -> nom du script
-		-"--in prefs_5_123" -> les entrées que l'on utilise (123 car c'est la seed de génération aléatoire, et 5 correspond au n)
+		-"--in 5_123_prefs" -> les entrées que l'on utilise (123 car c'est la seed de génération aléatoire, et 5 correspond au n)
 		-"mode DA_E" -> on prend les étudiants comme priorité dans l'algorithme
-		-"--out match_5_123_E.json" -> l'endroit ou se créera le fichier (on précise le jeu de donnée, ainsi que le mode)
+		-"--out 5_123_E_match.json" -> l'endroit ou se créera le fichier (on précise le jeu de donnée, ainsi que le mode)
 		
 Pour cette partie, on a réussi à utiliser le csv de la question précédente afin de résoudre le problème. On a construit l'algorithme de "Mariage Stable".
 On a une zone d'action sur la génération aléatoire ( n + seed), ainsi que sur l'importance des proposants/receveurs (mode DA_E/S).
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 3. Proposer une méthode pour mesurer la satisfaction des étudiants ainsi que celle des établissements.
 	Création d'un nouveau fichier python nommé metrics qui nous permetra de mesurer la satisfaction.
@@ -74,8 +75,35 @@ On a une zone d'action sur la génération aléatoire ( n + seed), ainsi que sur
 		5:Test de stabilité
 		6:Sauvegarde du rapport
 	
-	Commande d'exécution : python3 eval_matching.py --prefs prefs_10_1.json --match match_10_1_E.json --out metrics_10_1_E.json
+	Commande d'exécution : python3 eval_matching.py --prefs 10_1_prefs.json --match 10_1_E_match.json --out 10_1_E_metrics.json
 		-"eval_matching.py" -> nom du script
-		-"--prefs prefs_10_1.json" -> csv de preférences que l'on choisit (ici, n=10 et seed=1)
-		-"--match match_10_1_E.json" -> fichier de resultat de l'algorithme. (ici, testé sur prefs_10_1.json en mode DA_E)
-		-"--out metrics_10_1_E.json" -> le fichier avec tous les résultat de satisfaction (ici, testé sur prefs_10_1.json en mode DA_E)
+		-"--prefs 10_1_prefs.json" -> csv de preférences que l'on choisit (ici, n=10 et seed=1)
+		-"--match 10_1_E_match.json" -> fichier de resultat de l'algorithme. (ici, testé sur prefs_10_1.json en mode DA_E)
+		-"--out 10_1_E_metrics.json" -> le fichier avec tous les résultat de satisfaction (ici, testé sur prefs_10_1.json en mode DA_E)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Tester le programme sur plusieurs jeux de données
+	création de deux programmes de tests :
+		run_experimetns.py -> script qui gènere les fichier json en focntion de n, seed et DA_E/DA_S
+			Dans notre cas, 5 n différents (10, 20, 50, 100, 200) et 20 seeds différents (1 à 21)
+			+ génère un ficher result.csv qui regroupe tous les résultats pertinant des json.
+			Exemple d'une ligne: 10,1,DA_E,True,1.8,1.0,0.6,0.9,4.6,4.5,0.1,0.3
+				-10=n; 1=seed; DA_E=mode; True=stable; 
+				-1.8=student_mean_rank; 1.0=student_median_rank; 0.6=student_top1; 0.9=sdudent_top3; 
+				-4.6=school_mean_rank; 4.5=school_median_rank; 0.1=school_top1; 0.3=school_top3
+		plot_result.py -> script qui génère des graphes en fonctiones des resultats obtenu précédemment
+			Voici l'exploitation des 8 graphes :
+				-school_boxplot 
+				-school_mean_rank 
+				-school_top1
+				-school_top3
+				-student_boxplot
+				-student_mean_rank
+				-student_top1
+				-student_top3
+5. Proposer une extension du syst`eme propos´e pour int´egrer les repr´esentations
+compactes des pr´ef´erences vues en cours (sans implantation).
+			
+
+
