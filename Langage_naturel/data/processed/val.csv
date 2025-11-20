@@ -1,0 +1,339 @@
+phrase_originale,nom1,nom2,determinant,nom1_lemme,nom2_lemme,definitude,type_jdm,est_valide,notes,nom1_starts_with_vowel,nom2_starts_with_vowel,nom1_ends_with_e,nom2_ends_with_e,nom1_ends_with_s,nom2_ends_with_s,definitude,has_article_le,has_article_un,nom1_is_person,nom2_is_person,nom1_is_location,nom2_is_location,nom1_is_temporal,nom2_is_temporal,nom1_is_abstract,nom2_is_abstract,nom1_is_material,nom2_is_material,nom1_length,nom2_length,phrase_length,nom1_syllables_approx,nom2_syllables_approx,length_ratio,has_determinant,word_count,has_adjective
+le projet de linguistique,projet,linguistique,de,projet,linguistique,False,r_topic,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,12,25,2,6,0.5,1,4,0
+la peinture de la porte,la peinture,la porte,de,la peinture,la porte,False,r_processus_patient,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,11,8,23,5,3,1.375,1,5,0
+les clés du concierge,clés,concierge,du,clé,concierge,True,r_own-1,True,,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,3,9,21,1,4,0.3333333333333333,1,4,0
+le tutoriel d'informatique,tutoriel,informatique,d',tutoriel,informatique,False,r_topic,True,,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,8,12,26,4,6,0.6666666666666666,1,3,0
+la hausse des prix de la demande,la hausse des prix,la demande,de,la hausse des pri,la demande,False,r_has_causatif,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,10,32,6,4,1.7,1,7,0
+la sculpture du bois,sculpture,bois,du,sculpture,boi,True,r_processus_patient,True,,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,9,3,20,3,2,3.0,1,4,0
+la voiture du médecin,voiture,médecin,de,voiture,médecin,False,r_own-1,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,21,4,3,1.0,1,4,0
+la statue de marbre,statue,marbre,de,statue,marbre,False,r_objet>matiere,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,6,19,3,2,1.0,1,4,0
+le musée de paris,musée,paris,de,musée,pari,False,r_lieu,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,4,17,3,2,1.25,1,4,0
+un bouquet de fleurs,bouquet,fleurs,de,bouquet,fleur,False,r_quantificateur,True,,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,7,5,20,4,2,1.4,1,4,0
+le roman d'hugo,roman,hugo,d',roman,hugo,False,r_product_of,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,4,15,2,2,1.25,1,3,0
+la symphonie de mozart,symphonie,mozart,de,symphonie,mozart,False,r_product_of,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,6,22,4,2,1.5,1,4,0
+la prudence du conducteur,prudence,conducteur,de,prudence,conducteur,False,r_has_property-1,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,10,25,3,4,0.8,1,4,0
+le livre d'économie,livre,économie,d',livre,économie,False,r_topic,True,,0,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,8,19,2,5,0.625,1,3,0
+le cadre de bois,cadre,bois,de,cadre,boi,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,3,16,2,2,1.6666666666666667,1,4,0
+le camarade d'hugo,camarade,hugo,d',camarade,hugo,False,r_social_tie,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,4,18,4,2,2.0,1,3,0
+le riz de thaïlande,riz,thaïlande,de,riz,thaïlande,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,9,19,1,4,0.3333333333333333,1,4,0
+la sculpture de rodin,sculpture,rodin,de,sculpture,rodin,False,r_product_of,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,5,21,3,2,1.8,1,4,0
+la table de bois,table,bois,de,table,boi,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,3,16,2,2,1.6666666666666667,1,4,0
+le musée de paris,musée,paris,de,musée,pari,False,r_lieu,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,4,17,3,2,1.25,1,4,0
+l'avocat d'ahmed,avocat,ahmed,d',avocat,ahmed,False,r_social_tie,True,,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,5,16,3,2,1.2,1,2,0
+l'associé de sarah,associé,sarah,de,associé,sarah,False,r_social_tie,True,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,5,18,4,2,1.4,0,3,0
+le stylo de l'étudiant,le stylo,l'étudiant,de,le stylo,l'étudiant,False,r_own-1,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,10,22,3,4,0.8,1,4,0
+la peinture du peintre,peinture,peintre,du,peinture,peintre,True,r_processus_agent,True,,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,8,7,22,4,3,1.1428571428571428,1,4,0
+la sculpture du bois,sculpture,bois,du,sculpture,boi,True,r_processus_patient,True,,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,9,3,20,3,2,3.0,1,4,0
+la scie de coupe,scie,coupe,de,scie,coupe,False,r_processus>instr-1,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,5,16,2,3,0.8,1,4,0
+la scie de coupe,scie,coupe,de,scie,coupe,False,r_processus>instr-1,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,5,16,2,3,0.8,1,4,0
+le laser de gravure,laser,gravure,de,laser,gravure,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,7,19,2,3,0.7142857142857143,1,4,0
+la table de bois,table,bois,de,table,boi,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,3,16,2,2,1.6666666666666667,1,4,0
+le mentor de jules,mentor,jules,de,mentor,jule,False,r_social_tie,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,6,4,18,2,2,1.5,1,4,0
+le podcast d'histoire,podcast,histoire,d',podcast,histoire,False,r_topic,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,8,21,2,4,0.875,1,3,0
+le thé de chine,thé,chine,de,thé,chine,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,5,15,1,2,0.6,1,4,0
+la roue de la voiture,la roue,la voiture,de,la roue,la voiture,False,r_holo,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,10,21,4,5,0.7,1,5,0
+la réparation du mécanicien,réparation,mécanicien,du,réparation,mécanicien,True,r_processus_agent,True,,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,10,10,27,5,5,1.0,1,4,0
+la sculpture de l'artiste,la sculpture,l'artiste,de,la sculpture,l'artiste,False,r_processus_agent,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,9,25,4,3,1.3333333333333333,1,4,0
+les annulations de la grève,les annulations,la grève,de,les annulation,la grève,False,r_has_causatif,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,14,8,27,6,3,1.75,1,5,0
+l'exposé de cuisine,exposé,cuisine,de,exposé,cuisine,False,r_topic,True,,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,7,19,3,4,0.8571428571428571,0,3,0
+le roman d'hugo,roman,hugo,d',roman,hugo,False,r_product_of,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,4,15,2,2,1.25,1,3,0
+la sculpture de l'artiste,la sculpture,l'artiste,de,la sculpture,l'artiste,False,r_processus_agent,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,9,25,4,3,1.3333333333333333,1,4,0
+le riz de thaïlande,riz,thaïlande,de,riz,thaïlande,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,9,19,1,4,0.3333333333333333,1,4,0
+la table de métal,table,métal,de,table,métal,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,5,17,2,2,1.0,1,4,0
+la fenêtre de la maison,la fenêtre,la maison,de,la fenêtre,la maison,False,r_holo,True,,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,10,9,23,4,4,1.1111111111111112,1,5,0
+l'ami de pierre,ami,pierre,de,ami,pierre,False,r_social_tie,True,,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,3,6,15,2,3,0.5,0,3,0
+l'hôpital de nantes,hôpital,nantes,de,hôpital,nante,False,r_lieu,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,5,19,3,2,1.4,0,3,0
+la bague de la mariée,la bague,la mariée,de,la bague,la mariée,False,r_own-1,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,9,21,4,5,0.8888888888888888,1,5,0
+le châssis de la fenêtre,le châssis,la fenêtre,de,le châssi,la fenêtre,False,r_holo,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,9,10,24,2,4,0.9,1,5,0
+la bière d'allemagne,bière,allemagne,d',bière,allemagne,False,r_lieu>origine,True,,0,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,9,20,3,4,0.5555555555555556,1,3,0
+le parent de lucie,parent,lucie,de,parent,lucie,False,r_social_tie,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,5,18,2,3,1.2,1,4,0
+la tour de paris,tour,paris,de,tour,pari,False,r_lieu,True,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,4,16,2,2,1.0,1,4,0
+le marteau de perçage,marteau,perçage,de,marteau,perçage,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,7,21,4,3,1.0,1,4,0
+la carte d'une égion,carte,une égion,d',carte,une égion,False,r_depic,True,,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,5,9,20,2,5,0.5555555555555556,1,4,0
+le livre du professeur,livre,professeur,du,livre,professeur,True,r_own-1,True,,0,0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,5,10,22,2,4,0.5,1,4,0
+une goutte d'eau,goutte,eau,d',goutte,eau,False,r_quantificateur,True,,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,6,3,16,3,3,2.0,1,3,0
+le poème de rimbaud,poème,rimbaud,de,poème,rimbaud,False,r_product_of,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,7,19,3,3,0.7142857142857143,1,4,0
+le travail de l'ouvrier,le travail,l'ouvrier,de,le travail,l'ouvrier,False,r_processus_agent,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,10,9,23,4,4,1.1111111111111112,1,4,0
+le fromage de suisse,fromage,suisse,de,fromage,suisse,False,r_lieu>origine,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,6,20,3,3,1.1666666666666667,1,4,0
+le laser de gravure,laser,gravure,de,laser,gravure,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,7,19,2,3,0.7142857142857143,1,4,0
+la coque du téléphone,coque,téléphone,du,coque,téléphone,True,r_holo,True,,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,5,9,21,3,4,0.5555555555555556,1,4,0
+le dessin d'un visage,dessin,un visage,d',dessin,un visage,False,r_depic,True,,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,6,9,21,2,4,0.6666666666666666,1,4,0
+la peinture de la porte,la peinture,la porte,de,la peinture,la porte,False,r_processus_patient,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,11,8,23,5,3,1.375,1,5,0
+l'hôpital de nantes,hôpital,nantes,de,hôpital,nante,False,r_lieu,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,5,19,3,2,1.4,0,3,0
+la réparation du mécanicien,réparation,mécanicien,du,réparation,mécanicien,True,r_processus_agent,True,,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,10,10,27,5,5,1.0,1,4,0
+le cadre de bois,cadre,bois,de,cadre,boi,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,3,16,2,2,1.6666666666666667,1,4,0
+la taille de la pierre,la taille,la pierre,de,la taille,la pierre,False,r_processus_patient,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,9,9,22,4,4,1.0,1,5,0
+le vin de france,vin,france,de,vin,france,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,6,16,1,2,0.5,1,4,0
+l'aile de l'avion,l'aile,l'avion,de,l'aile,l'avion,False,r_holo,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,7,17,3,3,0.8571428571428571,0,3,0
+le marteau de perçage,marteau,perçage,de,marteau,perçage,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,7,21,4,3,1.0,1,4,0
+le camarade d'hugo,camarade,hugo,d',camarade,hugo,False,r_social_tie,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,4,18,4,2,2.0,1,3,0
+un litre de lait,litre,lait,de,litre,lait,False,r_quantificateur,True,,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,5,4,16,2,2,1.25,1,4,0
+une poignée de sel,poignée,sel,de,poignée,sel,False,r_quantificateur,True,,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,3,18,4,1,2.3333333333333335,1,4,0
+les pannes de la chaleur,les pannes,la chaleur,de,les panne,la chaleur,False,r_has_causatif,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,9,10,24,3,4,0.9,1,5,0
+le chocolat de belgique,chocolat,belgique,de,chocolat,belgique,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,8,23,3,4,1.0,1,4,0
+le dessin de cézanne,dessin,cézanne,de,dessin,cézanne,False,r_product_of,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,7,20,2,3,0.8571428571428571,1,4,0
+la roue de la voiture,la roue,la voiture,de,la roue,la voiture,False,r_holo,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,10,21,4,5,0.7,1,5,0
+la selle du vélo,selle,vélo,du,selle,vélo,True,r_holo,True,,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,5,4,16,2,2,1.25,1,4,0
+le laser de gravure,laser,gravure,de,laser,gravure,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,7,19,2,3,0.7142857142857143,1,4,0
+la fenêtre de la maison,la fenêtre,la maison,de,la fenêtre,la maison,False,r_holo,True,,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,10,9,23,4,4,1.1111111111111112,1,5,0
+un litre de lait,litre,lait,de,litre,lait,False,r_quantificateur,True,,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,5,4,16,2,2,1.25,1,4,0
+l'hôpital de nantes,hôpital,nantes,de,hôpital,nante,False,r_lieu,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,5,19,3,2,1.4,0,3,0
+un bouquet de fleurs,bouquet,fleurs,de,bouquet,fleur,False,r_quantificateur,True,,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,7,5,20,4,2,1.4,1,4,0
+les retards de la pluie,les retards,la pluie,de,les retard,la pluie,False,r_has_causatif,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,10,8,23,3,4,1.25,1,5,0
+un grain de poivre,grain,poivre,de,grain,poivre,False,r_quantificateur,True,,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,5,6,18,2,3,0.8333333333333334,1,4,0
+le marché de marrakech,marché,marrakech,de,marché,marrakech,False,r_lieu,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,9,22,2,3,0.6666666666666666,1,4,0
+les clés du concierge,clés,concierge,du,clé,concierge,True,r_own-1,True,,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,3,9,21,1,4,0.3333333333333333,1,4,0
+l'imprimante d'impression,imprimante,impression,d',imprimante,impression,False,r_processus>instr-1,True,,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,10,25,4,4,1.0,1,2,0
+un sac de farine,sac,farine,de,sac,farine,False,r_quantificateur,True,,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,3,6,16,1,3,0.5,1,4,0
+l'assiette d'argile,assiette,argile,d',assiette,argile,False,r_objet>matiere,True,,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,6,19,4,3,1.3333333333333333,1,2,0
+la bague de la mariée,la bague,la mariée,de,la bague,la mariée,False,r_own-1,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,9,21,4,5,0.8888888888888888,1,5,0
+la douceur de l'infirmière,la douceur,l'infirmière,de,la douceur,l'infirmière,False,r_has_property-1,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,12,26,5,5,0.8333333333333334,1,4,0
+les retards de la pluie,les retards,la pluie,de,les retard,la pluie,False,r_has_causatif,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,10,8,23,3,4,1.25,1,5,0
+la sculpture de rodin,sculpture,rodin,de,sculpture,rodin,False,r_product_of,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,5,21,3,2,1.8,1,4,0
+l'aile de l'avion,l'aile,l'avion,de,l'aile,l'avion,False,r_holo,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,7,17,3,3,0.8571428571428571,0,3,0
+le cadre de bois,cadre,bois,de,cadre,boi,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,3,16,2,2,1.6666666666666667,1,4,0
+le courage du pompier,courage,pompier,du,courage,pompier,True,r_has_property-1,True,,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,7,7,21,4,3,1.0,1,4,0
+le mentor de jules,mentor,jules,de,mentor,jule,False,r_social_tie,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,6,4,18,2,2,1.5,1,4,0
+la sculpture du bois,sculpture,bois,du,sculpture,boi,True,r_processus_patient,True,,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,9,3,20,3,2,3.0,1,4,0
+le nettoyage de l'agent,le nettoyage,l'agent,de,le nettoyage,l'agent,False,r_processus_agent,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,12,7,23,6,2,1.7142857142857142,1,4,0
+la roue de la voiture,la roue,la voiture,de,la roue,la voiture,False,r_holo,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,10,21,4,5,0.7,1,5,0
+la créativité de l'artiste,la créativité,l'artiste,de,la créativité,l'artiste,False,r_has_property-1,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,9,26,6,3,1.4444444444444444,1,4,0
+un bouquet de fleurs,bouquet,fleurs,de,bouquet,fleur,False,r_quantificateur,True,,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,7,5,20,4,2,1.4,1,4,0
+le chocolat de belgique,chocolat,belgique,de,chocolat,belgique,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,8,23,3,4,1.0,1,4,0
+l'imprimante d'impression,imprimante,impression,d',imprimante,impression,False,r_processus>instr-1,True,,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,10,25,4,4,1.0,1,2,0
+l'imprimante d'impression,imprimante,impression,d',imprimante,impression,False,r_processus>instr-1,True,,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,10,25,4,4,1.0,1,2,0
+la générosité de la bénévole,la générosité,la bénévole,de,la générosité,la bénévole,False,r_has_property-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,13,11,28,6,5,1.1818181818181819,1,5,0
+le portrait d'un enfant,portrait,un enfant,d',portrait,un enfant,False,r_depic,True,,0,1,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,0,8,9,23,3,3,0.8888888888888888,1,4,0
+le cours de mathématiques,cours,mathématiques,de,cour,mathématique,False,r_topic,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4,12,25,2,6,0.3333333333333333,1,4,0
+le musée de paris,musée,paris,de,musée,pari,False,r_lieu,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,4,17,3,2,1.25,1,4,0
+la générosité de la bénévole,la générosité,la bénévole,de,la générosité,la bénévole,False,r_has_property-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,13,11,28,6,5,1.1818181818181819,1,5,0
+le stylo de l'étudiant,le stylo,l'étudiant,de,le stylo,l'étudiant,False,r_own-1,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,10,22,3,4,0.8,1,4,0
+le parent de lucie,parent,lucie,de,parent,lucie,False,r_social_tie,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,5,18,2,3,1.2,1,4,0
+un kilo de riz,kilo,riz,de,kilo,riz,False,r_quantificateur,True,,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,4,3,14,2,1,1.3333333333333333,1,4,0
+une tasse de thé,tasse,thé,de,tasse,thé,False,r_quantificateur,True,,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,5,3,16,2,1,1.6666666666666667,1,4,0
+un bouquet de fleurs,bouquet,fleurs,de,bouquet,fleur,False,r_quantificateur,True,,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,7,5,20,4,2,1.4,1,4,0
+la cathédrale de reims,cathédrale,reims,de,cathédrale,reim,False,r_lieu,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,10,4,22,4,2,2.5,1,4,0
+la sculpture de rodin,sculpture,rodin,de,sculpture,rodin,False,r_product_of,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,5,21,3,2,1.8,1,4,0
+le dessin d'un visage,dessin,un visage,d',dessin,un visage,False,r_depic,True,,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,6,9,21,2,4,0.6666666666666666,1,4,0
+les retards des travaux,retards,travaux,de,retard,traval,False,r_has_causatif,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,6,23,2,2,1.0,1,4,0
+la baisse des ventes de la crise,la baisse des ventes,la crise,de,la baisse des vente,la crise,False,r_has_causatif,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,8,32,7,3,2.375,1,7,0
+l'ami de pierre,ami,pierre,de,ami,pierre,False,r_social_tie,True,,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,3,6,15,2,3,0.5,0,3,0
+les coupures d'un orage,coupures,un orage,d',coupure,un orage,False,r_has_causatif,True,,0,1,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,7,8,23,4,4,0.875,1,4,0
+la porte de la maison,la porte,la maison,de,la porte,la maison,False,r_holo,True,,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,8,9,21,3,4,0.8888888888888888,1,5,0
+la gravure d'un animal,gravure,un animal,d',gravure,un animal,False,r_depic,True,,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,9,22,3,4,0.7777777777777778,1,4,0
+la baisse des ventes de la crise,la baisse des ventes,la crise,de,la baisse des vente,la crise,False,r_has_causatif,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,8,32,7,3,2.375,1,7,0
+un brin d'herbe,brin,herbe,d',brin,herbe,False,r_quantificateur,True,,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,4,5,15,1,2,0.8,1,3,0
+la force de l'athlète,la force,l'athlète,de,la force,l'athlète,False,r_has_property-1,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,8,9,21,3,3,0.8888888888888888,1,4,0
+la porte de la maison,la porte,la maison,de,la porte,la maison,False,r_holo,True,,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,8,9,21,3,4,0.8888888888888888,1,5,0
+la coque du téléphone,coque,téléphone,du,coque,téléphone,True,r_holo,True,,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,5,9,21,3,4,0.5555555555555556,1,4,0
+la montre du sportif,montre,sportif,du,montre,sportif,True,r_own-1,True,,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,6,7,20,2,2,0.8571428571428571,1,4,0
+les pannes de la chaleur,les pannes,la chaleur,de,les panne,la chaleur,False,r_has_causatif,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,9,10,24,3,4,0.9,1,5,0
+la cathédrale de reims,cathédrale,reims,de,cathédrale,reim,False,r_lieu,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,10,4,22,4,2,2.5,1,4,0
+le schéma d'un circuit,schéma,un circuit,d',schéma,un circuit,False,r_depic,True,,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,6,10,22,2,4,0.6,1,4,0
+l'hôpital de nantes,hôpital,nantes,de,hôpital,nante,False,r_lieu,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,5,19,3,2,1.4,0,3,0
+le cadre de bois,cadre,bois,de,cadre,boi,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,3,16,2,2,1.6666666666666667,1,4,0
+la créativité de l'artiste,la créativité,l'artiste,de,la créativité,l'artiste,False,r_has_property-1,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,9,26,6,3,1.4444444444444444,1,4,0
+l'hôpital de nantes,hôpital,nantes,de,hôpital,nante,False,r_lieu,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,5,19,3,2,1.4,0,3,0
+le poème de rimbaud,poème,rimbaud,de,poème,rimbaud,False,r_product_of,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,7,19,3,3,0.7142857142857143,1,4,0
+l'assemblage de l'ouvrière,l'assemblage,l'ouvrière,de,l'assemblage,l'ouvrière,False,r_processus_agent,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,10,26,4,5,1.2,0,3,0
+le musée de paris,musée,paris,de,musée,pari,False,r_lieu,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,4,17,3,2,1.25,1,4,0
+une poignée de sel,poignée,sel,de,poignée,sel,False,r_quantificateur,True,,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,3,18,4,1,2.3333333333333335,1,4,0
+le marteau de perçage,marteau,perçage,de,marteau,perçage,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,7,21,4,3,1.0,1,4,0
+un bouquet de fleurs,bouquet,fleurs,de,bouquet,fleur,False,r_quantificateur,True,,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,7,5,20,4,2,1.4,1,4,0
+le collègue de marie,collègue,marie,de,collègue,marie,False,r_social_tie,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,5,20,4,3,1.6,1,4,0
+le polissage du métal,polissage,métal,du,polissage,métal,True,r_processus_patient,True,,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,9,5,21,4,2,1.8,1,4,0
+la créativité de l'artiste,la créativité,l'artiste,de,la créativité,l'artiste,False,r_has_property-1,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,9,26,6,3,1.4444444444444444,1,4,0
+la traduction de la traductrice,la traduction,la traductrice,de,la traduction,la traductrice,False,r_processus_agent,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,14,31,5,5,0.9285714285714286,1,5,0
+la sculpture du bois,sculpture,bois,du,sculpture,boi,True,r_processus_patient,True,,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,9,3,20,3,2,3.0,1,4,0
+la sculpture de rodin,sculpture,rodin,de,sculpture,rodin,False,r_product_of,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,5,21,3,2,1.8,1,4,0
+la porte de la maison,la porte,la maison,de,la porte,la maison,False,r_holo,True,,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,8,9,21,3,4,0.8888888888888888,1,5,0
+le tutoriel d'informatique,tutoriel,informatique,d',tutoriel,informatique,False,r_topic,True,,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,8,12,26,4,6,0.6666666666666666,1,3,0
+l'hôpital de nantes,hôpital,nantes,de,hôpital,nante,False,r_lieu,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,5,19,3,2,1.4,0,3,0
+le dessin d'un visage,dessin,un visage,d',dessin,un visage,False,r_depic,True,,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,6,9,21,2,4,0.6666666666666666,1,4,0
+l'ami de pierre,ami,pierre,de,ami,pierre,False,r_social_tie,True,,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,3,6,15,2,3,0.5,0,3,0
+la chaise de bois,chaise,bois,de,chaise,boi,False,r_objet>matiere,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,3,17,3,2,2.0,1,4,0
+la rigueur de l'ingénieur,la rigueur,l'ingénieur,de,la rigueur,l'ingénieur,False,r_has_property-1,True,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,11,25,5,5,0.9090909090909091,1,4,0
+un litre de lait,litre,lait,de,litre,lait,False,r_quantificateur,True,,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,5,4,16,2,2,1.25,1,4,0
+la gravure d'un animal,gravure,un animal,d',gravure,un animal,False,r_depic,True,,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,9,22,3,4,0.7777777777777778,1,4,0
+la porte de la maison,la porte,la maison,de,la porte,la maison,False,r_holo,True,,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,8,9,21,3,4,0.8888888888888888,1,5,0
+les pannes de la tempête,les pannes,la tempête,de,les panne,la tempête,False,r_has_causatif,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,9,10,24,3,4,0.9,1,5,0
+la traduction de la traductrice,la traduction,la traductrice,de,la traduction,la traductrice,False,r_processus_agent,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,14,31,5,5,0.9285714285714286,1,5,0
+la porte de la maison,la porte,la maison,de,la porte,la maison,False,r_holo,True,,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,8,9,21,3,4,0.8888888888888888,1,5,0
+les coupures d'un orage,coupures,un orage,d',coupure,un orage,False,r_has_causatif,True,,0,1,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,7,8,23,4,4,0.875,1,4,0
+la taille de la pierre,la taille,la pierre,de,la taille,la pierre,False,r_processus_patient,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,9,9,22,4,4,1.0,1,5,0
+le dessin de cézanne,dessin,cézanne,de,dessin,cézanne,False,r_product_of,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,7,20,2,3,0.8571428571428571,1,4,0
+la sculpture du bois,sculpture,bois,du,sculpture,boi,True,r_processus_patient,True,,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,9,3,20,3,2,3.0,1,4,0
+le laser de gravure,laser,gravure,de,laser,gravure,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,7,19,2,3,0.7142857142857143,1,4,0
+le film de truffaut,film,truffaut,de,film,truffaut,False,r_product_of,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4,8,19,1,3,0.5,1,4,0
+le cours de mathématiques,cours,mathématiques,de,cour,mathématique,False,r_topic,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4,12,25,2,6,0.3333333333333333,1,4,0
+le couteau de coupe,couteau,coupe,de,couteau,coupe,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,5,19,5,3,1.4,1,4,0
+l'écriture de l'auteur,l'écriture,l'auteur,de,l'écriture,l'auteur,False,r_processus_agent,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,8,22,4,4,1.25,0,3,0
+un morceau de fromage,morceau,fromage,de,morceau,fromage,False,r_quantificateur,True,,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,7,7,21,4,3,1.0,1,4,0
+la taille de la pierre,la taille,la pierre,de,la taille,la pierre,False,r_processus_patient,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,9,9,22,4,4,1.0,1,5,0
+le laser de gravure,laser,gravure,de,laser,gravure,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,7,19,2,3,0.7142857142857143,1,4,0
+la patience de la professeure,la patience,la professeure,de,la patience,la professeure,False,r_has_property-1,True,,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,11,14,29,5,6,0.7857142857142857,1,5,0
+le fromage de suisse,fromage,suisse,de,fromage,suisse,False,r_lieu>origine,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,6,20,3,3,1.1666666666666667,1,4,0
+les retards de livraison des embouteillages,les retards de livraison,embouteillages,des,les retards de livraison,embouteillage,True,r_has_causatif,True,,0,1,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,24,13,43,8,7,1.8461538461538463,1,6,0
+la prudence du conducteur,prudence,conducteur,de,prudence,conducteur,False,r_has_property-1,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,10,25,3,4,0.8,1,4,0
+le tableau de monet,tableau,monet,de,tableau,monet,False,r_product_of,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,5,19,4,2,1.4,1,4,0
+le miel de france,miel,france,de,miel,france,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4,6,17,2,2,0.6666666666666666,1,4,0
+la réparation de la voiture,la réparation,la voiture,de,la réparation,la voiture,False,r_processus_patient,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,10,27,6,5,1.3,1,5,0
+les coupures d'un orage,coupures,un orage,d',coupure,un orage,False,r_has_causatif,True,,0,1,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,7,8,23,4,4,0.875,1,4,0
+le poème de rimbaud,poème,rimbaud,de,poème,rimbaud,False,r_product_of,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,7,19,3,3,0.7142857142857143,1,4,0
+le livre du professeur,livre,professeur,du,livre,professeur,True,r_own-1,True,,0,0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,5,10,22,2,4,0.5,1,4,0
+le projet de linguistique,projet,linguistique,de,projet,linguistique,False,r_topic,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,12,25,2,6,0.5,1,4,0
+la sculpture de rodin,sculpture,rodin,de,sculpture,rodin,False,r_product_of,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,5,21,3,2,1.8,1,4,0
+le camarade d'hugo,camarade,hugo,d',camarade,hugo,False,r_social_tie,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,4,18,4,2,2.0,1,3,0
+le travail de l'ouvrier,le travail,l'ouvrier,de,le travail,l'ouvrier,False,r_processus_agent,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,10,9,23,4,4,1.1111111111111112,1,4,0
+le couteau de coupe,couteau,coupe,de,couteau,coupe,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,5,19,5,3,1.4,1,4,0
+la table de métal,table,métal,de,table,métal,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,5,17,2,2,1.0,1,4,0
+le vin de france,vin,france,de,vin,france,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,6,16,1,2,0.5,1,4,0
+la montre du sportif,montre,sportif,du,montre,sportif,True,r_own-1,True,,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,6,7,20,2,2,0.8571428571428571,1,4,0
+le vin d'italie,vin,italie,d',vin,italie,False,r_lieu>origine,True,,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,6,15,1,4,0.5,1,3,0
+le camarade d'hugo,camarade,hugo,d',camarade,hugo,False,r_social_tie,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,4,18,4,2,2.0,1,3,0
+le stylo de l'étudiant,le stylo,l'étudiant,de,le stylo,l'étudiant,False,r_own-1,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,10,22,3,4,0.8,1,4,0
+la patience de la professeure,la patience,la professeure,de,la patience,la professeure,False,r_has_property-1,True,,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,11,14,29,5,6,0.7857142857142857,1,5,0
+la photo d'une ille,photo,une ille,d',photo,une ille,False,r_depic,True,,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,5,8,19,2,4,0.625,1,4,0
+le nettoyage de l'agent,le nettoyage,l'agent,de,le nettoyage,l'agent,False,r_processus_agent,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,12,7,23,6,2,1.7142857142857142,1,4,0
+le miel de france,miel,france,de,miel,france,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4,6,17,2,2,0.6666666666666666,1,4,0
+la fenêtre de la maison,la fenêtre,la maison,de,la fenêtre,la maison,False,r_holo,True,,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,10,9,23,4,4,1.1111111111111112,1,5,0
+la douceur de l'infirmière,la douceur,l'infirmière,de,la douceur,l'infirmière,False,r_has_property-1,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,12,26,5,5,0.8333333333333334,1,4,0
+les pannes de la tempête,les pannes,la tempête,de,les panne,la tempête,False,r_has_causatif,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,9,10,24,3,4,0.9,1,5,0
+la sculpture de l'artiste,la sculpture,l'artiste,de,la sculpture,l'artiste,False,r_processus_agent,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,9,25,4,3,1.3333333333333333,1,4,0
+le collègue de marie,collègue,marie,de,collègue,marie,False,r_social_tie,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,5,20,4,3,1.6,1,4,0
+le polissage du métal,polissage,métal,du,polissage,métal,True,r_processus_patient,True,,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,9,5,21,4,2,1.8,1,4,0
+l'assiette d'argile,assiette,argile,d',assiette,argile,False,r_objet>matiere,True,,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,6,19,4,3,1.3333333333333333,1,2,0
+la gravure d'un animal,gravure,un animal,d',gravure,un animal,False,r_depic,True,,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,9,22,3,4,0.7777777777777778,1,4,0
+la roue de la voiture,la roue,la voiture,de,la roue,la voiture,False,r_holo,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,10,21,4,5,0.7,1,5,0
+le livre d'économie,livre,économie,d',livre,économie,False,r_topic,True,,0,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,8,19,2,5,0.625,1,3,0
+une tasse de thé,tasse,thé,de,tasse,thé,False,r_quantificateur,True,,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,5,3,16,2,1,1.6666666666666667,1,4,0
+une poignée de sel,poignée,sel,de,poignée,sel,False,r_quantificateur,True,,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,3,18,4,1,2.3333333333333335,1,4,0
+la voiture du médecin,voiture,médecin,de,voiture,médecin,False,r_own-1,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,21,4,3,1.0,1,4,0
+la gravure d'un animal,gravure,un animal,d',gravure,un animal,False,r_depic,True,,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,9,22,3,4,0.7777777777777778,1,4,0
+le polissage du métal,polissage,métal,du,polissage,métal,True,r_processus_patient,True,,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,9,5,21,4,2,1.8,1,4,0
+la taille du tailleur de pierre,la taille du tailleur,pierre,de,la taille du tailleur,pierre,False,r_processus_agent,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,21,6,31,9,3,3.5,1,6,0
+les clés du concierge,clés,concierge,du,clé,concierge,True,r_own-1,True,,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,3,9,21,1,4,0.3333333333333333,1,4,0
+les embouteillages d'un accident,embouteillages,un accident,d',embouteillage,un accident,False,r_has_causatif,True,,1,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,13,11,32,7,4,1.1818181818181819,1,4,0
+la peinture d'un paysage,peinture,un paysage,d',peinture,un paysage,False,r_depic,True,,0,1,1,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,8,10,24,4,5,0.8,1,4,0
+la maquette d'un bateau,maquette,un bateau,d',maquette,un bateau,False,r_depic,True,,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,8,9,23,4,5,0.8888888888888888,1,4,0
+le tutoriel d'informatique,tutoriel,informatique,d',tutoriel,informatique,False,r_topic,True,,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,8,12,26,4,6,0.6666666666666666,1,3,0
+le pinceau de peinture,pinceau,peinture,de,pinceau,peinture,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,8,22,4,4,0.875,1,4,0
+le dessin de cézanne,dessin,cézanne,de,dessin,cézanne,False,r_product_of,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,7,20,2,3,0.8571428571428571,1,4,0
+le poème de rimbaud,poème,rimbaud,de,poème,rimbaud,False,r_product_of,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,7,19,3,3,0.7142857142857143,1,4,0
+le camarade d'hugo,camarade,hugo,d',camarade,hugo,False,r_social_tie,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,4,18,4,2,2.0,1,3,0
+le nettoyage de la maison,le nettoyage,la maison,de,le nettoyage,la maison,False,r_processus_patient,True,,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,12,9,25,6,4,1.3333333333333333,1,5,0
+l'huile d'olive de grèce,l'huile d'olive,grèce,de,l'huile d'olive,grèce,False,r_lieu>origine,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,15,5,24,6,2,3.0,1,4,0
+l'ordinateur d'écriture,ordinateur,écriture,d',ordinateur,écriture,False,r_processus>instr-1,True,,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,10,8,23,5,4,1.25,1,2,0
+le chocolat de belgique,chocolat,belgique,de,chocolat,belgique,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,8,23,3,4,1.0,1,4,0
+l'ordinateur d'écriture,ordinateur,écriture,d',ordinateur,écriture,False,r_processus>instr-1,True,,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,10,8,23,5,4,1.25,1,2,0
+le café de brésil,café,brésil,de,café,brésil,False,r_lieu>origine,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4,6,17,2,2,0.6666666666666666,1,4,0
+le cadre de bois,cadre,bois,de,cadre,boi,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,3,16,2,2,1.6666666666666667,1,4,0
+la bouteille de verre,bouteille,verre,de,bouteille,verre,False,r_objet>matiere,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,9,5,21,5,2,1.8,1,4,0
+la peinture de la porte,la peinture,la porte,de,la peinture,la porte,False,r_processus_patient,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,11,8,23,5,3,1.375,1,5,0
+la statue de marbre,statue,marbre,de,statue,marbre,False,r_objet>matiere,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,6,19,3,2,1.0,1,4,0
+le schéma d'un circuit,schéma,un circuit,d',schéma,un circuit,False,r_depic,True,,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,6,10,22,2,4,0.6,1,4,0
+les pénuries de la sécheresse,les pénuries,la sécheresse,de,les pénurie,la sécheresse,False,r_has_causatif,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,11,13,29,5,5,0.8461538461538461,1,5,0
+les pénuries de la sécheresse,les pénuries,la sécheresse,de,les pénurie,la sécheresse,False,r_has_causatif,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,11,13,29,5,5,0.8461538461538461,1,5,0
+les coupures d'un orage,coupures,un orage,d',coupure,un orage,False,r_has_causatif,True,,0,1,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,7,8,23,4,4,0.875,1,4,0
+la sagesse du vieillard,sagesse,vieillard,du,sagesse,vieillard,True,r_has_property-1,True,,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,7,9,23,3,4,0.7777777777777778,1,4,0
+la créativité de l'artiste,la créativité,l'artiste,de,la créativité,l'artiste,False,r_has_property-1,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,9,26,6,3,1.4444444444444444,1,4,0
+le fromage de suisse,fromage,suisse,de,fromage,suisse,False,r_lieu>origine,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,6,20,3,3,1.1666666666666667,1,4,0
+le projet de linguistique,projet,linguistique,de,projet,linguistique,False,r_topic,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,12,25,2,6,0.5,1,4,0
+le couvercle de la boîte,le couvercle,la boîte,de,le couvercle,la boîte,False,r_holo,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,12,8,24,5,4,1.5,1,5,0
+la taille de la pierre,la taille,la pierre,de,la taille,la pierre,False,r_processus_patient,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,9,9,22,4,4,1.0,1,5,0
+le chocolat de belgique,chocolat,belgique,de,chocolat,belgique,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,8,23,3,4,1.0,1,4,0
+les retards de la pluie,les retards,la pluie,de,les retard,la pluie,False,r_has_causatif,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,10,8,23,3,4,1.25,1,5,0
+le livre d'économie,livre,économie,d',livre,économie,False,r_topic,True,,0,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,8,19,2,5,0.625,1,3,0
+le tableau de monet,tableau,monet,de,tableau,monet,False,r_product_of,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,5,19,4,2,1.4,1,4,0
+le portrait d'un enfant,portrait,un enfant,d',portrait,un enfant,False,r_depic,True,,0,1,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,0,8,9,23,3,3,0.8888888888888888,1,4,0
+l'exposé de cuisine,exposé,cuisine,de,exposé,cuisine,False,r_topic,True,,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,7,19,3,4,0.8571428571428571,0,3,0
+l'associé de sarah,associé,sarah,de,associé,sarah,False,r_social_tie,True,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,5,18,4,2,1.4,0,3,0
+la peinture du peintre,peinture,peintre,du,peinture,peintre,True,r_processus_agent,True,,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,8,7,22,4,3,1.1428571428571428,1,4,0
+le courage du pompier,courage,pompier,du,courage,pompier,True,r_has_property-1,True,,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,7,7,21,4,3,1.0,1,4,0
+les annulations de la grève,les annulations,la grève,de,les annulation,la grève,False,r_has_causatif,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,14,8,27,6,3,1.75,1,5,0
+l'ami de pierre,ami,pierre,de,ami,pierre,False,r_social_tie,True,,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,3,6,15,2,3,0.5,0,3,0
+les retards de livraison des embouteillages,les retards de livraison,embouteillages,des,les retards de livraison,embouteillage,True,r_has_causatif,True,,0,1,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,24,13,43,8,7,1.8461538461538463,1,6,0
+la vidéo de musique,vidéo,musique,de,vidéo,musique,False,r_topic,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,7,19,3,4,0.7142857142857143,1,4,0
+le passeport du voyageur,passeport,voyageur,du,passeport,voyageur,True,r_own-1,True,,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,9,8,24,3,5,1.125,1,4,0
+le couteau de coupe,couteau,coupe,de,couteau,coupe,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,5,19,5,3,1.4,1,4,0
+l'écriture de l'auteur,l'écriture,l'auteur,de,l'écriture,l'auteur,False,r_processus_agent,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,8,22,4,4,1.25,0,3,0
+l'huile d'olive de grèce,l'huile d'olive,grèce,de,l'huile d'olive,grèce,False,r_lieu>origine,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,15,5,24,6,2,3.0,1,4,0
+la créativité de l'artiste,la créativité,l'artiste,de,la créativité,l'artiste,False,r_has_property-1,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,9,26,6,3,1.4444444444444444,1,4,0
+le passeport du voyageur,passeport,voyageur,du,passeport,voyageur,True,r_own-1,True,,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,9,8,24,3,5,1.125,1,4,0
+le manuel de physique,manuel,physique,de,manuel,physique,False,r_topic,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,8,21,3,4,0.75,1,4,0
+le portrait d'un enfant,portrait,un enfant,d',portrait,un enfant,False,r_depic,True,,0,1,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,0,8,9,23,3,3,0.8888888888888888,1,4,0
+le fromage de suisse,fromage,suisse,de,fromage,suisse,False,r_lieu>origine,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,6,20,3,3,1.1666666666666667,1,4,0
+l'assemblage de l'ouvrière,l'assemblage,l'ouvrière,de,l'assemblage,l'ouvrière,False,r_processus_agent,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,10,26,4,5,1.2,0,3,0
+la clé d'ouverture,clé,ouverture,d',clé,ouverture,False,r_processus>instr-1,True,,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,9,18,1,5,0.3333333333333333,1,3,0
+la carte d'une égion,carte,une égion,d',carte,une égion,False,r_depic,True,,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,5,9,20,2,5,0.5555555555555556,1,4,0
+la patience de la professeure,la patience,la professeure,de,la patience,la professeure,False,r_has_property-1,True,,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,11,14,29,5,6,0.7857142857142857,1,5,0
+le parent de lucie,parent,lucie,de,parent,lucie,False,r_social_tie,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,5,18,2,3,1.2,1,4,0
+l'écriture de l'auteur,l'écriture,l'auteur,de,l'écriture,l'auteur,False,r_processus_agent,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,8,22,4,4,1.25,0,3,0
+l'huile d'olive de grèce,l'huile d'olive,grèce,de,l'huile d'olive,grèce,False,r_lieu>origine,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,15,5,24,6,2,3.0,1,4,0
+la sagesse du vieillard,sagesse,vieillard,du,sagesse,vieillard,True,r_has_property-1,True,,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,7,9,23,3,4,0.7777777777777778,1,4,0
+la bague de la mariée,la bague,la mariée,de,la bague,la mariée,False,r_own-1,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,9,21,4,5,0.8888888888888888,1,5,0
+le portrait de picasso,portrait,picasso,de,portrait,picasso,False,r_product_of,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,8,7,22,3,3,1.1428571428571428,1,4,0
+la taille de la pierre,la taille,la pierre,de,la taille,la pierre,False,r_processus_patient,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,9,9,22,4,4,1.0,1,5,0
+la bague de la mariée,la bague,la mariée,de,la bague,la mariée,False,r_own-1,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,9,21,4,5,0.8888888888888888,1,5,0
+le projet de linguistique,projet,linguistique,de,projet,linguistique,False,r_topic,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,12,25,2,6,0.5,1,4,0
+la fenêtre de la maison,la fenêtre,la maison,de,la fenêtre,la maison,False,r_holo,True,,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,10,9,23,4,4,1.1111111111111112,1,5,0
+la traduction de la traductrice,la traduction,la traductrice,de,la traduction,la traductrice,False,r_processus_agent,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,14,31,5,5,0.9285714285714286,1,5,0
+le livre du professeur,livre,professeur,du,livre,professeur,True,r_own-1,True,,0,0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,5,10,22,2,4,0.5,1,4,0
+le nettoyage de la maison,le nettoyage,la maison,de,le nettoyage,la maison,False,r_processus_patient,True,,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,12,9,25,6,4,1.3333333333333333,1,5,0
+le projet de linguistique,projet,linguistique,de,projet,linguistique,False,r_topic,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,12,25,2,6,0.5,1,4,0
+le couteau de coupe,couteau,coupe,de,couteau,coupe,False,r_processus>instr-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,5,19,5,3,1.4,1,4,0
+la peinture du peintre,peinture,peintre,du,peinture,peintre,True,r_processus_agent,True,,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,8,7,22,4,3,1.1428571428571428,1,4,0
+la taille du tailleur de pierre,la taille du tailleur,pierre,de,la taille du tailleur,pierre,False,r_processus_agent,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,21,6,31,9,3,3.5,1,6,0
+la roue de la voiture,la roue,la voiture,de,la roue,la voiture,False,r_holo,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,10,21,4,5,0.7,1,5,0
+le marché de marrakech,marché,marrakech,de,marché,marrakech,False,r_lieu,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,9,22,2,3,0.6666666666666666,1,4,0
+la réparation de la voiture,la réparation,la voiture,de,la réparation,la voiture,False,r_processus_patient,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,10,27,6,5,1.3,1,5,0
+l'article de biologie,article,biologie,de,article,biologie,False,r_topic,True,,1,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,8,21,3,5,0.875,0,3,0
+la clé d'ouverture,clé,ouverture,d',clé,ouverture,False,r_processus>instr-1,True,,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,9,18,1,5,0.3333333333333333,1,3,0
+l'associé de sarah,associé,sarah,de,associé,sarah,False,r_social_tie,True,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,5,18,4,2,1.4,0,3,0
+la réparation de la voiture,la réparation,la voiture,de,la réparation,la voiture,False,r_processus_patient,True,,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,10,27,6,5,1.3,1,5,0
+l'université de lyon,université,lyon,de,université,lyon,False,r_lieu,True,,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,10,4,20,5,2,2.5,0,3,0
+la bouteille de verre,bouteille,verre,de,bouteille,verre,False,r_objet>matiere,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,9,5,21,5,2,1.8,1,4,0
+le mentor de jules,mentor,jules,de,mentor,jule,False,r_social_tie,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,6,4,18,2,2,1.5,1,4,0
+le schéma d'un circuit,schéma,un circuit,d',schéma,un circuit,False,r_depic,True,,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,6,10,22,2,4,0.6,1,4,0
+la roue de la voiture,la roue,la voiture,de,la roue,la voiture,False,r_holo,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,10,21,4,5,0.7,1,5,0
+la maquette d'un bateau,maquette,un bateau,d',maquette,un bateau,False,r_depic,True,,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,8,9,23,4,5,0.8888888888888888,1,4,0
+la générosité de la bénévole,la générosité,la bénévole,de,la générosité,la bénévole,False,r_has_property-1,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,13,11,28,6,5,1.1818181818181819,1,5,0
+le portrait d'un enfant,portrait,un enfant,d',portrait,un enfant,False,r_depic,True,,0,1,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,0,8,9,23,3,3,0.8888888888888888,1,4,0
+la scie de coupe,scie,coupe,de,scie,coupe,False,r_processus>instr-1,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,5,16,2,3,0.8,1,4,0
+le podcast d'histoire,podcast,histoire,d',podcast,histoire,False,r_topic,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,8,21,2,4,0.875,1,3,0
+le collègue de marie,collègue,marie,de,collègue,marie,False,r_social_tie,True,,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,5,20,4,3,1.6,1,4,0
+la table de métal,table,métal,de,table,métal,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,5,17,2,2,1.0,1,4,0
+la peinture de la porte,la peinture,la porte,de,la peinture,la porte,False,r_processus_patient,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,11,8,23,5,3,1.375,1,5,0
+la statue de marbre,statue,marbre,de,statue,marbre,False,r_objet>matiere,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,6,19,3,2,1.0,1,4,0
+le courage du pompier,courage,pompier,du,courage,pompier,True,r_has_property-1,True,,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,7,7,21,4,3,1.0,1,4,0
+le passeport du voyageur,passeport,voyageur,du,passeport,voyageur,True,r_own-1,True,,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,9,8,24,3,5,1.125,1,4,0
+la sculpture de rodin,sculpture,rodin,de,sculpture,rodin,False,r_product_of,True,,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,5,21,3,2,1.8,1,4,0
+le thé de chine,thé,chine,de,thé,chine,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,5,15,1,2,0.6,1,4,0
+le pont d'avignon,pont,avignon,d',pont,avignon,False,r_lieu,True,,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4,7,17,1,3,0.5714285714285714,1,3,0
+la force de l'athlète,la force,l'athlète,de,la force,l'athlète,False,r_has_property-1,True,,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,8,9,21,3,3,0.8888888888888888,1,4,0
+la table de métal,table,métal,de,table,métal,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,5,17,2,2,1.0,1,4,0
+les clés du concierge,clés,concierge,du,clé,concierge,True,r_own-1,True,,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,3,9,21,1,4,0.3333333333333333,1,4,0
+le pont d'avignon,pont,avignon,d',pont,avignon,False,r_lieu,True,,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4,7,17,1,3,0.5714285714285714,1,3,0
+le tabouret de bois,tabouret,bois,de,tabouret,boi,False,r_objet>matiere,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,8,3,19,4,2,2.6666666666666665,1,4,0
+la gravure d'un animal,gravure,un animal,d',gravure,un animal,False,r_depic,True,,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,9,22,3,4,0.7777777777777778,1,4,0
+un bouquet de fleurs,bouquet,fleurs,de,bouquet,fleur,False,r_quantificateur,True,,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,7,5,20,4,2,1.4,1,4,0
+la photo d'une ille,photo,une ille,d',photo,une ille,False,r_depic,True,,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,5,8,19,2,4,0.625,1,4,0
+la montre du sportif,montre,sportif,du,montre,sportif,True,r_own-1,True,,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,6,7,20,2,2,0.8571428571428571,1,4,0
+un bouquet de fleurs,bouquet,fleurs,de,bouquet,fleur,False,r_quantificateur,True,,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,7,5,20,4,2,1.4,1,4,0
+le roman d'hugo,roman,hugo,d',roman,hugo,False,r_product_of,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,4,15,2,2,1.25,1,3,0
+le banc de pierre,banc,pierre,de,banc,pierre,False,r_objet>matiere,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,4,6,17,1,3,0.6666666666666666,1,4,0
+le film de truffaut,film,truffaut,de,film,truffaut,False,r_product_of,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4,8,19,1,3,0.5,1,4,0
+la peinture du peintre,peinture,peintre,du,peinture,peintre,True,r_processus_agent,True,,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,8,7,22,4,3,1.1428571428571428,1,4,0
+le marché de marrakech,marché,marrakech,de,marché,marrakech,False,r_lieu,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,9,22,2,3,0.6666666666666666,1,4,0
+le film de truffaut,film,truffaut,de,film,truffaut,False,r_product_of,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,4,8,19,1,3,0.5,1,4,0
+le marché de marrakech,marché,marrakech,de,marché,marrakech,False,r_lieu,True,,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,9,22,2,3,0.6666666666666666,1,4,0
+un morceau de fromage,morceau,fromage,de,morceau,fromage,False,r_quantificateur,True,,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,7,7,21,4,3,1.0,1,4,0
+l'article de biologie,article,biologie,de,article,biologie,False,r_topic,True,,1,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,8,21,3,5,0.875,0,3,0
+la tour de paris,tour,paris,de,tour,pari,False,r_lieu,True,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,4,16,2,2,1.0,1,4,0
+le thé de chine,thé,chine,de,thé,chine,False,r_lieu>origine,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,5,15,1,2,0.6,1,4,0
+une poignée de sel,poignée,sel,de,poignée,sel,False,r_quantificateur,True,,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,3,18,4,1,2.3333333333333335,1,4,0
+l'université de lyon,université,lyon,de,université,lyon,False,r_lieu,True,,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,10,4,20,5,2,2.5,0,3,0
+l'exposé de cuisine,exposé,cuisine,de,exposé,cuisine,False,r_topic,True,,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,7,19,3,4,0.8571428571428571,0,3,0
+la table de bois,table,bois,de,table,boi,False,r_objet>matiere,True,,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,5,3,16,2,2,1.6666666666666667,1,4,0
+le mentor de jules,mentor,jules,de,mentor,jule,False,r_social_tie,True,,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,6,4,18,2,2,1.5,1,4,0
+la photo d'une ille,photo,une ille,d',photo,une ille,False,r_depic,True,,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,5,8,19,2,4,0.625,1,4,0

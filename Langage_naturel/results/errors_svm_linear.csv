@@ -1,0 +1,19 @@
+true,pred,phrase
+r_product_of,r_lieu,le film de truffaut
+r_product_of,r_lieu,le film de truffaut
+r_lieu>origine,r_lieu,le café de brésil
+r_processus>instr-1,r_topic,le pinceau de peinture
+r_product_of,r_lieu>origine,le dessin de cézanne
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_processus>instr-1,r_topic,le pinceau de peinture
+r_lieu>origine,r_lieu,le café de brésil
+r_product_of,r_lieu,le film de truffaut
+r_processus>instr-1,r_topic,le pinceau de peinture
+r_has_causatif,r_holo,les pannes de la tempête
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_lieu>origine,r_lieu,le café de brésil
+r_lieu>origine,r_lieu,le café de brésil
+r_processus>instr-1,r_topic,le pinceau de peinture
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_product_of,r_lieu,le film de truffaut

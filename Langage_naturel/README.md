@@ -100,7 +100,7 @@ _Section à compléter au fur et à mesure des expérimentations_
 
 ## 📚 Ressources
 
-- **Corpus** : 
+- **Corpus** : Corpus de test pour l'instant.
 - **JeuxDeMots** : http://www.jeuxdemots.org/
 - **Articles de référence** : 
 Extraction automatique de règles pour la détermination de types de

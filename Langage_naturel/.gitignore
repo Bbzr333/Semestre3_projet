@@ -16,6 +16,7 @@ dist/
 *.ipynb_checkpoints
 
 # Models et données volumineuses
+models/baseline/*
 models/**/*.pkl
 models/**/*.h5
 models/**/*.pt

@@ -1,0 +1,47 @@
+true,pred,phrase
+r_topic,r_processus>instr-1,la vidéo de musique
+r_lieu,r_product_of,le marché de marrakech
+r_lieu>origine,r_topic,le chocolat de belgique
+r_holo,r_has_causatif,le châssis de la fenêtre
+r_product_of,r_lieu,le film de truffaut
+r_has_property-1,r_own-1,la sagesse du vieillard
+r_objet>matiere,r_social_tie,l'assiette d'argile
+r_topic,r_processus>instr-1,la vidéo de musique
+r_has_property-1,r_own-1,la sagesse du vieillard
+r_lieu>origine,r_topic,le chocolat de belgique
+r_has_property-1,r_processus_agent,la générosité de la bénévole
+r_topic,r_processus>instr-1,la vidéo de musique
+r_own-1,r_holo,la bague de la mariée
+r_has_property-1,r_processus_agent,la générosité de la bénévole
+r_product_of,r_lieu,le film de truffaut
+r_own-1,r_holo,la bague de la mariée
+r_lieu>origine,r_product_of,le café de brésil
+r_product_of,r_lieu>origine,le dessin de cézanne
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_objet>matiere,r_social_tie,l'assiette d'argile
+r_own-1,r_holo,la bague de la mariée
+r_lieu>origine,r_product_of,le café de brésil
+r_product_of,r_lieu,le film de truffaut
+r_own-1,r_holo,la bague de la mariée
+r_own-1,r_holo,la bague de la mariée
+r_has_causatif,r_holo,les retards de la pluie
+r_processus_agent,r_processus_patient,la peinture du peintre
+r_has_causatif,r_holo,les pannes de la tempête
+r_holo,r_has_causatif,le châssis de la fenêtre
+r_objet>matiere,r_social_tie,l'assiette d'argile
+r_holo,r_has_causatif,le châssis de la fenêtre
+r_has_property-1,r_processus_agent,la créativité de l'artiste
+r_lieu>origine,r_topic,le chocolat de belgique
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_has_property-1,r_processus_agent,la générosité de la bénévole
+r_processus_agent,r_processus_patient,la peinture du peintre
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_has_property-1,r_processus_agent,la créativité de l'artiste
+r_lieu>origine,r_product_of,le café de brésil
+r_objet>matiere,r_social_tie,l'assiette d'argile
+r_lieu>origine,r_product_of,le café de brésil
+r_lieu,r_product_of,le marché de marrakech
+r_own-1,r_holo,la bague de la mariée
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_has_property-1,r_own-1,la sagesse du vieillard
+r_product_of,r_lieu,le film de truffaut
