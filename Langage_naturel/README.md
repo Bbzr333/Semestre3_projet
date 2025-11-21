@@ -157,15 +157,20 @@ print(prediction)  # → 'r_holo'
 - **Structurelles** : longueur, ratio, présence déterminant
 - **Sémantiques basiques** : catégories prédéfinies
 
-### Comparaison avec LLM (à venir)
+### Comparaison avec LLM
 
-| Modèle | Accuracy | Temps/exemple | Coût |
-|--------|----------|---------------|------|
-| Random Forest | 100.0% | 0.001s | Gratuit |
-| GPT-3.5-turbo | ~85-90%* | 2.5s | $0.002/ex |
-| GPT-4 | ~95-98%* | 3s | $0.12/ex |
+| Modèle | Accuracy | Temps/exemple | Coût | Échantillon |
+|--------|----------|---------------|------|-------------|
+| Random Forest | 100.0% | 0.001s | Gratuit | 338 |
+| Gradient Boosting | 100.0% | 0.001s | Gratuit | 338 |
+| **GPT-3.5-turbo** | **95.0%** | 0.70s | $0.002/ex | 100 |
+| SVM Linear | 94.7% | 0.001s | Gratuit | 338 |
 
-*Estimation - Tests en cours
+**Résultats GPT-3.5-turbo** :
+- Évaluation few-shot (2 exemples/classe)
+- 5 erreurs sur 100 exemples
+- Erreurs sur cas ambigus : polysémie (peinture), multi-interprétation (carte)
+- Performance remarquable mais inférieure aux modèles ensemble
 
 ## 🔬 Analyse
 
@@ -191,6 +196,60 @@ Le corpus actuel est **linéairement séparable** :
 - Tester sur corpus externe (Wikipedia, journaux)
 - Features avancées (embeddings CamemBERT)
 - Augmentation du corpus (5000+ exemples)
+
+## 🤖 Comparaison Détaillée avec GPT-3.5
+
+### Méthodologie
+- **Modèle** : GPT-3.5-turbo (OpenAI API)
+- **Approche** : Few-shot prompting (2 exemples/classe)
+- **Échantillon** : 100 exemples du test set
+- **Coût** : $0.20
+
+### Résultats
+
+**Performance globale** :
+- Accuracy : **95.0%** (5 erreurs / 100 exemples)
+- Temps moyen : 0.70s par exemple
+- F1-score macro : 0.96
+
+**Classes parfaites** (12/15) :
+- `r_has_causatif`, `r_has_property-1`, `r_holo`, `r_lieu>origine`
+- `r_objet>matiere`, `r_own-1`, `r_processus>instr-1`, `r_processus_agent`
+- `r_quantificateur`, `r_social_tie`, `r_topic`, `r_lieu`
+
+**Classes difficiles** :
+- `r_depic` : 67% (confusion lieu/topic)
+- `r_processus_patient` : 78% (polysémie peinture)
+- `r_product_of` : 88% (créateur vs sujet)
+
+### Analyse des Erreurs
+
+Les 5 erreurs révèlent des **ambiguïtés sémantiques légitimes** :
+
+1. **"la carte d'une région"** : `r_depic` → `r_lieu`
+   - Ambiguïté : représentation vs localisation
+
+2. **"la peinture de la porte"** : `r_processus_patient` → `r_depic`
+   - Polysémie : action (peindre) vs objet (tableau)
+
+3. **"le tableau de monet"** : `r_product_of` → `r_depic`
+   - Confusion : création vs représentation
+
+### Conclusion
+
+**Points forts de GPT-3.5** :
+- ✅ Performance remarquable (95%) en few-shot
+- ✅ Erreurs uniquement sur cas ambigus
+- ✅ Aucune erreur grossière
+
+**Avantages des modèles classiques** :
+- ✅ Performance parfaite (100%)
+- ✅ 700× plus rapides (0.001s vs 0.70s)
+- ✅ Gratuits et déployables facilement
+
+**Recommandation** : Pour ce corpus linéairement séparable, 
+Random Forest offre le meilleur compromis. GPT serait préférable 
+sur corpus réel avec forte ambiguïté contextuelle.
 
 ## 🛠️ Technologies
 
@@ -235,9 +294,14 @@ _À définir_
 - [x] Matrices de confusion générées
 - [x] Scripts de comparaison ChatGPT prêts
 
+### ✅ Récemment complété
+- [x] Comparaison avec ChatGPT (GPT-3.5-turbo : 95%)
+- [x] Graphiques comparatifs générés
+- [x] Analyse des erreurs LLM
+
 ### 🚧 En cours
-- [ ] Comparaison avec ChatGPT (GPT-3.5/GPT-4)
 - [ ] Analyse de l'importance des features
+- [ ] Test GPT-4 (optionnel)
 - [ ] Intégration API JeuxDeMots pour enrichissement
 
 ### 📋 À venir
