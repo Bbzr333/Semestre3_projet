@@ -26,6 +26,9 @@ data/raw/**/*.csv
 data/raw/**/*.json
 !data/raw/.gitkeep
 
+# OpenAI API keys
+data/apiKey/*
+
 # IDE
 .vscode/
 .idea/

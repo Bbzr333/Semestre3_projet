@@ -1,0 +1,11 @@
+phrase,true,pred
+le pinceau de peinture,r_processus>instr-1,r_objet>matiere
+l'écriture du texte,r_processus_patient,r_product_of
+la carte d'une égion,r_depic,r_topic
+la peinture de la porte,r_processus_patient,r_depic
+l'écriture du texte,r_processus_patient,r_processus>instr-1
+la carte d'une égion,r_depic,r_topic
+la peinture de la porte,r_processus_patient,r_depic
+le portrait de picasso,r_product_of,r_depic
+la selle du vélo,r_holo,r_own-1
+le tableau de monet,r_product_of,r_depic
