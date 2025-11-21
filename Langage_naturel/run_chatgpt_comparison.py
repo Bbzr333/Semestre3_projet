@@ -1,5 +1,5 @@
 """
-Comparaison avec ChatGPT (GPT-4 / GPT-3.5)
+Comparaison avec ChatGPT (GPT-3.5)
 Évaluation via API OpenAI avec few-shot prompting
 """
 
@@ -312,7 +312,7 @@ def main():
     baseline_results = pd.read_csv('results/test_results.csv', index_col=0)
     
     # Configuration
-    MODELS_TO_TEST = ['gpt-3.5-turbo', 'gpt-4']
+    MODELS_TO_TEST = ['gpt-3.5-turbo']
     N_SAMPLES = 100  # Échantillon pour économiser les tokens (modifiable)
     
     print(f"\n⚙️  Configuration:")

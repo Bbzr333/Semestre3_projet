@@ -27,7 +27,7 @@ data/raw/**/*.json
 !data/raw/.gitkeep
 
 # OpenAI API keys
-data/apiKey/*
+data/apiKey/config.json
 
 # IDE
 .vscode/
