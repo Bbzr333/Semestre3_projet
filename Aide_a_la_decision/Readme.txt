@@ -102,8 +102,8 @@ On a une zone d'action sur la génération aléatoire ( n + seed), ainsi que sur
 				-student_mean_rank
 				-student_top1
 				-student_top3
-5. Proposer une extension du syst`eme propos´e pour int´egrer les repr´esentations
-compactes des pr´ef´erences vues en cours (sans implantation).
+5. Proposer une extension du système proposé pour intégrer les représentations
+compactes des préférences vues en cours (sans implantation).
 			
 
 
