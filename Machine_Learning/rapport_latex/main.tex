@@ -1,0 +1,250 @@
+% Projet HAI923 - Modèle CLIP Image-Texte
+% Template rapport LaTeX
+% 
+% ATTENTION:
+% - Utiliser le template officiel: https://www.lirmm.fr/~poncelet/Ressources/template_projet.zip
+% - 8 pages maximum (+ 2 pages annexes max)
+% - NE PAS décrire l'objectif/données (tout le monde les connaît)
+% - SE CONCENTRER sur le travail réalisé
+
+\documentclass[12pt,a4paper]{article}
+
+% Packages essentiels
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{subcaption}
+
+% Configuration des marges (selon template LIRMM)
+\geometry{
+    a4paper,
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+% Configuration listings (code)
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny\color{gray}
+}
+
+% Informations du document
+\title{
+    \textbf{Projet HAI923} \\
+    Réalisation d'un modèle CLIP Image-Texte
+}
+
+\author{
+    \textbf{Nom Prénom} (N° Carte: XXXXXXXX) \\
+    \textbf{Nom Prénom} (N° Carte: XXXXXXXX) \\
+    \textbf{Nom Prénom} (N° Carte: XXXXXXXX) \\
+    \textbf{Nom Prénom} (N° Carte: XXXXXXXX) \\
+    \vspace{0.5cm}
+    \textit{Groupe N°: [À COMPLÉTER]} \\
+    \vspace{0.5cm}
+    Master 2 Intelligence Artificielle \\
+    Université de Montpellier
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Ce rapport présente notre réalisation d'un modèle CLIP (Contrastive Language-Image Pre-training) pour associer des images et des textes. Le modèle combine un encodeur CNN pour les images et un encodeur SmallBERT pour les textes dans un espace latent commun, permettant la recherche bidirectionnelle image-texte.
+
+\textbf{Mots-clés:} CLIP, Vision par ordinateur, Traitement du langage naturel, Apprentissage contrastif, Embeddings multimodaux
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ================================================================
+\section{Introduction}
+% ================================================================
+
+% TODO: Introduction concise
+% - Contexte (modèles multimodaux)
+% - Objectif du projet
+% - Structure du rapport
+% ATTENTION: NE PAS paraphraser l'énoncé
+
+% ================================================================
+\section{Architecture du Modèle}
+% ================================================================
+
+\subsection{Vue d'ensemble}
+
+% TODO: Présenter l'architecture globale CLIP
+% - Encodeur image
+% - Encodeur texte
+% - Espace latent commun
+% - Loss contrastive
+
+\subsection{Encodeur Image (CNN)}
+
+% TODO: 
+% - Architecture choisie
+% - Modifications apportées pour CLIP
+% - Dimensions des embeddings
+% - Normalisation
+
+\subsection{Encodeur Texte (SmallBERT)}
+
+% TODO:
+% - Choix de SmallBERT
+% - Problème du token <CLS> manquant
+% - Solution de résumé de phrase choisie
+% - Dimensions des embeddings
+
+\subsection{Loss Contrastive}
+
+% TODO:
+% - Principe de la loss contrastive
+% - Implémentation
+% - Paramètres (température)
+
+% ================================================================
+\section{Implémentation}
+% ================================================================
+
+\subsection{Préparation des Données}
+
+% TODO:
+% - Dataset Flickr (4 classes)
+% - Prétraitement images
+% - Prétraitement textes
+% - Split train/val/test
+
+\subsection{Étape 1: Classifieur CNN}
+
+% TODO:
+% - Architecture
+% - Hyperparamètres
+% - Résultats (rapidement, ce n'est pas le focus)
+
+\subsection{Étape 2: Classifieur SmallBERT}
+
+% TODO:
+% - Architecture
+% - Gestion du résumé de phrase
+% - Résultats (rapidement)
+
+\subsection{Étape 3: Modèle CLIP}
+
+% TODO:
+% - Intégration des encodeurs
+% - Entraînement
+% - Hyperparamètres finaux
+% - Convergence
+
+% ================================================================
+\section{Résultats Expérimentaux}
+% ================================================================
+
+\subsection{Métriques d'Évaluation}
+
+% TODO:
+% - Métriques utilisées
+% - Protocole d'évaluation
+
+\subsection{Performances du Modèle}
+
+% TODO:
+% - Courbes d'entraînement
+% - Loss contrastive
+% - Accuracy (si applicable)
+
+\subsection{Analyse Qualitative}
+
+% TODO:
+% - Exemples de requêtes texte → images
+% - Exemples de requêtes image → textes
+% - Top-5 avec scores
+% - Analyse des résultats
+
+\subsection{Comparaison et Discussion}
+
+% TODO:
+% - Cas où le modèle fonctionne bien
+% - Cas d'échec
+% - Explications
+
+% ================================================================
+\section{Travail Facultatif (si réalisé)}
+% ================================================================
+
+% TODO (si applicable):
+% - DistilBERT vs SmallBERT
+% - Enrichissement des textes
+% - Impact sur les performances
+
+% ================================================================
+\section{Conclusion}
+% ================================================================
+
+% TODO:
+% - Récapitulatif du travail
+% - Principaux résultats
+% - Limitations
+% - Perspectives d'amélioration
+
+% ================================================================
+\section*{Références}
+% ================================================================
+
+\begin{thebibliography}{9}
+
+\bibitem{radford2021}
+A. Radford et al.,
+\textit{Learning Transferable Visual Models From Natural Language Supervision (CLIP)},
+ICML 2021.
+\url{https://arxiv.org/pdf/2103.00020}
+
+\bibitem{guides_lirmm}
+Guides LIRMM Deep Learning,
+\url{https://gite.lirmm.fr/poncelet/deeplearning/}
+
+% TODO: Ajouter d'autres références si utilisées
+
+\end{thebibliography}
+
+% ================================================================
+% ANNEXES (2 pages maximum)
+% ================================================================
+\newpage
+\appendix
+
+\section{Code Principal}
+
+% TODO (optionnel):
+% - Extraits de code importants
+% - Architectures détaillées
+
+\section{Résultats Complémentaires}
+
+% TODO (optionnel):
+% - Tableaux de résultats détaillés
+% - Visualisations supplémentaires
+
+\end{document}
