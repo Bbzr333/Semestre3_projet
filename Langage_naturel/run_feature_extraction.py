@@ -5,6 +5,7 @@ Script d'extraction de features et split des données
 import pandas as pd
 import sys
 from pathlib import Path
+import numpy as np
 
 sys.path.append('src')
 

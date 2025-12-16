@@ -301,7 +301,6 @@ _À définir_
 
 ### 🚧 En cours
 - [ ] Analyse de l'importance des features
-- [ ] Test GPT-4 (optionnel)
 - [ ] Intégration API JeuxDeMots pour enrichissement
 
 ### 📋 À venir
@@ -325,6 +324,3 @@ python run_evaluate_test.py
 Les modèles entraînés sont sauvegardés dans `models/baseline/`.
 
 ---
-
-**Dernière mise à jour** : Novembre 2024
-**Version** : 1.0.0 - Baseline Models Complète
