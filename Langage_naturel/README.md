@@ -33,7 +33,8 @@ Ce projet développe un système capable d'identifier automatiquement le type de
 │   ├── data/                   # Generateur de donnees JDM
 │   └── utils/                  # Client API JeuxDeMots
 ├── models/
-│   └── baseline/               # Modeles entraines (.joblib)
+│   ├── baseline/               # Modeles entraines (.joblib)
+│   └── camembert/              # Modele CamemBERT (PyTorch)
 ├── results/
 │   ├── test_results.csv        # Resultats sur test set
 │   ├── cross_validation_detailed.csv
@@ -44,7 +45,9 @@ Ce projet développe un système capable d'identifier automatiquement le type de
 ├── run_train_baseline.py       # Entrainement des modeles
 ├── run_evaluate_test.py        # Evaluation sur test set
 ├── run_cross_validation.py     # Validation croisee 10-fold
-└── run_chatgpt_simple.py       # Comparaison avec ChatGPT
+├── run_chatgpt_simple.py       # Comparaison avec ChatGPT
+├── run_train_camembert.py      # Entrainement CamemBERT
+└── run_evaluate_camembert.py   # Evaluation CamemBERT
 ```
 
 ## 🚀 Installation
@@ -135,7 +138,8 @@ print(prediction)  # → 'r_holo'
 | Modèle | Accuracy | F1-Score | Temps/exemple | Erreurs |
 |--------|----------|----------|---------------|---------|
 | **🥇 Random Forest** | **100.0%** | 1.000 | 0.001s | 0/338 |
-| **🥈 Gradient Boosting** | **100.0%** | 1.000 | 0.003s | 0/338 |
+| **🥇 CamemBERT** | **100.0%** | 1.000 | 0.05s | 0/338 |
+| **🥇 Gradient Boosting** | **100.0%** | 1.000 | 0.003s | 0/338 |
 | **🥉 SVM Linear** | 94.7% | 0.945 | 0.001s | 18/338 |
 | SVM RBF | 93.5% | 0.935 | 0.001s | 22/338 |
 | Logistic Regression | 86.4% | 0.862 | 0.001s | 46/338 |
@@ -172,8 +176,9 @@ print(prediction)  # → 'r_holo'
 | Modèle | Accuracy | Temps/exemple | Coût | Échantillon |
 |--------|----------|---------------|------|-------------|
 | Random Forest | 100.0% | 0.001s | Gratuit | 338 |
+| **CamemBERT** | **100.0%** | 0.05s | Gratuit | 338 |
 | Gradient Boosting | 100.0% | 0.001s | Gratuit | 338 |
-| **GPT-3.5-turbo** | **95.0%** | 0.70s | $0.002/ex | 100 |
+| GPT-3.5-turbo | 95.0% | 0.70s | $0.002/ex | 100 |
 | SVM Linear | 94.7% | 0.001s | Gratuit | 338 |
 
 **Résultats GPT-3.5-turbo** :
@@ -297,10 +302,58 @@ api.get_semantic_types("voiture")   # {'vehicule', 'transport', ...}
 api.get_signature("livre")          # Dict complet
 ```
 
+## Deep Learning avec CamemBERT
+
+### Entrainement
+
+```bash
+# Entrainement avec parametres par defaut (5 epochs)
+python run_train_camembert.py
+
+# Personnaliser les hyperparametres
+python run_train_camembert.py --epochs 10 --batch_size 32 --lr 3e-5
+```
+
+### Evaluation
+
+```bash
+python run_evaluate_camembert.py
+```
+
+### Utilisation du modele
+
+```python
+from src.models.deep_learning.camembert_classifier import CamemBERTClassifier
+
+# Charger le modele entraine
+model = CamemBERTClassifier.load('models/camembert/best_model')
+
+# Predire sur du texte brut (pas besoin de features!)
+predictions = model.predict([
+    "la porte de la maison",
+    "le livre de Marie",
+    "le vin de Bordeaux"
+])
+print(predictions)  # ['r_holo', 'r_own-1', 'r_lieu>origine']
+```
+
+### Resultats CamemBERT
+
+| Epoch | Train Loss | Train Acc | Val Acc |
+|-------|------------|-----------|---------|
+| 1 | 2.61 | 40.4% | 99.4% |
+| 2 | 1.91 | 98.0% | 100% |
+| 3 | 1.42 | 98.8% | 100% |
+| 4 | 1.17 | 99.0% | 100% |
+| 5 | 1.05 | 99.5% | 100% |
+
+**Test final: 100% accuracy (0 erreurs sur 338 exemples)**
+
 ## Technologies
 
 - **Python 3.11**
 - **scikit-learn** - Modeles ML classiques
+- **PyTorch + Transformers** - Deep Learning (CamemBERT)
 - **pandas, numpy** - Manipulation de donnees
 - **matplotlib, seaborn** - Visualisation
 - **OpenAI API** - Comparaison avec ChatGPT (optionnel)
@@ -330,6 +383,7 @@ _À définir_
 
 **Phase 1 : Modeles Baseline - Complete**
 **Phase 2 : Integration JeuxDeMots - Complete**
+**Phase 3 : Deep Learning (CamemBERT) - Complete**
 
 ### Etapes realisees
 - [x] Architecture du projet definie
@@ -342,16 +396,17 @@ _À définir_
 - [x] Validation croisee 10-fold
 - [x] Matrices de confusion generees
 - [x] Comparaison avec ChatGPT (GPT-3.5-turbo : 95%)
+- [x] Integration API JeuxDeMots REST
+- [x] 102 features (21 basiques + 81 JDM semantiques)
+- [x] Generateur de donnees depuis JDM
+- [x] Corpus augmente (783 exemples generes)
 
 ### Recemment complete
-- [x] **Integration API JeuxDeMots REST** (https://jdm-api.demo.lirmm.fr)
-- [x] **102 features** (21 basiques + 81 JDM semantiques)
-- [x] **Generateur de donnees** depuis JDM (`run_generate_jdm_data.py`)
-- [x] Corpus augmente (783 exemples generes)
-- [x] Pipeline complet avec features JDM
+- [x] **CamemBERT** : classifieur deep learning (100% accuracy)
+- [x] **Pipeline complet** : entrainement + evaluation CamemBERT
+- [x] **Inference sur texte brut** : pas besoin de features manuelles
 
 ### A venir
-- [ ] Modeles Deep Learning (CamemBERT)
 - [ ] Test sur corpus externe
 - [ ] Gestion des cas ambigus (multi-label)
 - [ ] Interface de demonstration
@@ -368,6 +423,10 @@ python run_feature_extraction.py
 python run_train_baseline.py
 python run_evaluate_test.py
 
+# Pipeline CamemBERT (deep learning)
+python run_train_camembert.py --epochs 5
+python run_evaluate_camembert.py
+
 # Pipeline avec augmentation JDM
 python run_generate_jdm_data.py --n-per-class 100
 python run_feature_extraction_augmented.py
@@ -375,6 +434,6 @@ python run_train_baseline.py --data-dir data/processed/augmented
 python run_evaluate_test.py --data-dir data/processed/augmented
 ```
 
-Les modeles entraines sont sauvegardes dans `models/baseline/`.
+Les modeles entraines sont sauvegardes dans `models/baseline/` et `models/camembert/`.
 
 ---

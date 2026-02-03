@@ -1,0 +1,2 @@
+model,accuracy,precision_macro,recall_macro,f1_macro,errors,total
+CamemBERT,1.0,1.0,1.0,1.0,0,338

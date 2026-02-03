@@ -17,11 +17,17 @@ dist/
 
 # Models et données volumineuses
 models/baseline/*
+models/camembert/
+
 models/**/*.pkl
 models/**/*.h5
 models/**/*.pt
 models/**/*.pth
 models/**/*.bin
+models/**/*.safetensors
+
+models/camembert/best_model/model.safetensors
+models/**/*.joblib
 data/raw/**/*.csv
 data/raw/**/*.json
 !data/raw/.gitkeep
