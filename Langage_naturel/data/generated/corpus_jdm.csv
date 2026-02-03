@@ -1,0 +1,1909 @@
+phrase,nom1,nom2,type_jdm,source,weight
+maison dequartier,maison,quartier,r_holo,jdm_api,60.0
+maison d'Ouro Preto,maison,Ouro Preto,r_holo,jdm_api,41.0
+maison deWolverhampton,maison,Wolverhampton,r_holo,jdm_api,42.0
+maison duYork,maison,York,r_holo,jdm_api,34.0
+maison deRoseau,maison,Roseau,r_holo,jdm_api,11.0
+maison duBeauvais,maison,Beauvais,r_holo,jdm_api,17.0
+maison duRouen,maison,Rouen,r_holo,jdm_api,29.0
+maison deBethléem,maison,Bethléem,r_holo,jdm_api,17.0
+maison de laTrente,maison,Trente,r_holo,jdm_api,28.0
+maison de l'Hakodate,maison,Hakodate,r_holo,jdm_api,32.0
+maison de larue,maison,rue,r_holo,jdm_api,63.0
+maison deMolsheim,maison,Molsheim,r_holo,jdm_api,17.0
+maison duSaint-Pétersbourg,maison,Saint-Pétersbourg,r_holo,jdm_api,10.0
+maison decité,maison,cité,r_holo,jdm_api,60.0
+maison de l'Albertville,maison,Albertville,r_holo,jdm_api,13.0
+maison deterrain,maison,terrain,r_holo,jdm_api,53.0
+maison duNovossibirsk,maison,Novossibirsk,r_holo,jdm_api,29.0
+maison d'Esztergom,maison,Esztergom,r_holo,jdm_api,15.0
+maison deBrazzaville,maison,Brazzaville,r_holo,jdm_api,17.0
+maison decomplexe,maison,complexe,r_holo,jdm_api,29.0
+maison duRiyad,maison,Riyad,r_holo,jdm_api,26.0
+maison duTioumen,maison,Tioumen,r_holo,jdm_api,30.0
+maison deKiev,maison,Kiev,r_holo,jdm_api,17.0
+maison dePlovdiv,maison,Plovdiv,r_holo,jdm_api,26.0
+maison dethème astral,maison,thème astral,r_holo,jdm_api,55.0
+maison decommune,maison,commune,r_holo,jdm_api,19.0
+maison duMourmansk,maison,Mourmansk,r_holo,jdm_api,32.0
+maison duMahé,maison,Mahé,r_holo,jdm_api,35.0
+maison delotissement,maison,lotissement,r_holo,jdm_api,17.0
+maison duMadrid,maison,Madrid,r_holo,jdm_api,35.0
+maison deMunich,maison,Munich,r_holo,jdm_api,29.0
+maison de l'Avesnes-sur-Helpe,maison,Avesnes-sur-Helpe,r_holo,jdm_api,17.0
+maison dedomaine,maison,domaine,r_holo,jdm_api,25.0
+maison duBangkok,maison,Bangkok,r_holo,jdm_api,30.0
+maison decapitale,maison,capitale,r_holo,jdm_api,17.0
+maison deBeyrouth,maison,Beyrouth,r_holo,jdm_api,24.0
+maison deSaratov,maison,Saratov,r_holo,jdm_api,31.0
+maison devillage,maison,village,r_holo,jdm_api,63.0
+maison deThessalonique,maison,Thessalonique,r_holo,jdm_api,11.0
+maison duSpringfield,maison,Springfield,r_holo,jdm_api,28.0
+maison deBucarest,maison,Bucarest,r_holo,jdm_api,26.0
+maison depropriété,maison,propriété,r_holo,jdm_api,30.0
+maison de l'Iakoutsk,maison,Iakoutsk,r_holo,jdm_api,36.0
+maison deChoisy-le-Roi,maison,Choisy-le-Roi,r_holo,jdm_api,12.0
+maison de l'Oran,maison,Oran,r_holo,jdm_api,26.0
+maison d'Indianapolis,maison,Indianapolis,r_holo,jdm_api,36.0
+maison deSuresnes,maison,Suresnes,r_holo,jdm_api,26.0
+maison d'Hambourg,maison,Hambourg,r_holo,jdm_api,31.0
+maison deBolton,maison,Bolton,r_holo,jdm_api,16.0
+maison deRangoon,maison,Rangoon,r_holo,jdm_api,31.0
+voiture degolf,voiture,golf,r_holo,jdm_api,27.0
+voiture derue,voiture,rue,r_holo,jdm_api,27.0
+voiture detrain,voiture,train,r_holo,jdm_api,28.0
+voiture detgv,voiture,tgv,r_holo,jdm_api,26.0
+voiture ducirculation,voiture,circulation,r_holo,jdm_api,58.0
+voiture de l'exposition,voiture,exposition,r_holo,jdm_api,28.0
+voiture de larallye,voiture,rallye,r_holo,jdm_api,29.0
+voiture duTGV,voiture,TGV,r_holo,jdm_api,38.0
+voiture devoyage,voiture,voyage,r_holo,jdm_api,34.0
+voiture de latrain à grande vitesse,voiture,train à grande vitesse,r_holo,jdm_api,34.0
+voiture de latrain grande vitesse,voiture,train grande vitesse,r_holo,jdm_api,29.0
+voiture deTER,voiture,TER,r_holo,jdm_api,40.0
+voiture de lanoix de muscade,voiture,noix de muscade,r_holo,jdm_api,39.0
+voiture dupetit pont,voiture,petit pont,r_holo,jdm_api,11.0
+voiture demontagnes russes,voiture,montagnes russes,r_holo,jdm_api,27.0
+voiture deBeijing,voiture,Beijing,r_holo,jdm_api,39.0
+voiture deDCRI,voiture,DCRI,r_holo,jdm_api,39.0
+voiture deMyristica fragrans,voiture,Myristica fragrans,r_holo,jdm_api,25.0
+voiture denoix muscade,voiture,noix muscade,r_holo,jdm_api,14.0
+voiture duBonnie Parker,voiture,Bonnie Parker,r_holo,jdm_api,12.0
+voiture dumyristica fragrans,voiture,myristica fragrans,r_holo,jdm_api,25.0
+voiture deMontagnes russes,voiture,Montagnes russes,r_holo,jdm_api,26.0
+voiture de laTrain à Grande Vitesse,voiture,Train à Grande Vitesse,r_holo,jdm_api,26.0
+voiture deNoix de muscade,voiture,Noix de muscade,r_holo,jdm_api,22.0
+voiture deTrain à grande vitesse,voiture,Train à grande vitesse,r_holo,jdm_api,26.0
+arbre duforêts,arbre,forêts,r_holo,jdm_api,21.0
+arbre d'incendie,arbre,incendie,r_holo,jdm_api,31.0
+arbre duparc,arbre,parc,r_holo,jdm_api,54.0
+arbre de laterre,arbre,terre,r_holo,jdm_api,56.0
+arbre de laVie,arbre,Vie,r_holo,jdm_api,30.0
+arbre devégétation,arbre,végétation,r_holo,jdm_api,52.0
+arbre de lacampagne,arbre,campagne,r_holo,jdm_api,60.0
+arbre de lafrégate,arbre,frégate,r_holo,jdm_api,32.0
+arbre d'automobile,arbre,automobile,r_holo,jdm_api,32.0
+arbre debois,arbre,bois,r_holo,jdm_api,63.0
+arbre de lapinède,arbre,pinède,r_holo,jdm_api,30.0
+arbre d'arachidier,arbre,arachidier,r_holo,jdm_api,31.0
+arbre dupré,arbre,pré,r_holo,jdm_api,26.0
+arbre de lagarrigue,arbre,garrigue,r_holo,jdm_api,16.0
+arbre dejardin,arbre,jardin,r_holo,jdm_api,53.0
+arbre de lanature,arbre,nature,r_holo,jdm_api,53.0
+arbre duforêt,arbre,forêt,r_holo,jdm_api,73.0
+arbre dujardin paysager,arbre,jardin paysager,r_holo,jdm_api,26.0
+arbre demoteur thermique,arbre,moteur thermique,r_holo,jdm_api,35.0
+arbre duturbine à gaz,arbre,turbine à gaz,r_holo,jdm_api,26.0
+arbre demoteur à combustion,arbre,moteur à combustion,r_holo,jdm_api,32.0
+arbre deturbine à combustion,arbre,turbine à combustion,r_holo,jdm_api,26.0
+arbre duturbine à gaz de combustion,arbre,turbine à gaz de combustion,r_holo,jdm_api,29.0
+arbre de l'acer,arbre,acer,r_holo,jdm_api,34.0
+arbre degarigue,arbre,garigue,r_holo,jdm_api,29.0
+arbre deforêt des Hauts de l'Ouest,arbre,forêt des Hauts de l'Ouest,r_holo,jdm_api,26.0
+arbre deMoteur à combustion,arbre,Moteur à combustion,r_holo,jdm_api,18.0
+arbre duTurbine à gaz,arbre,Turbine à gaz,r_holo,jdm_api,24.0
+arbre dePinède,arbre,Pinède,r_holo,jdm_api,22.0
+corps de l'oiseau-à-berceau,corps,oiseau-à-berceau,r_holo,jdm_api,43.0
+corps deStoph,corps,Stoph,r_holo,jdm_api,32.0
+corps deLasker-Schüler,corps,Lasker-Schüler,r_holo,jdm_api,29.0
+corps desir Sacheverell Sitwell,corps,sir Sacheverell Sitwell,r_holo,jdm_api,13.0
+corps duMaria Callas,corps,Maria Callas,r_holo,jdm_api,13.0
+corps deMarcel Gotlieb Gotlib,corps,Marcel Gotlieb Gotlib,r_holo,jdm_api,19.0
+corps d'Alexander Roslin,corps,Alexander Roslin,r_holo,jdm_api,26.0
+corps desans-abri,corps,sans-abri,r_holo,jdm_api,32.0
+corps de l'exaspérant,corps,exaspérant,r_holo,jdm_api,18.0
+corps d'émeraude,corps,émeraude,r_holo,jdm_api,12.0
+corps d'écrivassier,corps,écrivassier,r_holo,jdm_api,27.0
+corps deRobert Surcouf,corps,Robert Surcouf,r_holo,jdm_api,18.0
+corps dubleu,corps,bleu,r_holo,jdm_api,35.0
+corps de laSophie Rostopchine,corps,Sophie Rostopchine,r_holo,jdm_api,35.0
+corps debourriquet,corps,bourriquet,r_holo,jdm_api,29.0
+corps de l'ure,corps,ure,r_holo,jdm_api,35.0
+corps de lachlamydère,corps,chlamydère,r_holo,jdm_api,11.0
+corps deLépide,corps,Lépide,r_holo,jdm_api,15.0
+corps dutarpan,corps,tarpan,r_holo,jdm_api,17.0
+corps duvannier,corps,vannier,r_holo,jdm_api,27.0
+corps dePapadhópoulos,corps,Papadhópoulos,r_holo,jdm_api,18.0
+corps defixateur,corps,fixateur,r_holo,jdm_api,25.0
+corps duwallon,corps,wallon,r_holo,jdm_api,25.0
+corps dufourmillant,corps,fourmillant,r_holo,jdm_api,25.0
+corps duchat,corps,chat,r_holo,jdm_api,54.0
+corps de l'uniforme,corps,uniforme,r_holo,jdm_api,28.0
+corps duJan Lenica,corps,Jan Lenica,r_holo,jdm_api,18.0
+corps d'admoniteur,corps,admoniteur,r_holo,jdm_api,28.0
+corps deNicolas Schöffer,corps,Nicolas Schöffer,r_holo,jdm_api,35.0
+corps deYan Liben,corps,Yan Liben,r_holo,jdm_api,10.0
+corps decongréganiste,corps,congréganiste,r_holo,jdm_api,46.0
+corps dereconstituant,corps,reconstituant,r_holo,jdm_api,19.0
+corps dulagopèdes,corps,lagopèdes,r_holo,jdm_api,14.0
+corps dechaud lapin,corps,chaud lapin,r_holo,jdm_api,29.0
+corps deguenipe,corps,guenipe,r_holo,jdm_api,32.0
+corps dedévot,corps,dévot,r_holo,jdm_api,19.0
+corps de l'olive,corps,olive,r_holo,jdm_api,35.0
+corps duGil Robles,corps,Gil Robles,r_holo,jdm_api,16.0
+corps deboutefeu,corps,boutefeu,r_holo,jdm_api,35.0
+corps de l'Histoire,corps,Histoire,r_holo,jdm_api,14.0
+corps depiaf,corps,piaf,r_holo,jdm_api,15.0
+corps duPugin,corps,Pugin,r_holo,jdm_api,17.0
+corps d'Hiro-Hito,corps,Hiro-Hito,r_holo,jdm_api,18.0
+corps decambrousier,corps,cambrousier,r_holo,jdm_api,46.0
+corps duprématuré,corps,prématuré,r_holo,jdm_api,25.0
+corps d'essentialiser,corps,essentialiser,r_holo,jdm_api,15.0
+corps decaudataire,corps,caudataire,r_holo,jdm_api,26.0
+corps duMaria-Stela,corps,Maria-Stela,r_holo,jdm_api,18.0
+corps d'abaisseur,corps,abaisseur,r_holo,jdm_api,25.0
+corps dePoggendorff,corps,Poggendorff,r_holo,jdm_api,11.0
+livre de lalittérature,livre,littérature,r_holo,jdm_api,28.0
+livre delibrairie,livre,librairie,r_holo,jdm_api,63.0
+livre debibliothèque,livre,bibliothèque,r_holo,jdm_api,97.0
+livre deconnaissance,livre,connaissance,r_holo,jdm_api,31.0
+livre ducollection,livre,collection,r_holo,jdm_api,80.0
+livre desérie,livre,série,r_holo,jdm_api,55.0
+livre de laLa Pléïade,livre,La Pléïade,r_holo,jdm_api,32.0
+table dusalle à manger,table,salle à manger,r_holo,jdm_api,60.0
+table decuisine,table,cuisine,r_holo,jdm_api,63.0
+table debillard,table,billard,r_holo,jdm_api,26.0
+table deguitare,table,guitare,r_holo,jdm_api,26.0
+table dumaison,table,maison,r_holo,jdm_api,16.0
+table debistro,table,bistro,r_holo,jdm_api,17.0
+table de l'auberge,table,auberge,r_holo,jdm_api,31.0
+table derestaurant,table,restaurant,r_holo,jdm_api,54.0
+table dubistrot,table,bistrot,r_holo,jdm_api,32.0
+table deviolon,table,violon,r_holo,jdm_api,30.0
+table de l'école,table,école,r_holo,jdm_api,26.0
+table dusalon,table,salon,r_holo,jdm_api,61.0
+table delogement,table,logement,r_holo,jdm_api,19.0
+table dubanquet,table,banquet,r_holo,jdm_api,14.0
+table de l'hôtel,table,hôtel,r_holo,jdm_api,25.0
+table de lasuite,table,suite,r_holo,jdm_api,28.0
+table demobilier,table,mobilier,r_holo,jdm_api,26.0
+table de laclasse,table,classe,r_holo,jdm_api,55.0
+table de l'oud,table,oud,r_holo,jdm_api,17.0
+table de lafête,table,fête,r_holo,jdm_api,90.0
+table durestau,table,restau,r_holo,jdm_api,30.0
+table debloc opératoire,table,bloc opératoire,r_holo,jdm_api,26.0
+table deresto,table,resto,r_holo,jdm_api,30.0
+table debase de données relationnelle,table,base de données relationnelle,r_holo,jdm_api,12.0
+ordinateur debureau,ordinateur,bureau,r_holo,jdm_api,57.0
+ordinateur d'écrivain,ordinateur,écrivain,r_holo,jdm_api,24.0
+ordinateur de l'entreprise,ordinateur,entreprise,r_holo,jdm_api,52.0
+ordinateur d'Internet,ordinateur,Internet,r_holo,jdm_api,54.0
+ordinateur deréseau,ordinateur,réseau,r_holo,jdm_api,60.0
+ordinateur d'école,ordinateur,école,r_holo,jdm_api,26.0
+ordinateur deréseau local,ordinateur,réseau local,r_holo,jdm_api,56.0
+ordinateur d'internet,ordinateur,internet,r_holo,jdm_api,55.0
+ordinateur de lareceptionniste,ordinateur,receptionniste,r_holo,jdm_api,18.0
+ville d'Amérique,ville,Amérique,r_holo,jdm_api,51.0
+ville de laplanète,ville,planète,r_holo,jdm_api,51.0
+ville decontinents,ville,continents,r_holo,jdm_api,34.0
+ville depays,ville,pays,r_holo,jdm_api,546.0
+ville demégalopole,ville,mégalopole,r_holo,jdm_api,70.0
+ville de laterre,ville,terre,r_holo,jdm_api,51.0
+homme duzonzon,homme,zonzon,r_lieu,jdm_api,55.0
+homme dufauteuil,homme,fauteuil,r_lieu,jdm_api,39.0
+homme dematernité,homme,maternité,r_lieu,jdm_api,39.0
+homme de lavoiture,homme,voiture,r_lieu,jdm_api,78.0
+homme de lachorale,homme,chorale,r_lieu,jdm_api,29.0
+homme de lapelouse,homme,pelouse,r_lieu,jdm_api,38.0
+homme debureau,homme,bureau,r_lieu,jdm_api,89.0
+homme d'océan,homme,océan,r_lieu,jdm_api,33.0
+homme deporte-avions,homme,porte-avions,r_lieu,jdm_api,25.0
+homme decaserne,homme,caserne,r_lieu,jdm_api,39.0
+homme demontagne,homme,montagne,r_lieu,jdm_api,30.0
+homme de l'Irak,homme,Irak,r_lieu,jdm_api,22.0
+homme de lasynagogue,homme,synagogue,r_lieu,jdm_api,38.0
+homme demaison de retraite,homme,maison de retraite,r_lieu,jdm_api,38.0
+homme decage,homme,cage,r_lieu,jdm_api,26.0
+homme duvilla,homme,villa,r_lieu,jdm_api,38.0
+homme debar,homme,bar,r_lieu,jdm_api,49.0
+homme derue,homme,rue,r_lieu,jdm_api,109.0
+homme de laplanète,homme,planète,r_lieu,jdm_api,32.0
+homme de lagendarmerie,homme,gendarmerie,r_lieu,jdm_api,28.0
+homme decamp,homme,camp,r_lieu,jdm_api,28.0
+homme depays,homme,pays,r_lieu,jdm_api,108.0
+homme deradeau,homme,radeau,r_lieu,jdm_api,38.0
+homme ducinéma,homme,cinéma,r_lieu,jdm_api,80.0
+homme deterre,homme,terre,r_lieu,jdm_api,108.0
+homme degymnase,homme,gymnase,r_lieu,jdm_api,38.0
+homme detrain,homme,train,r_lieu,jdm_api,27.0
+homme decachette,homme,cachette,r_lieu,jdm_api,32.0
+homme de laferme,homme,ferme,r_lieu,jdm_api,39.0
+homme denavire,homme,navire,r_lieu,jdm_api,41.0
+homme dumaison de santé,homme,maison de santé,r_lieu,jdm_api,29.0
+homme decanapé,homme,canapé,r_lieu,jdm_api,118.0
+homme duFar West,homme,Far West,r_lieu,jdm_api,28.0
+homme de lalatomie,homme,latomie,r_lieu,jdm_api,26.0
+homme ducontinent,homme,continent,r_lieu,jdm_api,99.0
+homme dudortoir,homme,dortoir,r_lieu,jdm_api,38.0
+homme de l'Asie,homme,Asie,r_lieu,jdm_api,51.0
+homme detaverne,homme,taverne,r_lieu,jdm_api,38.0
+homme dumaison,homme,maison,r_lieu,jdm_api,159.0
+homme dechamp de bataille,homme,champ de bataille,r_lieu,jdm_api,37.0
+homme dedouane,homme,douane,r_lieu,jdm_api,38.0
+homme desauna,homme,sauna,r_lieu,jdm_api,38.0
+homme de larêve,homme,rêve,r_lieu,jdm_api,38.0
+homme de l'Athènes,homme,Athènes,r_lieu,jdm_api,38.0
+homme dumaison de fous,homme,maison de fous,r_lieu,jdm_api,28.0
+homme dechemin,homme,chemin,r_lieu,jdm_api,39.0
+homme decavité,homme,cavité,r_lieu,jdm_api,15.0
+homme dufourgon,homme,fourgon,r_lieu,jdm_api,25.0
+homme de laguerre,homme,guerre,r_lieu,jdm_api,16.0
+homme deprison,homme,prison,r_lieu,jdm_api,49.0
+femme dufauteuil,femme,fauteuil,r_lieu,jdm_api,38.0
+femme duparc,femme,parc,r_lieu,jdm_api,57.0
+femme de lavoiture,femme,voiture,r_lieu,jdm_api,60.0
+femme de lapelouse,femme,pelouse,r_lieu,jdm_api,38.0
+femme debureau,femme,bureau,r_lieu,jdm_api,59.0
+femme de larade,femme,rade,r_lieu,jdm_api,34.0
+femme de lasynagogue,femme,synagogue,r_lieu,jdm_api,39.0
+femme decuisine,femme,cuisine,r_lieu,jdm_api,88.0
+femme ducoiffeur,femme,coiffeur,r_lieu,jdm_api,53.0
+femme de lamaison de retraite,femme,maison de retraite,r_lieu,jdm_api,38.0
+femme devilla,femme,villa,r_lieu,jdm_api,25.0
+femme dubar,femme,bar,r_lieu,jdm_api,57.0
+femme de larue,femme,rue,r_lieu,jdm_api,43.0
+femme dupays,femme,pays,r_lieu,jdm_api,65.0
+femme deradeau,femme,radeau,r_lieu,jdm_api,38.0
+femme de laterre,femme,terre,r_lieu,jdm_api,38.0
+femme debordel,femme,bordel,r_lieu,jdm_api,27.0
+femme dubras,femme,bras,r_lieu,jdm_api,49.0
+femme dutrain,femme,train,r_lieu,jdm_api,26.0
+femme defoyer,femme,foyer,r_lieu,jdm_api,29.0
+femme defilm,femme,film,r_lieu,jdm_api,58.0
+femme decantine,femme,cantine,r_lieu,jdm_api,38.0
+femme dumaison de santé,femme,maison de santé,r_lieu,jdm_api,35.0
+femme decanapé,femme,canapé,r_lieu,jdm_api,38.0
+femme deFar West,femme,Far West,r_lieu,jdm_api,31.0
+femme ducontinent,femme,continent,r_lieu,jdm_api,40.0
+femme dudortoir,femme,dortoir,r_lieu,jdm_api,38.0
+femme demaison,femme,maison,r_lieu,jdm_api,146.0
+femme dedouane,femme,douane,r_lieu,jdm_api,38.0
+femme dusauna,femme,sauna,r_lieu,jdm_api,38.0
+femme deboulevard,femme,boulevard,r_lieu,jdm_api,10.0
+femme derêve,femme,rêve,r_lieu,jdm_api,38.0
+femme de l'Athènes,femme,Athènes,r_lieu,jdm_api,38.0
+femme dupartout,femme,partout,r_lieu,jdm_api,88.0
+femme demaison de fous,femme,maison de fous,r_lieu,jdm_api,40.0
+femme dezoo,femme,zoo,r_lieu,jdm_api,32.0
+femme dechemin,femme,chemin,r_lieu,jdm_api,38.0
+femme defourgon,femme,fourgon,r_lieu,jdm_api,25.0
+femme deprison,femme,prison,r_lieu,jdm_api,38.0
+femme deparc zoologique,femme,parc zoologique,r_lieu,jdm_api,35.0
+femme d'Italie,femme,Italie,r_lieu,jdm_api,38.0
+femme de l'hôpital psychiatrique,femme,hôpital psychiatrique,r_lieu,jdm_api,27.0
+femme deplume,femme,plume,r_lieu,jdm_api,15.0
+femme dupizzeria,femme,pizzeria,r_lieu,jdm_api,29.0
+femme ducafé,femme,café,r_lieu,jdm_api,56.0
+femme detélévision,femme,télévision,r_lieu,jdm_api,53.0
+femme dulit,femme,lit,r_lieu,jdm_api,39.0
+femme detableau,femme,tableau,r_lieu,jdm_api,38.0
+femme de lacampagne,femme,campagne,r_lieu,jdm_api,38.0
+femme dejacuzzi,femme,jacuzzi,r_lieu,jdm_api,38.0
+animal debanquise,animal,banquise,r_lieu,jdm_api,51.0
+animal decocon,animal,cocon,r_lieu,jdm_api,38.0
+animal desavane,animal,savane,r_lieu,jdm_api,100.0
+animal de l'animalerie,animal,animalerie,r_lieu,jdm_api,46.0
+animal deparc,animal,parc,r_lieu,jdm_api,46.0
+animal de l'océan,animal,océan,r_lieu,jdm_api,36.0
+animal debiome,animal,biome,r_lieu,jdm_api,38.0
+animal demontagne,animal,montagne,r_lieu,jdm_api,65.0
+animal duvilles,animal,villes,r_lieu,jdm_api,53.0
+animal de lacage,animal,cage,r_lieu,jdm_api,91.0
+animal duterrier,animal,terrier,r_lieu,jdm_api,41.0
+animal d'élevage,animal,élevage,r_lieu,jdm_api,55.0
+animal deplanète,animal,planète,r_lieu,jdm_api,35.0
+animal de l'hameau,animal,hameau,r_lieu,jdm_api,16.0
+animal deterre,animal,terre,r_lieu,jdm_api,35.0
+animal detanière,animal,tanière,r_lieu,jdm_api,38.0
+animal d'étable,animal,étable,r_lieu,jdm_api,38.0
+animal deferme,animal,ferme,r_lieu,jdm_api,61.0
+animal decour,animal,cour,r_lieu,jdm_api,34.0
+animal duFar West,animal,Far West,r_lieu,jdm_api,38.0
+animal decontinent,animal,continent,r_lieu,jdm_api,38.0
+animal dumaison,animal,maison,r_lieu,jdm_api,78.0
+animal d'arbre,animal,arbre,r_lieu,jdm_api,78.0
+animal dezoo,animal,zoo,r_lieu,jdm_api,124.0
+animal dechemin,animal,chemin,r_lieu,jdm_api,38.0
+animal de laparc zoologique,animal,parc zoologique,r_lieu,jdm_api,29.0
+animal debiotope,animal,biotope,r_lieu,jdm_api,29.0
+animal deciel,animal,ciel,r_lieu,jdm_api,31.0
+animal de lacaverne,animal,caverne,r_lieu,jdm_api,30.0
+animal decampagne,animal,campagne,r_lieu,jdm_api,23.0
+animal debrousse,animal,brousse,r_lieu,jdm_api,26.0
+animal ducarrousel,animal,carrousel,r_lieu,jdm_api,32.0
+animal decirque,animal,cirque,r_lieu,jdm_api,78.0
+animal deplateau,animal,plateau,r_lieu,jdm_api,34.0
+animal dubois,animal,bois,r_lieu,jdm_api,88.0
+animal d'écurie,animal,écurie,r_lieu,jdm_api,79.0
+animal de lajungle,animal,jungle,r_lieu,jdm_api,42.0
+animal de laniche,animal,niche,r_lieu,jdm_api,45.0
+animal depré,animal,pré,r_lieu,jdm_api,38.0
+animal devéhicule,animal,véhicule,r_lieu,jdm_api,44.0
+animal d'épisode,animal,épisode,r_lieu,jdm_api,28.0
+animal de l'habitat,animal,habitat,r_lieu,jdm_api,27.0
+animal depoulailler,animal,poulailler,r_lieu,jdm_api,39.0
+animal de l'endroit,animal,endroit,r_lieu,jdm_api,11.0
+animal dulieu,animal,lieu,r_lieu,jdm_api,28.0
+animal demilieu aquatique,animal,milieu aquatique,r_lieu,jdm_api,54.0
+animal de laTunisie,animal,Tunisie,r_lieu,jdm_api,28.0
+animal deville,animal,ville,r_lieu,jdm_api,15.0
+animal dupoint d'eau,animal,point d'eau,r_lieu,jdm_api,29.0
+animal dejardin,animal,jardin,r_lieu,jdm_api,36.0
+plante de lasavane,plante,savane,r_lieu,jdm_api,51.0
+plante duparc,plante,parc,r_lieu,jdm_api,88.0
+plante debalcon,plante,balcon,r_lieu,jdm_api,100.0
+plante de lamontagne,plante,montagne,r_lieu,jdm_api,148.0
+plante dupays,plante,pays,r_lieu,jdm_api,36.0
+plante de laterre,plante,terre,r_lieu,jdm_api,78.0
+plante depied,plante,pied,r_lieu,jdm_api,39.0
+plante duterrain,plante,terrain,r_lieu,jdm_api,39.0
+plante de larivière,plante,rivière,r_lieu,jdm_api,38.0
+plante dupotager,plante,potager,r_lieu,jdm_api,53.0
+plante departout,plante,partout,r_lieu,jdm_api,53.0
+plante de lafleuriste,plante,fleuriste,r_lieu,jdm_api,63.0
+plante de lavase,plante,vase,r_lieu,jdm_api,38.0
+plante dusol,plante,sol,r_lieu,jdm_api,91.0
+plante decampagne,plante,campagne,r_lieu,jdm_api,128.0
+plante de l'aquarium,plante,aquarium,r_lieu,jdm_api,38.0
+plante desalon,plante,salon,r_lieu,jdm_api,27.0
+plante dechamp,plante,champ,r_lieu,jdm_api,150.0
+plante dubois,plante,bois,r_lieu,jdm_api,98.0
+plante de lajungle,plante,jungle,r_lieu,jdm_api,38.0
+plante deRhin,plante,Rhin,r_lieu,jdm_api,38.0
+plante depré,plante,pré,r_lieu,jdm_api,48.0
+plante degarrigue,plante,garrigue,r_lieu,jdm_api,26.0
+plante de l'endroit,plante,endroit,r_lieu,jdm_api,11.0
+plante de laserre,plante,serre,r_lieu,jdm_api,78.0
+plante dejardin,plante,jardin,r_lieu,jdm_api,270.0
+plante depot,plante,pot,r_lieu,jdm_api,191.0
+plante denature,plante,nature,r_lieu,jdm_api,98.0
+plante duforêt,plante,forêt,r_lieu,jdm_api,65.0
+plante de lasalle d'attente,plante,salle d'attente,r_lieu,jdm_api,38.0
+plante de lazone humide,plante,zone humide,r_lieu,jdm_api,38.0
+plante durocher des Doms,plante,rocher des Doms,r_lieu,jdm_api,38.0
+plante de lagarigue,plante,garigue,r_lieu,jdm_api,14.0
+plante desalon d'attente,plante,salon d'attente,r_lieu,jdm_api,10.0
+plante desalle d'attente d'un dentiste,plante,salle d'attente d'un dentiste,r_lieu,jdm_api,28.0
+objet de lavoiture,objet,voiture,r_lieu,jdm_api,36.0
+objet deboîte,objet,boîte,r_lieu,jdm_api,26.0
+objet debureau,objet,bureau,r_lieu,jdm_api,78.0
+objet dedehors,objet,dehors,r_lieu,jdm_api,78.0
+objet de lacuisine,objet,cuisine,r_lieu,jdm_api,98.0
+objet derue,objet,rue,r_lieu,jdm_api,98.0
+objet deterre,objet,terre,r_lieu,jdm_api,78.0
+objet demeuble,objet,meuble,r_lieu,jdm_api,128.0
+objet dusac,objet,sac,r_lieu,jdm_api,118.0
+objet d'étagère,objet,étagère,r_lieu,jdm_api,108.0
+objet decontenant,objet,contenant,r_lieu,jdm_api,75.0
+objet de l'armoire,objet,armoire,r_lieu,jdm_api,78.0
+objet dumaison,objet,maison,r_lieu,jdm_api,188.0
+objet detiroir,objet,tiroir,r_lieu,jdm_api,118.0
+objet demusée du Louvre,objet,musée du Louvre,r_lieu,jdm_api,38.0
+discours d'ennuyer,discours,ennuyer,r_processus_agent,jdm_api,31.0
+discours deraser,discours,raser,r_processus_agent,jdm_api,30.0
+discours dumenacer,discours,menacer,r_processus_agent,jdm_api,30.0
+discours demanquer de clarté,discours,manquer de clarté,r_processus_agent,jdm_api,30.0
+discours d'être vaseux,discours,être vaseux,r_processus_agent,jdm_api,30.0
+travail deréaliser,travail,réaliser,r_processus_agent,jdm_api,27.0
+travail detuer,travail,tuer,r_processus_agent,jdm_api,30.0
+travail defatiguer,travail,fatiguer,r_processus_agent,jdm_api,30.0
+travail dusocialiser,travail,socialiser,r_processus_agent,jdm_api,30.0
+travail de l'améliorer,travail,améliorer,r_processus_agent,jdm_api,30.0
+travail d'enrichir,travail,enrichir,r_processus_agent,jdm_api,30.0
+travail duse nourrir,travail,se nourrir,r_processus_agent,jdm_api,30.0
+travail dupeser,travail,peser,r_processus_agent,jdm_api,30.0
+travail durendre fou,travail,rendre fou,r_processus_agent,jdm_api,30.0
+travail de laproduire,travail,produire,r_processus_agent,jdm_api,69.0
+travail dupression,travail,pression,r_processus_agent,jdm_api,33.0
+travail d'accomplir,travail,accomplir,r_processus_agent,jdm_api,25.0
+travail ducréer,travail,créer,r_processus_agent,jdm_api,27.0
+travail decollaborer,travail,collaborer,r_processus_agent,jdm_api,49.0
+travail d'épuiser,travail,épuiser,r_processus_agent,jdm_api,30.0
+travail derapporter,travail,rapporter,r_processus_agent,jdm_api,100.0
+travail d'effectuer,travail,effectuer,r_processus_agent,jdm_api,27.0
+travail de l'organiser,travail,organiser,r_processus_agent,jdm_api,28.0
+travail deprendre du temps,travail,prendre du temps,r_processus_agent,jdm_api,31.0
+travail detélétravailler,travail,télétravailler,r_processus_agent,jdm_api,49.0
+travail durapporter de l'argent,travail,rapporter de l'argent,r_processus_agent,jdm_api,100.0
+travail defaire des mondanités,travail,faire des mondanités,r_processus_agent,jdm_api,30.0
+travail de l'être difficile,travail,être difficile,r_processus_agent,jdm_api,30.0
+travail degénérer des revenus,travail,générer des revenus,r_processus_agent,jdm_api,30.0
+travail de laréunion en ligne,travail,réunion en ligne,r_processus_agent,jdm_api,49.0
+travail d'être dur,travail,être dur,r_processus_agent,jdm_api,30.0
+travail deproduire la valeur,travail,produire la valeur,r_processus_agent,jdm_api,57.0
+travail de l'utiliser logiciel,travail,utiliser logiciel,r_processus_agent,jdm_api,49.0
+intervention de l'arriver comme un cheveu sur la soupe,intervention,arriver comme un cheveu sur la soupe,r_processus_agent,jdm_api,30.0
+intervention de l'être difficile,intervention,être difficile,r_processus_agent,jdm_api,30.0
+intervention de l'être dur,intervention,être dur,r_processus_agent,jdm_api,30.0
+action devivre,action,vivre,r_processus_agent,jdm_api,30.0
+action desurprendre,action,surprendre,r_processus_agent,jdm_api,30.0
+action dupenser,action,penser,r_processus_agent,jdm_api,30.0
+action dedormir,action,dormir,r_processus_agent,jdm_api,30.0
+action de lase reproduire,action,se reproduire,r_processus_agent,jdm_api,30.0
+action derésoudre,action,résoudre,r_processus_agent,jdm_api,33.0
+action d'écrire,action,écrire,r_processus_agent,jdm_api,30.0
+action degrimper,action,grimper,r_processus_agent,jdm_api,30.0
+action dechuter,action,chuter,r_processus_agent,jdm_api,30.0
+action dumonter,action,monter,r_processus_agent,jdm_api,100.0
+action decontinuer,action,continuer,r_processus_agent,jdm_api,30.0
+action dejouer dans un film,action,jouer dans un film,r_processus_agent,jdm_api,30.0
+action d'avoir pour objectif,action,avoir pour objectif,r_processus_agent,jdm_api,46.0
+oeuvre dereprésenter,oeuvre,représenter,r_processus_agent,jdm_api,36.0
+oeuvre ducommuniquer,oeuvre,communiquer,r_processus_agent,jdm_api,35.0
+oeuvre dudéfier,oeuvre,défier,r_processus_agent,jdm_api,35.0
+oeuvre de l'inspirer,oeuvre,inspirer,r_processus_agent,jdm_api,36.0
+oeuvre d'émouvoir,oeuvre,émouvoir,r_processus_agent,jdm_api,87.0
+oeuvre de lavendre,oeuvre,vendre,r_processus_agent,jdm_api,30.0
+oeuvre dequestionner,oeuvre,questionner,r_processus_agent,jdm_api,35.0
+oeuvre decaptiver,oeuvre,captiver,r_processus_agent,jdm_api,35.0
+oeuvre de l'être nul,oeuvre,être nul,r_processus_agent,jdm_api,30.0
+projet d'en baver,projet,en baver,r_processus_agent,jdm_api,30.0
+projet duse dérouler,projet,se dérouler,r_processus_agent,jdm_api,30.0
+projet dupéricliter,projet,péricliter,r_processus_agent,jdm_api,31.0
+projet dese trouver,projet,se trouver,r_processus_agent,jdm_api,100.0
+projet d'échouer,projet,échouer,r_processus_agent,jdm_api,100.0
+projet deréussir,projet,réussir,r_processus_agent,jdm_api,100.0
+projet dufoirer,projet,foirer,r_processus_agent,jdm_api,31.0
+projet de l'être à bout de souffle,projet,être à bout de souffle,r_processus_agent,jdm_api,30.0
+projet duse trouver dans,projet,se trouver dans,r_processus_agent,jdm_api,100.0
+projet ducapoter,projet,capoter,r_processus_agent,jdm_api,31.0
+projet dufaillir,projet,faillir,r_processus_agent,jdm_api,30.0
+projet de l'achopper,projet,achopper,r_processus_agent,jdm_api,31.0
+projet des'essouffler,projet,s'essouffler,r_processus_agent,jdm_api,30.0
+projet des'époumoner,projet,s'époumoner,r_processus_agent,jdm_api,30.0
+projet debattre de l'aile,projet,battre de l'aile,r_processus_agent,jdm_api,30.0
+projet dupasser à l'as,projet,passer à l'as,r_processus_agent,jdm_api,30.0
+projet d'avoir le souffle court,projet,avoir le souffle court,r_processus_agent,jdm_api,30.0
+projet derester en plan,projet,rester en plan,r_processus_agent,jdm_api,30.0
+projet derester lettre morte,projet,rester lettre morte,r_processus_agent,jdm_api,30.0
+projet dusuivre son cours,projet,suivre son cours,r_processus_agent,jdm_api,30.0
+projet dese prendre un vent,projet,se prendre un vent,r_processus_agent,jdm_api,30.0
+projet de l'être au point mort,projet,être au point mort,r_processus_agent,jdm_api,30.0
+projet d'être essoufflé,projet,être essoufflé,r_processus_agent,jdm_api,30.0
+projet de laperdre haleine,projet,perdre haleine,r_processus_agent,jdm_api,30.0
+projet de l'être hors d'haleine,projet,être hors d'haleine,r_processus_agent,jdm_api,30.0
+projet dus'éjecter,projet,s'éjecter,r_processus_agent,jdm_api,30.0
+projet de lamanquer de souffle,projet,manquer de souffle,r_processus_agent,jdm_api,30.0
+projet d'accoucher d'une souris,projet,accoucher d'une souris,r_processus_agent,jdm_api,30.0
+projet d'être dans l'impasse,projet,être dans l'impasse,r_processus_agent,jdm_api,31.0
+film de ladistraire,film,distraire,r_processus_agent,jdm_api,30.0
+film d'ennuyer,film,ennuyer,r_processus_agent,jdm_api,30.0
+film desurprendre,film,surprendre,r_processus_agent,jdm_api,30.0
+film dusortir,film,sortir,r_processus_agent,jdm_api,37.0
+film decommencer,film,commencer,r_processus_agent,jdm_api,30.0
+film duprovoquer,film,provoquer,r_processus_agent,jdm_api,100.0
+film duse dérouler,film,se dérouler,r_processus_agent,jdm_api,30.0
+film de ladéplaire,film,déplaire,r_processus_agent,jdm_api,30.0
+film duchoquer,film,choquer,r_processus_agent,jdm_api,30.0
+film deraconter,film,raconter,r_processus_agent,jdm_api,37.0
+film de l'inspirer,film,inspirer,r_processus_agent,jdm_api,43.0
+film deproduire,film,produire,r_processus_agent,jdm_api,27.0
+film de l'effrayer,film,effrayer,r_processus_agent,jdm_api,30.0
+film deterroriser,film,terroriser,r_processus_agent,jdm_api,30.0
+film d'envoûter,film,envoûter,r_processus_agent,jdm_api,30.0
+film de l'émouvoir,film,émouvoir,r_processus_agent,jdm_api,61.0
+film de l'avoir du succès,film,avoir du succès,r_processus_agent,jdm_api,30.0
+film demarquer,film,marquer,r_processus_agent,jdm_api,100.0
+film derécupérer,film,récupérer,r_processus_agent,jdm_api,31.0
+film d'heurter,film,heurter,r_processus_agent,jdm_api,100.0
+film de l'horrifier,film,horrifier,r_processus_agent,jdm_api,30.0
+film dupleurer,film,pleurer,r_processus_agent,jdm_api,30.0
+film dufaire peur,film,faire peur,r_processus_agent,jdm_api,32.0
+film dutoucher,film,toucher,r_processus_agent,jdm_api,30.0
+film dedivertir,film,divertir,r_processus_agent,jdm_api,30.0
+film d'empoigner,film,empoigner,r_processus_agent,jdm_api,30.0
+film dese décoller,film,se décoller,r_processus_agent,jdm_api,30.0
+film de l'amuser,film,amuser,r_processus_agent,jdm_api,30.0
+film de ladécrire,film,décrire,r_processus_agent,jdm_api,34.0
+film de laplaire,film,plaire,r_processus_agent,jdm_api,31.0
+film ducontinuer,film,continuer,r_processus_agent,jdm_api,30.0
+film duse gendarmer,film,se gendarmer,r_processus_agent,jdm_api,30.0
+film defaire de la peine,film,faire de la peine,r_processus_agent,jdm_api,30.0
+film dufaire du bruit,film,faire du bruit,r_processus_agent,jdm_api,30.0
+film dufaire un tabac,film,faire un tabac,r_processus_agent,jdm_api,100.0
+film defaire rire,film,faire rire,r_processus_agent,jdm_api,30.0
+film d'envouter,film,envouter,r_processus_agent,jdm_api,30.0
+film dufaire sensation,film,faire sensation,r_processus_agent,jdm_api,30.0
+film duremporter un vif succès,film,remporter un vif succès,r_processus_agent,jdm_api,30.0
+film duse tailler un beau succès,film,se tailler un beau succès,r_processus_agent,jdm_api,30.0
+film dufaire un carton,film,faire un carton,r_processus_agent,jdm_api,30.0
+film dufaire du foin,film,faire du foin,r_processus_agent,jdm_api,30.0
+film dufaire pleurer,film,faire pleurer,r_processus_agent,jdm_api,30.0
+film dufaire un bisou,film,faire un bisou,r_processus_agent,jdm_api,30.0
+film de l'être nul,film,être nul,r_processus_agent,jdm_api,30.0
+destruction de l'entreprendre,destruction,entreprendre,r_processus_patient,jdm_api,30.0
+destruction de l'annoncer,destruction,annoncer,r_processus_patient,jdm_api,30.0
+destruction de l'éviter,destruction,éviter,r_processus_patient,jdm_api,30.0
+destruction dereconstruire,destruction,reconstruire,r_processus_patient,jdm_api,30.0
+destruction dusurvivre à,destruction,survivre à,r_processus_patient,jdm_api,30.0
+construction d'assurer,construction,assurer,r_processus_patient,jdm_api,30.0
+construction duterminer,construction,terminer,r_processus_patient,jdm_api,31.0
+construction desolidifier,construction,solidifier,r_processus_patient,jdm_api,100.0
+construction d'entreprendre,construction,entreprendre,r_processus_patient,jdm_api,30.0
+construction duretaper,construction,retaper,r_processus_patient,jdm_api,30.0
+construction deravaler,construction,ravaler,r_processus_patient,jdm_api,30.0
+construction dusoutenir,construction,soutenir,r_processus_patient,jdm_api,30.0
+construction dudémolir,construction,démolir,r_processus_patient,jdm_api,100.0
+construction dechiffrer,construction,chiffrer,r_processus_patient,jdm_api,30.0
+construction de l'empêcher,construction,empêcher,r_processus_patient,jdm_api,31.0
+construction de ladétruire,construction,détruire,r_processus_patient,jdm_api,100.0
+construction dudiriger,construction,diriger,r_processus_patient,jdm_api,30.0
+cuisson decommencer,cuisson,commencer,r_processus_patient,jdm_api,30.0
+cuisson d'arrêter,cuisson,arrêter,r_processus_patient,jdm_api,30.0
+cuisson duprolonger,cuisson,prolonger,r_processus_patient,jdm_api,30.0
+cuisson dusurveiller,cuisson,surveiller,r_processus_patient,jdm_api,31.0
+cuisson definaliser,cuisson,finaliser,r_processus_patient,jdm_api,100.0
+cuisson denécessiter,cuisson,nécessiter,r_processus_patient,jdm_api,32.0
+cuisson desubir,cuisson,subir,r_processus_patient,jdm_api,31.0
+cuisson deminuter,cuisson,minuter,r_processus_patient,jdm_api,100.0
+cuisson derater,cuisson,rater,r_processus_patient,jdm_api,30.0
+cuisson duvérifier,cuisson,vérifier,r_processus_patient,jdm_api,30.0
+cuisson d'accompagner,cuisson,accompagner,r_processus_patient,jdm_api,31.0
+cuisson ducontinuer,cuisson,continuer,r_processus_patient,jdm_api,30.0
+cuisson dudémarrer,cuisson,démarrer,r_processus_patient,jdm_api,30.0
+lecture defaciliter,lecture,faciliter,r_processus_patient,jdm_api,30.0
+lecture de l'adorer,lecture,adorer,r_processus_patient,jdm_api,30.0
+lecture de l'aimer,lecture,aimer,r_processus_patient,jdm_api,30.0
+lecture d'empêcher,lecture,empêcher,r_processus_patient,jdm_api,30.0
+lecture dese plonger dans,lecture,se plonger dans,r_processus_patient,jdm_api,30.0
+lecture dereprendre,lecture,reprendre,r_processus_patient,jdm_api,31.0
+lecture dese faciliter,lecture,se faciliter,r_processus_patient,jdm_api,30.0
+analyse durédiger,analyse,rédiger,r_processus_patient,jdm_api,49.0
+analyse defaciliter,analyse,faciliter,r_processus_patient,jdm_api,31.0
+analyse de l'accélérer,analyse,accélérer,r_processus_patient,jdm_api,31.0
+analyse dupublier,analyse,publier,r_processus_patient,jdm_api,30.0
+analyse dese faciliter,analyse,se faciliter,r_processus_patient,jdm_api,30.0
+outil duretirer,outil,retirer,r_processus>instr-1,jdm_api,35.0
+outil dufaçonner,outil,façonner,r_processus>instr-1,jdm_api,27.0
+outil deréaliser,outil,réaliser,r_processus>instr-1,jdm_api,27.0
+outil dumodifier,outil,modifier,r_processus>instr-1,jdm_api,29.0
+outil de l'élargir,outil,élargir,r_processus>instr-1,jdm_api,34.0
+outil deblesser,outil,blesser,r_processus>instr-1,jdm_api,26.0
+outil d'enterrer,outil,enterrer,r_processus>instr-1,jdm_api,28.0
+outil de l'assembler,outil,assembler,r_processus>instr-1,jdm_api,28.0
+outil dedémonter,outil,démonter,r_processus>instr-1,jdm_api,30.0
+outil depeindre,outil,peindre,r_processus>instr-1,jdm_api,40.0
+outil defabriquer,outil,fabriquer,r_processus>instr-1,jdm_api,70.0
+outil dufrapper,outil,frapper,r_processus>instr-1,jdm_api,31.0
+outil desculpter,outil,sculpter,r_processus>instr-1,jdm_api,51.0
+outil de l'excaver,outil,excaver,r_processus>instr-1,jdm_api,32.0
+outil dubloquer,outil,bloquer,r_processus>instr-1,jdm_api,25.0
+outil dudémanteler,outil,démanteler,r_processus>instr-1,jdm_api,34.0
+outil d'utiliser,outil,utiliser,r_processus>instr-1,jdm_api,35.0
+outil ducasser,outil,casser,r_processus>instr-1,jdm_api,29.0
+outil deformer,outil,former,r_processus>instr-1,jdm_api,34.0
+outil de l'adapter,outil,adapter,r_processus>instr-1,jdm_api,28.0
+outil dutravailler,outil,travailler,r_processus>instr-1,jdm_api,112.0
+outil duramasser,outil,ramasser,r_processus>instr-1,jdm_api,35.0
+outil dumachiner,outil,machiner,r_processus>instr-1,jdm_api,36.0
+outil d'agir,outil,agir,r_processus>instr-1,jdm_api,30.0
+outil de laconstruire,outil,construire,r_processus>instr-1,jdm_api,90.0
+outil durénover,outil,rénover,r_processus>instr-1,jdm_api,60.0
+outil decharcuter,outil,charcuter,r_processus>instr-1,jdm_api,31.0
+outil deréparer,outil,réparer,r_processus>instr-1,jdm_api,104.0
+outil deforcer,outil,forcer,r_processus>instr-1,jdm_api,31.0
+outil d'arranger,outil,arranger,r_processus>instr-1,jdm_api,26.0
+outil dufinir,outil,finir,r_processus>instr-1,jdm_api,29.0
+outil durestaurer,outil,restaurer,r_processus>instr-1,jdm_api,52.0
+outil dulanger,outil,langer,r_processus>instr-1,jdm_api,30.0
+outil decouper,outil,couper,r_processus>instr-1,jdm_api,57.0
+outil decreuser,outil,creuser,r_processus>instr-1,jdm_api,26.0
+outil debricoler,outil,bricoler,r_processus>instr-1,jdm_api,135.0
+instrument deréaliser,instrument,réaliser,r_processus>instr-1,jdm_api,27.0
+instrument decarillonner,instrument,carillonner,r_processus>instr-1,jdm_api,32.0
+instrument defabriquer,instrument,fabriquer,r_processus>instr-1,jdm_api,26.0
+instrument de larefaire,instrument,refaire,r_processus>instr-1,jdm_api,29.0
+instrument de l'orchestrer,instrument,orchestrer,r_processus>instr-1,jdm_api,39.0
+instrument decréer,instrument,créer,r_processus>instr-1,jdm_api,28.0
+instrument dufinir,instrument,finir,r_processus>instr-1,jdm_api,34.0
+instrument dujouer,instrument,jouer,r_processus>instr-1,jdm_api,26.0
+instrument de lafaire de la musique,instrument,faire de la musique,r_processus>instr-1,jdm_api,26.0
+instrument dejouer de la musique,instrument,jouer de la musique,r_processus>instr-1,jdm_api,30.0
+instrument de ladiffuser de la musique,instrument,diffuser de la musique,r_processus>instr-1,jdm_api,28.0
+machine dupétrir,machine,pétrir,r_processus>instr-1,jdm_api,31.0
+machine dudémanteler,machine,démanteler,r_processus>instr-1,jdm_api,28.0
+machine durapiécer,machine,rapiécer,r_processus>instr-1,jdm_api,35.0
+machine delinger,machine,linger,r_processus>instr-1,jdm_api,29.0
+machine detisser,machine,tisser,r_processus>instr-1,jdm_api,32.0
+machine derincer,machine,rincer,r_processus>instr-1,jdm_api,31.0
+machine debroyer,machine,broyer,r_processus>instr-1,jdm_api,34.0
+appareil dupétrir,appareil,pétrir,r_processus>instr-1,jdm_api,28.0
+appareil demodifier,appareil,modifier,r_processus>instr-1,jdm_api,42.0
+appareil duzézayer,appareil,zézayer,r_processus>instr-1,jdm_api,35.0
+appareil defriser,appareil,friser,r_processus>instr-1,jdm_api,27.0
+appareil demesurer,appareil,mesurer,r_processus>instr-1,jdm_api,40.0
+appareil devoler,appareil,voler,r_processus>instr-1,jdm_api,31.0
+appareil detester,appareil,tester,r_processus>instr-1,jdm_api,35.0
+appareil devibrer,appareil,vibrer,r_processus>instr-1,jdm_api,34.0
+appareil de laprendre,appareil,prendre,r_processus>instr-1,jdm_api,34.0
+appareil deremplir,appareil,remplir,r_processus>instr-1,jdm_api,21.0
+appareil duphotographier,appareil,photographier,r_processus>instr-1,jdm_api,35.0
+appareil dugarnir,appareil,garnir,r_processus>instr-1,jdm_api,21.0
+appareil dujaillir,appareil,jaillir,r_processus>instr-1,jdm_api,26.0
+appareil d'ouïr,appareil,ouïr,r_processus>instr-1,jdm_api,32.0
+appareil de l'enregistrer,appareil,enregistrer,r_processus>instr-1,jdm_api,26.0
+appareil delanger,appareil,langer,r_processus>instr-1,jdm_api,30.0
+appareil dezozoter,appareil,zozoter,r_processus>instr-1,jdm_api,29.0
+appareil de l'avoir un cheveu sur la langue,appareil,avoir un cheveu sur la langue,r_processus>instr-1,jdm_api,35.0
+appareil duzézéyer,appareil,zézéyer,r_processus>instr-1,jdm_api,28.0
+ustensile deramasser,ustensile,ramasser,r_processus>instr-1,jdm_api,32.0
+ustensile decuisiner,ustensile,cuisiner,r_processus>instr-1,jdm_api,28.0
+ustensile detouiller,ustensile,touiller,r_processus>instr-1,jdm_api,26.0
+force duvivant,force,vivant,r_has_property-1,jdm_api,39.0
+force de lamusculaire,force,musculaire,r_has_property-1,jdm_api,30.0
+force de latranquille,force,tranquille,r_has_property-1,jdm_api,80.0
+force de lavive,force,vive,r_has_property-1,jdm_api,60.0
+force dudonné,force,donné,r_has_property-1,jdm_api,26.0
+force de laconjuguée,force,conjuguée,r_has_property-1,jdm_api,27.0
+force dephysique,force,physique,r_has_property-1,jdm_api,102.0
+force desauvage,force,sauvage,r_has_property-1,jdm_api,51.0
+force de labrute,force,brute,r_has_property-1,jdm_api,110.0
+force deconjugué,force,conjugué,r_has_property-1,jdm_api,30.0
+force d'hétérotrophe,force,hétérotrophe,r_has_property-1,jdm_api,15.0
+force devivipare,force,vivipare,r_has_property-1,jdm_api,15.0
+force de ladonnée,force,donnée,r_has_property-1,jdm_api,29.0
+force de l'exercé,force,exercé,r_has_property-1,jdm_api,29.0
+force demort,force,mort,r_has_property-1,jdm_api,32.0
+force dementale,force,mentale,r_has_property-1,jdm_api,80.0
+force depuissant,force,puissant,r_has_property-1,jdm_api,60.0
+force de l'endotherme,force,endotherme,r_has_property-1,jdm_api,15.0
+force d'électrique,force,électrique,r_has_property-1,jdm_api,31.0
+force de l'armée,force,armée,r_has_property-1,jdm_api,56.0
+force de lamusculeuse,force,musculeuse,r_has_property-1,jdm_api,29.0
+force de lagrande,force,grande,r_has_property-1,jdm_api,60.0
+force d'humaine,force,humaine,r_has_property-1,jdm_api,57.0
+force de lade frappe,force,de frappe,r_has_property-1,jdm_api,53.0
+force de lapuissante,force,puissante,r_has_property-1,jdm_api,70.0
+force de labrutale,force,brutale,r_has_property-1,jdm_api,60.0
+force de lade la nature,force,de la nature,r_has_property-1,jdm_api,323.0
+force de lagravitatoire,force,gravitatoire,r_has_property-1,jdm_api,29.0
+force decollective,force,collective,r_has_property-1,jdm_api,30.0
+force d'attractive,force,attractive,r_has_property-1,jdm_api,23.0
+force de labilatéralement symétrique,force,bilatéralement symétrique,r_has_property-1,jdm_api,15.0
+force de l'équivalente,force,équivalente,r_has_property-1,jdm_api,26.0
+force de l'exercée,force,exercée,r_has_property-1,jdm_api,36.0
+force defonctionné,force,fonctionné,r_has_property-1,jdm_api,29.0
+force de lafonctionnée,force,fonctionnée,r_has_property-1,jdm_api,34.0
+force depuisé,force,puisé,r_has_property-1,jdm_api,25.0
+force depuisée,force,puisée,r_has_property-1,jdm_api,25.0
+"force degrand, grande",force,"grand, grande",r_has_property-1,jdm_api,28.0
+intelligence de lalucide,intelligence,lucide,r_has_property-1,jdm_api,26.0
+intelligence de lavariable,intelligence,variable,r_has_property-1,jdm_api,28.0
+intelligence detactique,intelligence,tactique,r_has_property-1,jdm_api,41.0
+intelligence devive,intelligence,vive,r_has_property-1,jdm_api,45.0
+intelligence denormale,intelligence,normale,r_has_property-1,jdm_api,26.0
+intelligence de lafaible,intelligence,faible,r_has_property-1,jdm_api,36.0
+intelligence de l'artificielle,intelligence,artificielle,r_has_property-1,jdm_api,56.0
+intelligence de l'en général,intelligence,en général,r_has_property-1,jdm_api,26.0
+intelligence demore,intelligence,more,r_has_property-1,jdm_api,26.0
+intelligence de lanoble,intelligence,noble,r_has_property-1,jdm_api,29.0
+intelligence deprécoce,intelligence,précoce,r_has_property-1,jdm_api,32.0
+intelligence desupérieure,intelligence,supérieure,r_has_property-1,jdm_api,42.0
+intelligence de lastratégique,intelligence,stratégique,r_has_property-1,jdm_api,26.0
+intelligence de lavaste,intelligence,vaste,r_has_property-1,jdm_api,37.0
+intelligence de laremarquable,intelligence,remarquable,r_has_property-1,jdm_api,37.0
+intelligence debelle,intelligence,belle,r_has_property-1,jdm_api,39.0
+intelligence de l'élevé,intelligence,élevé,r_has_property-1,jdm_api,41.0
+intelligence de lapratique,intelligence,pratique,r_has_property-1,jdm_api,35.0
+intelligence de l'humaine,intelligence,humaine,r_has_property-1,jdm_api,38.0
+intelligence de lamesurée,intelligence,mesurée,r_has_property-1,jdm_api,26.0
+intelligence d'aiguisée,intelligence,aiguisée,r_has_property-1,jdm_api,29.0
+intelligence de l'illuminée,intelligence,illuminée,r_has_property-1,jdm_api,28.0
+intelligence d'exceptionnelle,intelligence,exceptionnelle,r_has_property-1,jdm_api,37.0
+intelligence decollective,intelligence,collective,r_has_property-1,jdm_api,35.0
+intelligence de lasurnaturelle,intelligence,surnaturelle,r_has_property-1,jdm_api,32.0
+intelligence de lasimulée,intelligence,simulée,r_has_property-1,jdm_api,26.0
+intelligence deréchauffée,intelligence,réchauffée,r_has_property-1,jdm_api,30.0
+intelligence de lastimulée,intelligence,stimulée,r_has_property-1,jdm_api,31.0
+intelligence d'émotionnelle,intelligence,émotionnelle,r_has_property-1,jdm_api,28.0
+intelligence d'embarquée,intelligence,embarquée,r_has_property-1,jdm_api,26.0
+intelligence d'utilisée,intelligence,utilisée,r_has_property-1,jdm_api,26.0
+intelligence d'admirée,intelligence,admirée,r_has_property-1,jdm_api,37.0
+intelligence de l'en anglais,intelligence,en anglais,r_has_property-1,jdm_api,26.0
+courage de l'exceptionnel,courage,exceptionnel,r_has_property-1,jdm_api,31.0
+courage de l'extraordinaire,courage,extraordinaire,r_has_property-1,jdm_api,26.0
+courage dedésirable,courage,désirable,r_has_property-1,jdm_api,31.0
+courage derassemblé,courage,rassemblé,r_has_property-1,jdm_api,34.0
+courage de l'audacieux,courage,audacieux,r_has_property-1,jdm_api,26.0
+courage d'opposant,courage,opposant,r_has_property-1,jdm_api,26.0
+courage duredoublé,courage,redoublé,r_has_property-1,jdm_api,30.0
+courage demanifesté,courage,manifesté,r_has_property-1,jdm_api,28.0
+courage defonctionné,courage,fonctionné,r_has_property-1,jdm_api,27.0
+courage depuisé,courage,puisé,r_has_property-1,jdm_api,25.0
+gentillesse degrande,gentillesse,grande,r_has_property-1,jdm_api,26.0
+sagesse de lapolitique,sagesse,politique,r_has_property-1,jdm_api,26.0
+sagesse depopulaire,sagesse,populaire,r_has_property-1,jdm_api,26.0
+sagesse dedésirable,sagesse,désirable,r_has_property-1,jdm_api,27.0
+sagesse de laprofonde,sagesse,profonde,r_has_property-1,jdm_api,40.0
+sagesse desimple,sagesse,simple,r_has_property-1,jdm_api,26.0
+sagesse d'expérimenté,sagesse,expérimenté,r_has_property-1,jdm_api,30.0
+sagesse deprécieuse,sagesse,précieuse,r_has_property-1,jdm_api,35.0
+sagesse degrande,sagesse,grande,r_has_property-1,jdm_api,31.0
+sagesse de lamesurée,sagesse,mesurée,r_has_property-1,jdm_api,36.0
+sagesse decultivée,sagesse,cultivée,r_has_property-1,jdm_api,25.0
+sagesse de l'intemporelle,sagesse,intemporelle,r_has_property-1,jdm_api,31.0
+sagesse de l'acquise,sagesse,acquise,r_has_property-1,jdm_api,25.0
+sagesse deréfléchie,sagesse,réfléchie,r_has_property-1,jdm_api,50.0
+sagesse detransmise,sagesse,transmise,r_has_property-1,jdm_api,25.0
+talent duvivant,talent,vivant,r_has_property-1,jdm_api,46.0
+talent de l'indéniable,talent,indéniable,r_has_property-1,jdm_api,26.0
+talent dumusical,talent,musical,r_has_property-1,jdm_api,26.0
+talent delocal,talent,local,r_has_property-1,jdm_api,35.0
+talent de l'exceptionnel,talent,exceptionnel,r_has_property-1,jdm_api,52.0
+talent duconfirmé,talent,confirmé,r_has_property-1,jdm_api,24.0
+talent dunaissant,talent,naissant,r_has_property-1,jdm_api,26.0
+talent d'offensif,talent,offensif,r_has_property-1,jdm_api,26.0
+talent dejeune,talent,jeune,r_has_property-1,jdm_api,23.0
+talent de l'eucaryote,talent,eucaryote,r_has_property-1,jdm_api,25.0
+talent duvoulu,talent,voulu,r_has_property-1,jdm_api,25.0
+talent debelge,talent,belge,r_has_property-1,jdm_api,29.0
+talent demortel,talent,mortel,r_has_property-1,jdm_api,25.0
+talent d'hétérotrophe,talent,hétérotrophe,r_has_property-1,jdm_api,25.0
+talent de lamédiocre,talent,médiocre,r_has_property-1,jdm_api,26.0
+talent de lavivipare,talent,vivipare,r_has_property-1,jdm_api,25.0
+talent destratégique,talent,stratégique,r_has_property-1,jdm_api,30.0
+talent de laremarquable,talent,remarquable,r_has_property-1,jdm_api,26.0
+talent depropre,talent,propre,r_has_property-1,jdm_api,26.0
+talent dumort,talent,mort,r_has_property-1,jdm_api,35.0
+talent dulatent,talent,latent,r_has_property-1,jdm_api,26.0
+talent d'endotherme,talent,endotherme,r_has_property-1,jdm_api,25.0
+talent deprouvé,talent,prouvé,r_has_property-1,jdm_api,32.0
+talent detotale,talent,totale,r_has_property-1,jdm_api,25.0
+talent dumontré,talent,montré,r_has_property-1,jdm_api,12.0
+talent de labilatéralement symétrique,talent,bilatéralement symétrique,r_has_property-1,jdm_api,25.0
+talent de l'en or massif,talent,en or massif,r_has_property-1,jdm_api,39.0
+livre dedroit,livre,droit,r_topic,jdm_api,35.0
+livre d'édition,livre,édition,r_topic,jdm_api,28.0
+livre deculture,livre,culture,r_topic,jdm_api,26.0
+livre dumathématiques,livre,mathématiques,r_topic,jdm_api,362.0
+livre demonnaie,livre,monnaie,r_topic,jdm_api,31.0
+livre dupoids et mesures,livre,poids et mesures,r_topic,jdm_api,35.0
+livre de lalittérature,livre,littérature,r_topic,jdm_api,315.0
+livre de lacommerce,livre,commerce,r_topic,jdm_api,262.0
+livre de latoxicomanie,livre,toxicomanie,r_topic,jdm_api,25.0
+livre de lamusique,livre,musique,r_topic,jdm_api,40.0
+livre demétrologie,livre,métrologie,r_topic,jdm_api,43.0
+livre de laFrance,livre,France,r_topic,jdm_api,40.0
+livre delecture,livre,lecture,r_topic,jdm_api,30.0
+livre de lavie quotidienne,livre,vie quotidienne,r_topic,jdm_api,67.0
+livre dediplomatie,livre,diplomatie,r_topic,jdm_api,15.0
+livre d'économie,livre,économie,r_topic,jdm_api,237.0
+livre de ladrogue,livre,drogue,r_topic,jdm_api,58.0
+livre de lamarine,livre,marine,r_topic,jdm_api,29.0
+livre de laLittérature,livre,Littérature,r_topic,jdm_api,110.0
+livre de laCommerce,livre,Commerce,r_topic,jdm_api,79.0
+livre deMathématiques,livre,Mathématiques,r_topic,jdm_api,76.0
+livre dedrogues,livre,drogues,r_topic,jdm_api,296.0
+livre d'unités de mesure,livre,unités de mesure,r_topic,jdm_api,29.0
+livre demusic,livre,music,r_topic,jdm_api,28.0
+livre d'Économie,livre,Économie,r_topic,jdm_api,25.0
+livre destupéfiants,livre,stupéfiants,r_topic,jdm_api,25.0
+film de laphotographie,film,photographie,r_topic,jdm_api,56.0
+film de l'art,film,art,r_topic,jdm_api,91.0
+film de l'arts,film,arts,r_topic,jdm_api,34.0
+film deconditionnement,film,conditionnement,r_topic,jdm_api,30.0
+film detechnique,film,technique,r_topic,jdm_api,47.0
+film deseptième art,film,septième art,r_topic,jdm_api,71.0
+film decinéma,film,cinéma,r_topic,jdm_api,675.0
+film derecréation,film,recréation,r_topic,jdm_api,34.0
+film defilms,film,films,r_topic,jdm_api,36.0
+film dephysique,film,physique,r_topic,jdm_api,61.0
+film de lachimie,film,chimie,r_topic,jdm_api,253.0
+film deloisirs,film,loisirs,r_topic,jdm_api,52.0
+film dutélévision,film,télévision,r_topic,jdm_api,51.0
+film delettres,film,lettres,r_topic,jdm_api,32.0
+film devidéothèque,film,vidéothèque,r_topic,jdm_api,35.0
+film dunutrition,film,nutrition,r_topic,jdm_api,36.0
+film devidéo,film,vidéo,r_topic,jdm_api,48.0
+film d'alimentation,film,alimentation,r_topic,jdm_api,61.0
+film d'artistique,film,artistique,r_topic,jdm_api,34.0
+film devie quotidienne,film,vie quotidienne,r_topic,jdm_api,67.0
+film devacances,film,vacances,r_topic,jdm_api,52.0
+film de l'emballage,film,emballage,r_topic,jdm_api,28.0
+film de l'économie,film,économie,r_topic,jdm_api,60.0
+film duCinéma,film,Cinéma,r_topic,jdm_api,76.0
+film d'Arts,film,Arts,r_topic,jdm_api,28.0
+film de l'emballages,film,emballages,r_topic,jdm_api,40.0
+film duVideo,film,Video,r_topic,jdm_api,30.0
+film duvideo,film,video,r_topic,jdm_api,26.0
+film de l'artistic,film,artistic,r_topic,jdm_api,35.0
+film dechymie,film,chymie,r_topic,jdm_api,37.0
+film de l'humanities,film,humanities,r_topic,jdm_api,27.0
+film deliterature,film,literature,r_topic,jdm_api,39.0
+film deles arts,film,les arts,r_topic,jdm_api,28.0
+cours dedroit,cours,droit,r_topic,jdm_api,41.0
+cours d'hydrographie,cours,hydrographie,r_topic,jdm_api,27.0
+cours de latourisme,cours,tourisme,r_topic,jdm_api,26.0
+cours d'hôtellerie,cours,hôtellerie,r_topic,jdm_api,28.0
+cours deformation,cours,formation,r_topic,jdm_api,36.0
+cours detemps,cours,temps,r_topic,jdm_api,27.0
+cours dematière,cours,matière,r_topic,jdm_api,15.0
+cours de labiologie,cours,biologie,r_topic,jdm_api,23.0
+cours de lajurisprudence,cours,jurisprudence,r_topic,jdm_api,27.0
+cours d'hydrologie,cours,hydrologie,r_topic,jdm_api,32.0
+cours dechimie,cours,chimie,r_topic,jdm_api,32.0
+cours dephylogénie,cours,phylogénie,r_topic,jdm_api,22.0
+cours de lacommerce,cours,commerce,r_topic,jdm_api,27.0
+cours de lafinance,cours,finance,r_topic,jdm_api,28.0
+cours d'eau,cours,eau,r_topic,jdm_api,29.0
+cours d'enseignement,cours,enseignement,r_topic,jdm_api,31.0
+cours de l'éducation,cours,éducation,r_topic,jdm_api,35.0
+cours de lascolaire,cours,scolaire,r_topic,jdm_api,247.0
+cours de l'architecture,cours,architecture,r_topic,jdm_api,35.0
+cours descolarité,cours,scolarité,r_topic,jdm_api,27.0
+cours de l'urbanisme,cours,urbanisme,r_topic,jdm_api,243.0
+cours de l'économie,cours,économie,r_topic,jdm_api,42.0
+cours dufinances,cours,finances,r_topic,jdm_api,27.0
+cours decours d'eau,cours,cours d'eau,r_topic,jdm_api,27.0
+cours demarine,cours,marine,r_topic,jdm_api,28.0
+cours de l'évolution,cours,évolution,r_topic,jdm_api,27.0
+cours de l'Urbanisme,cours,Urbanisme,r_topic,jdm_api,27.0
+cours de laScolaire,cours,Scolaire,r_topic,jdm_api,77.0
+cours dufleuves,cours,fleuves,r_topic,jdm_api,29.0
+cours de l'éducation nationale,cours,éducation nationale,r_topic,jdm_api,26.0
+cours de l'aménagement urbain,cours,aménagement urbain,r_topic,jdm_api,27.0
+cours debiologie évolutive,cours,biologie évolutive,r_topic,jdm_api,15.0
+cours de laministère de l'Éducation nationale,cours,ministère de l'Éducation nationale,r_topic,jdm_api,30.0
+cours deministère de l'éducation,cours,ministère de l'éducation,r_topic,jdm_api,25.0
+cours de l'Éducation nationale,cours,Éducation nationale,r_topic,jdm_api,26.0
+cours duministère de l'Éducation,cours,ministère de l'Éducation,r_topic,jdm_api,26.0
+cours deCours d'eau,cours,Cours d'eau,r_topic,jdm_api,34.0
+article de labotanique,article,botanique,r_topic,jdm_api,28.0
+article dulégislation,article,législation,r_topic,jdm_api,29.0
+article dudroit,article,droit,r_topic,jdm_api,37.0
+article dumass media,article,mass media,r_topic,jdm_api,30.0
+article depresse,article,presse,r_topic,jdm_api,22.0
+article delinguistique,article,linguistique,r_topic,jdm_api,271.0
+article de lapresse écrite,article,presse écrite,r_topic,jdm_api,31.0
+article dejournalisme,article,journalisme,r_topic,jdm_api,32.0
+article decommerce,article,commerce,r_topic,jdm_api,69.0
+article d'entomologie,article,entomologie,r_topic,jdm_api,35.0
+article de lagrammaire,article,grammaire,r_topic,jdm_api,403.0
+article demycologie,article,mycologie,r_topic,jdm_api,31.0
+article demédias,article,médias,r_topic,jdm_api,31.0
+article deloi,article,loi,r_topic,jdm_api,32.0
+article deconférence,article,conférence,r_topic,jdm_api,32.0
+article de l'anatomie,article,anatomie,r_topic,jdm_api,57.0
+article dezoologie,article,zoologie,r_topic,jdm_api,172.0
+article d'économie,article,économie,r_topic,jdm_api,42.0
+article dulois,article,lois,r_topic,jdm_api,21.0
+article deLinguistique,article,Linguistique,r_topic,jdm_api,21.0
+article deZoologie,article,Zoologie,r_topic,jdm_api,58.0
+article de laGrammaire,article,Grammaire,r_topic,jdm_api,25.0
+article dedroit objectif,article,droit objectif,r_topic,jdm_api,32.0
+article demass-média,article,mass-média,r_topic,jdm_api,26.0
+article dumass média,article,mass média,r_topic,jdm_api,30.0
+article de lamédias de masse,article,médias de masse,r_topic,jdm_api,27.0
+article de lamédia de masse,article,média de masse,r_topic,jdm_api,32.0
+article deMédias de masse,article,Médias de masse,r_topic,jdm_api,32.0
+article deMédia de masse,article,Média de masse,r_topic,jdm_api,35.0
+documentaire decinéma,documentaire,cinéma,r_topic,jdm_api,29.0
+documentaire dufilms,documentaire,films,r_topic,jdm_api,34.0
+these demusique,these,musique,r_topic,jdm_api,48.0
+these de l'orthodontie,these,orthodontie,r_topic,jdm_api,45.0
+etude debiologie,etude,biologie,r_topic,jdm_api,96.0
+etude de lamusique,etude,musique,r_topic,jdm_api,35.0
+etude demédecine,etude,médecine,r_topic,jdm_api,252.0
+etude deMédecine,etude,Médecine,r_topic,jdm_api,25.0
+etude dumusic,etude,music,r_topic,jdm_api,46.0
+etude deprocédure médicale,etude,procédure médicale,r_topic,jdm_api,102.0
+recherche d'Histoire,recherche,Histoire,r_topic,jdm_api,85.0
+recherche d'art,recherche,art,r_topic,jdm_api,21.0
+recherche dudroit,recherche,droit,r_topic,jdm_api,30.0
+recherche d'arts,recherche,arts,r_topic,jdm_api,29.0
+recherche depsychologie,recherche,psychologie,r_topic,jdm_api,66.0
+recherche d'astronomie,recherche,astronomie,r_topic,jdm_api,295.0
+recherche dumathématiques,recherche,mathématiques,r_topic,jdm_api,283.0
+recherche de labiologie,recherche,biologie,r_topic,jdm_api,392.0
+recherche de lasociologie,recherche,sociologie,r_topic,jdm_api,27.0
+recherche delittérature,recherche,littérature,r_topic,jdm_api,27.0
+recherche de laphilosophie,recherche,philosophie,r_topic,jdm_api,15.0
+recherche de laphysique,recherche,physique,r_topic,jdm_api,286.0
+recherche dechimie,recherche,chimie,r_topic,jdm_api,284.0
+recherche derecherche scientifique,recherche,recherche scientifique,r_topic,jdm_api,15.0
+recherche desciences,recherche,sciences,r_topic,jdm_api,461.0
+recherche de lascience,recherche,science,r_topic,jdm_api,204.0
+recherche dupsy,recherche,psy,r_topic,jdm_api,34.0
+recherche de lapharmacie,recherche,pharmacie,r_topic,jdm_api,57.0
+recherche d'habillement,recherche,habillement,r_topic,jdm_api,15.0
+recherche de l'archéologie,recherche,archéologie,r_topic,jdm_api,32.0
+recherche de lamédecine,recherche,médecine,r_topic,jdm_api,421.0
+recherche d'informatique,recherche,informatique,r_topic,jdm_api,27.0
+recherche deconférence,recherche,conférence,r_topic,jdm_api,24.0
+recherche de lavie quotidienne,recherche,vie quotidienne,r_topic,jdm_api,15.0
+recherche de lamode,recherche,mode,r_topic,jdm_api,27.0
+recherche depolice,recherche,police,r_topic,jdm_api,23.0
+recherche deScience,recherche,Science,r_topic,jdm_api,95.0
+recherche de l'enquête,recherche,enquête,r_topic,jdm_api,15.0
+recherche de l'histoire,recherche,histoire,r_topic,jdm_api,293.0
+recherche de laPhysique,recherche,Physique,r_topic,jdm_api,150.0
+recherche de laBiologie,recherche,Biologie,r_topic,jdm_api,91.0
+recherche de laMédecine,recherche,Médecine,r_topic,jdm_api,119.0
+recherche duMathématiques,recherche,Mathématiques,r_topic,jdm_api,165.0
+recherche deSciences,recherche,Sciences,r_topic,jdm_api,120.0
+recherche de l'Astronomie,recherche,Astronomie,r_topic,jdm_api,80.0
+recherche dudroit civil,recherche,droit civil,r_topic,jdm_api,26.0
+recherche desciences de la terre,recherche,sciences de la terre,r_topic,jdm_api,25.0
+recherche dechymie,recherche,chymie,r_topic,jdm_api,28.0
+recherche de laprocédure médicale,recherche,procédure médicale,r_topic,jdm_api,29.0
+recherche de lamalade mentale,recherche,malade mentale,r_topic,jdm_api,29.0
+tableau demoliere,tableau,moliere,r_product_of,generated,50.0
+tableau demonet,tableau,monet,r_product_of,generated,50.0
+tableau devoltaire,tableau,voltaire,r_product_of,generated,50.0
+tableau depasteur,tableau,pasteur,r_product_of,generated,50.0
+tableau d'einstein,tableau,einstein,r_product_of,generated,50.0
+tableau derenoir,tableau,renoir,r_product_of,generated,50.0
+tableau debalzac,tableau,balzac,r_product_of,generated,50.0
+tableau dedescartes,tableau,descartes,r_product_of,generated,50.0
+livre d'hugo,livre,hugo,r_product_of,generated,50.0
+livre derousseau,livre,rousseau,r_product_of,generated,50.0
+livre demonet,livre,monet,r_product_of,generated,50.0
+livre debach,livre,bach,r_product_of,generated,50.0
+livre depicasso,livre,picasso,r_product_of,generated,50.0
+livre debalzac,livre,balzac,r_product_of,generated,50.0
+livre d'einstein,livre,einstein,r_product_of,generated,50.0
+livre devoltaire,livre,voltaire,r_product_of,generated,50.0
+film demoliere,film,moliere,r_product_of,generated,50.0
+film d'hugo,film,hugo,r_product_of,generated,50.0
+film debalzac,film,balzac,r_product_of,generated,50.0
+film devoltaire,film,voltaire,r_product_of,generated,50.0
+film depicasso,film,picasso,r_product_of,generated,50.0
+film d'einstein,film,einstein,r_product_of,generated,50.0
+film derousseau,film,rousseau,r_product_of,generated,50.0
+film dedescartes,film,descartes,r_product_of,generated,50.0
+chanson demonet,chanson,monet,r_product_of,generated,50.0
+chanson debach,chanson,bach,r_product_of,generated,50.0
+chanson demozart,chanson,mozart,r_product_of,generated,50.0
+chanson decurie,chanson,curie,r_product_of,generated,50.0
+chanson devoltaire,chanson,voltaire,r_product_of,generated,50.0
+chanson depasteur,chanson,pasteur,r_product_of,generated,50.0
+chanson debalzac,chanson,balzac,r_product_of,generated,50.0
+chanson derousseau,chanson,rousseau,r_product_of,generated,50.0
+poeme derenoir,poeme,renoir,r_product_of,generated,50.0
+poeme derousseau,poeme,rousseau,r_product_of,generated,50.0
+poeme debach,poeme,bach,r_product_of,generated,50.0
+poeme depasteur,poeme,pasteur,r_product_of,generated,50.0
+poeme depicasso,poeme,picasso,r_product_of,generated,50.0
+poeme demoliere,poeme,moliere,r_product_of,generated,50.0
+poeme debalzac,poeme,balzac,r_product_of,generated,50.0
+poeme debeethoven,poeme,beethoven,r_product_of,generated,50.0
+roman d'hugo,roman,hugo,r_product_of,generated,50.0
+roman demozart,roman,mozart,r_product_of,generated,50.0
+roman depicasso,roman,picasso,r_product_of,generated,50.0
+roman derenoir,roman,renoir,r_product_of,generated,50.0
+roman demoliere,roman,moliere,r_product_of,generated,50.0
+roman debalzac,roman,balzac,r_product_of,generated,50.0
+roman dedescartes,roman,descartes,r_product_of,generated,50.0
+roman devoltaire,roman,voltaire,r_product_of,generated,50.0
+sculpture debach,sculpture,bach,r_product_of,generated,50.0
+sculpture derousseau,sculpture,rousseau,r_product_of,generated,50.0
+sculpture d'hugo,sculpture,hugo,r_product_of,generated,50.0
+sculpture depasteur,sculpture,pasteur,r_product_of,generated,50.0
+sculpture d'einstein,sculpture,einstein,r_product_of,generated,50.0
+sculpture decurie,sculpture,curie,r_product_of,generated,50.0
+sculpture debeethoven,sculpture,beethoven,r_product_of,generated,50.0
+sculpture depicasso,sculpture,picasso,r_product_of,generated,50.0
+symphonie devoltaire,symphonie,voltaire,r_product_of,generated,50.0
+symphonie depasteur,symphonie,pasteur,r_product_of,generated,50.0
+symphonie demoliere,symphonie,moliere,r_product_of,generated,50.0
+symphonie debach,symphonie,bach,r_product_of,generated,50.0
+symphonie demonet,symphonie,monet,r_product_of,generated,50.0
+symphonie dedescartes,symphonie,descartes,r_product_of,generated,50.0
+symphonie debalzac,symphonie,balzac,r_product_of,generated,50.0
+symphonie debeethoven,symphonie,beethoven,r_product_of,generated,50.0
+opera demonet,opera,monet,r_product_of,generated,50.0
+opera derousseau,opera,rousseau,r_product_of,generated,50.0
+opera demoliere,opera,moliere,r_product_of,generated,50.0
+opera d'hugo,opera,hugo,r_product_of,generated,50.0
+opera derenoir,opera,renoir,r_product_of,generated,50.0
+opera d'einstein,opera,einstein,r_product_of,generated,50.0
+opera devoltaire,opera,voltaire,r_product_of,generated,50.0
+opera depasteur,opera,pasteur,r_product_of,generated,50.0
+piece d'hugo,piece,hugo,r_product_of,generated,50.0
+piece depicasso,piece,picasso,r_product_of,generated,50.0
+piece debeethoven,piece,beethoven,r_product_of,generated,50.0
+piece derousseau,piece,rousseau,r_product_of,generated,50.0
+piece dedescartes,piece,descartes,r_product_of,generated,50.0
+piece demoliere,piece,moliere,r_product_of,generated,50.0
+piece debalzac,piece,balzac,r_product_of,generated,50.0
+piece d'einstein,piece,einstein,r_product_of,generated,50.0
+oeuvre demoliere,oeuvre,moliere,r_product_of,generated,50.0
+oeuvre demozart,oeuvre,mozart,r_product_of,generated,50.0
+oeuvre debalzac,oeuvre,balzac,r_product_of,generated,50.0
+oeuvre devoltaire,oeuvre,voltaire,r_product_of,generated,50.0
+oeuvre depicasso,oeuvre,picasso,r_product_of,generated,50.0
+oeuvre dedescartes,oeuvre,descartes,r_product_of,generated,50.0
+oeuvre d'einstein,oeuvre,einstein,r_product_of,generated,50.0
+oeuvre decurie,oeuvre,curie,r_product_of,generated,50.0
+invention d'hugo,invention,hugo,r_product_of,generated,50.0
+invention d'einstein,invention,einstein,r_product_of,generated,50.0
+invention debeethoven,invention,beethoven,r_product_of,generated,50.0
+invention demoliere,invention,moliere,r_product_of,generated,50.0
+invention debalzac,invention,balzac,r_product_of,generated,50.0
+invention demonet,invention,monet,r_product_of,generated,50.0
+invention devoltaire,invention,voltaire,r_product_of,generated,50.0
+invention derousseau,invention,rousseau,r_product_of,generated,50.0
+decouverte depicasso,decouverte,picasso,r_product_of,generated,50.0
+decouverte demonet,decouverte,monet,r_product_of,generated,50.0
+decouverte d'einstein,decouverte,einstein,r_product_of,generated,50.0
+decouverte demoliere,decouverte,moliere,r_product_of,generated,50.0
+decouverte debach,decouverte,bach,r_product_of,generated,50.0
+decouverte dedescartes,decouverte,descartes,r_product_of,generated,50.0
+decouverte derousseau,decouverte,rousseau,r_product_of,generated,50.0
+decouverte derenoir,decouverte,renoir,r_product_of,generated,50.0
+theorie depasteur,theorie,pasteur,r_product_of,generated,50.0
+theorie dedescartes,theorie,descartes,r_product_of,generated,50.0
+theorie debach,theorie,bach,r_product_of,generated,50.0
+theorie demonet,theorie,monet,r_product_of,generated,50.0
+theorie devoltaire,theorie,voltaire,r_product_of,generated,50.0
+theorie demoliere,theorie,moliere,r_product_of,generated,50.0
+theorie debeethoven,theorie,beethoven,r_product_of,generated,50.0
+theorie demozart,theorie,mozart,r_product_of,generated,50.0
+recette devoltaire,recette,voltaire,r_product_of,generated,50.0
+recette debalzac,recette,balzac,r_product_of,generated,50.0
+recette demonet,recette,monet,r_product_of,generated,50.0
+recette debach,recette,bach,r_product_of,generated,50.0
+recette depicasso,recette,picasso,r_product_of,generated,50.0
+recette d'einstein,recette,einstein,r_product_of,generated,50.0
+recette dedescartes,recette,descartes,r_product_of,generated,50.0
+recette decurie,recette,curie,r_product_of,generated,50.0
+table desoie,table,soie,r_objet>matiere,generated,50.0
+table decuir,table,cuir,r_objet>matiere,generated,50.0
+table d'argent,table,argent,r_objet>matiere,generated,50.0
+table depapier,table,papier,r_objet>matiere,generated,50.0
+table detissu,table,tissu,r_objet>matiere,generated,50.0
+chaise demetal,chaise,metal,r_objet>matiere,generated,50.0
+chaise depapier,chaise,papier,r_objet>matiere,generated,50.0
+chaise depierre,chaise,pierre,r_objet>matiere,generated,50.0
+chaise deplastique,chaise,plastique,r_objet>matiere,generated,50.0
+chaise decuivre,chaise,cuivre,r_objet>matiere,generated,50.0
+porte demetal,porte,metal,r_objet>matiere,generated,50.0
+porte debeton,porte,beton,r_objet>matiere,generated,50.0
+porte decoton,porte,coton,r_objet>matiere,generated,50.0
+porte defer,porte,fer,r_objet>matiere,generated,50.0
+porte delaine,porte,laine,r_objet>matiere,generated,50.0
+fenetre d'acier,fenetre,acier,r_objet>matiere,generated,50.0
+fenetre depapier,fenetre,papier,r_objet>matiere,generated,50.0
+fenetre d'argent,fenetre,argent,r_objet>matiere,generated,50.0
+fenetre depierre,fenetre,pierre,r_objet>matiere,generated,50.0
+fenetre decoton,fenetre,coton,r_objet>matiere,generated,50.0
+escalier depierre,escalier,pierre,r_objet>matiere,generated,50.0
+escalier debois,escalier,bois,r_objet>matiere,generated,50.0
+escalier detissu,escalier,tissu,r_objet>matiere,generated,50.0
+escalier debeton,escalier,beton,r_objet>matiere,generated,50.0
+escalier d'argent,escalier,argent,r_objet>matiere,generated,50.0
+pont d'argent,pont,argent,r_objet>matiere,generated,50.0
+pont degranit,pont,granit,r_objet>matiere,generated,50.0
+pont debois,pont,bois,r_objet>matiere,generated,50.0
+pont d'acier,pont,acier,r_objet>matiere,generated,50.0
+pont deverre,pont,verre,r_objet>matiere,generated,50.0
+statue deverre,statue,verre,r_objet>matiere,generated,50.0
+statue d'or,statue,or,r_objet>matiere,generated,50.0
+statue decuivre,statue,cuivre,r_objet>matiere,generated,50.0
+statue decuir,statue,cuir,r_objet>matiere,generated,50.0
+statue detissu,statue,tissu,r_objet>matiere,generated,50.0
+bijou detissu,bijou,tissu,r_objet>matiere,generated,50.0
+bijou degranit,bijou,granit,r_objet>matiere,generated,50.0
+bijou depierre,bijou,pierre,r_objet>matiere,generated,50.0
+bijou d'or,bijou,or,r_objet>matiere,generated,50.0
+bijou demarbre,bijou,marbre,r_objet>matiere,generated,50.0
+couteau decoton,couteau,coton,r_objet>matiere,generated,50.0
+couteau deverre,couteau,verre,r_objet>matiere,generated,50.0
+couteau decuivre,couteau,cuivre,r_objet>matiere,generated,50.0
+couteau debois,couteau,bois,r_objet>matiere,generated,50.0
+couteau demarbre,couteau,marbre,r_objet>matiere,generated,50.0
+bol demarbre,bol,marbre,r_objet>matiere,generated,50.0
+bol d'acier,bol,acier,r_objet>matiere,generated,50.0
+bol d'or,bol,or,r_objet>matiere,generated,50.0
+bol desoie,bol,soie,r_objet>matiere,generated,50.0
+bol deverre,bol,verre,r_objet>matiere,generated,50.0
+vase depapier,vase,papier,r_objet>matiere,generated,50.0
+vase debois,vase,bois,r_objet>matiere,generated,50.0
+vase debeton,vase,beton,r_objet>matiere,generated,50.0
+vase demetal,vase,metal,r_objet>matiere,generated,50.0
+vase decuivre,vase,cuivre,r_objet>matiere,generated,50.0
+cadre demarbre,cadre,marbre,r_objet>matiere,generated,50.0
+cadre decuivre,cadre,cuivre,r_objet>matiere,generated,50.0
+cadre defer,cadre,fer,r_objet>matiere,generated,50.0
+cadre decarton,cadre,carton,r_objet>matiere,generated,50.0
+cadre demetal,cadre,metal,r_objet>matiere,generated,50.0
+banc demarbre,banc,marbre,r_objet>matiere,generated,50.0
+banc d'or,banc,or,r_objet>matiere,generated,50.0
+banc detissu,banc,tissu,r_objet>matiere,generated,50.0
+banc decoton,banc,coton,r_objet>matiere,generated,50.0
+banc decarton,banc,carton,r_objet>matiere,generated,50.0
+armoire delaine,armoire,laine,r_objet>matiere,generated,50.0
+armoire debronze,armoire,bronze,r_objet>matiere,generated,50.0
+armoire decuir,armoire,cuir,r_objet>matiere,generated,50.0
+armoire degranit,armoire,granit,r_objet>matiere,generated,50.0
+armoire desoie,armoire,soie,r_objet>matiere,generated,50.0
+coffre d'acier,coffre,acier,r_objet>matiere,generated,50.0
+coffre deverre,coffre,verre,r_objet>matiere,generated,50.0
+coffre debronze,coffre,bronze,r_objet>matiere,generated,50.0
+coffre decuivre,coffre,cuivre,r_objet>matiere,generated,50.0
+coffre decarton,coffre,carton,r_objet>matiere,generated,50.0
+bateau defer,bateau,fer,r_objet>matiere,generated,50.0
+bateau debeton,bateau,beton,r_objet>matiere,generated,50.0
+bateau debronze,bateau,bronze,r_objet>matiere,generated,50.0
+bateau deplastique,bateau,plastique,r_objet>matiere,generated,50.0
+bateau depierre,bateau,pierre,r_objet>matiere,generated,50.0
+maison demarbre,maison,marbre,r_objet>matiere,generated,50.0
+maison deverre,maison,verre,r_objet>matiere,generated,50.0
+maison degranit,maison,granit,r_objet>matiere,generated,50.0
+maison depierre,maison,pierre,r_objet>matiere,generated,50.0
+maison debois,maison,bois,r_objet>matiere,generated,50.0
+mur d'acier,mur,acier,r_objet>matiere,generated,50.0
+mur deplastique,mur,plastique,r_objet>matiere,generated,50.0
+mur decuir,mur,cuir,r_objet>matiere,generated,50.0
+mur decuivre,mur,cuivre,r_objet>matiere,generated,50.0
+mur deverre,mur,verre,r_objet>matiere,generated,50.0
+vin d'angleterre,vin,angleterre,r_lieu>origine,generated,50.0
+vin d'alsace,vin,alsace,r_lieu>origine,generated,50.0
+vin dechampagne,vin,champagne,r_lieu>origine,generated,50.0
+vin d'asie,vin,asie,r_lieu>origine,generated,50.0
+vin deparis,vin,paris,r_lieu>origine,generated,50.0
+vin delyon,vin,lyon,r_lieu>origine,generated,50.0
+vin denantes,vin,nantes,r_lieu>origine,generated,50.0
+vin debretagne,vin,bretagne,r_lieu>origine,generated,50.0
+fromage detoulouse,fromage,toulouse,r_lieu>origine,generated,50.0
+fromage d'asie,fromage,asie,r_lieu>origine,generated,50.0
+fromage denantes,fromage,nantes,r_lieu>origine,generated,50.0
+fromage destrasbourg,fromage,strasbourg,r_lieu>origine,generated,50.0
+fromage dechampagne,fromage,champagne,r_lieu>origine,generated,50.0
+fromage delille,fromage,lille,r_lieu>origine,generated,50.0
+fromage debourgogne,fromage,bourgogne,r_lieu>origine,generated,50.0
+fromage defrance,fromage,france,r_lieu>origine,generated,50.0
+chocolat d'espagne,chocolat,espagne,r_lieu>origine,generated,50.0
+chocolat debordeaux,chocolat,bordeaux,r_lieu>origine,generated,50.0
+chocolat debretagne,chocolat,bretagne,r_lieu>origine,generated,50.0
+chocolat destrasbourg,chocolat,strasbourg,r_lieu>origine,generated,50.0
+chocolat denantes,chocolat,nantes,r_lieu>origine,generated,50.0
+chocolat detoulouse,chocolat,toulouse,r_lieu>origine,generated,50.0
+chocolat d'asie,chocolat,asie,r_lieu>origine,generated,50.0
+chocolat denice,chocolat,nice,r_lieu>origine,generated,50.0
+parfum debourgogne,parfum,bourgogne,r_lieu>origine,generated,50.0
+parfum destrasbourg,parfum,strasbourg,r_lieu>origine,generated,50.0
+parfum demarseille,parfum,marseille,r_lieu>origine,generated,50.0
+parfum d'alsace,parfum,alsace,r_lieu>origine,generated,50.0
+parfum debretagne,parfum,bretagne,r_lieu>origine,generated,50.0
+parfum defrance,parfum,france,r_lieu>origine,generated,50.0
+parfum denormandie,parfum,normandie,r_lieu>origine,generated,50.0
+parfum denantes,parfum,nantes,r_lieu>origine,generated,50.0
+voiture dechine,voiture,chine,r_lieu>origine,generated,50.0
+voiture debordeaux,voiture,bordeaux,r_lieu>origine,generated,50.0
+voiture denantes,voiture,nantes,r_lieu>origine,generated,50.0
+voiture detoulouse,voiture,toulouse,r_lieu>origine,generated,50.0
+voiture d'italie,voiture,italie,r_lieu>origine,generated,50.0
+voiture derennes,voiture,rennes,r_lieu>origine,generated,50.0
+voiture d'espagne,voiture,espagne,r_lieu>origine,generated,50.0
+voiture deprovence,voiture,provence,r_lieu>origine,generated,50.0
+montre delille,montre,lille,r_lieu>origine,generated,50.0
+montre delyon,montre,lyon,r_lieu>origine,generated,50.0
+montre denice,montre,nice,r_lieu>origine,generated,50.0
+montre decorse,montre,corse,r_lieu>origine,generated,50.0
+montre d'europe,montre,europe,r_lieu>origine,generated,50.0
+montre defrance,montre,france,r_lieu>origine,generated,50.0
+montre deprovence,montre,provence,r_lieu>origine,generated,50.0
+montre dejapon,montre,japon,r_lieu>origine,generated,50.0
+biere delyon,biere,lyon,r_lieu>origine,generated,50.0
+biere debordeaux,biere,bordeaux,r_lieu>origine,generated,50.0
+biere dejapon,biere,japon,r_lieu>origine,generated,50.0
+biere d'europe,biere,europe,r_lieu>origine,generated,50.0
+biere d'afrique,biere,afrique,r_lieu>origine,generated,50.0
+biere d'alsace,biere,alsace,r_lieu>origine,generated,50.0
+biere debretagne,biere,bretagne,r_lieu>origine,generated,50.0
+biere d'amerique,biere,amerique,r_lieu>origine,generated,50.0
+cafe decorse,cafe,corse,r_lieu>origine,generated,50.0
+cafe denice,cafe,nice,r_lieu>origine,generated,50.0
+cafe dejapon,cafe,japon,r_lieu>origine,generated,50.0
+cafe deparis,cafe,paris,r_lieu>origine,generated,50.0
+cafe delille,cafe,lille,r_lieu>origine,generated,50.0
+cafe demarseille,cafe,marseille,r_lieu>origine,generated,50.0
+cafe denantes,cafe,nantes,r_lieu>origine,generated,50.0
+cafe destrasbourg,cafe,strasbourg,r_lieu>origine,generated,50.0
+the d'europe,the,europe,r_lieu>origine,generated,50.0
+the demarseille,the,marseille,r_lieu>origine,generated,50.0
+the dechine,the,chine,r_lieu>origine,generated,50.0
+the delille,the,lille,r_lieu>origine,generated,50.0
+the decorse,the,corse,r_lieu>origine,generated,50.0
+the debourgogne,the,bourgogne,r_lieu>origine,generated,50.0
+the delyon,the,lyon,r_lieu>origine,generated,50.0
+the defrance,the,france,r_lieu>origine,generated,50.0
+huile denormandie,huile,normandie,r_lieu>origine,generated,50.0
+huile d'afrique,huile,afrique,r_lieu>origine,generated,50.0
+huile d'alsace,huile,alsace,r_lieu>origine,generated,50.0
+huile delille,huile,lille,r_lieu>origine,generated,50.0
+huile dejapon,huile,japon,r_lieu>origine,generated,50.0
+huile debretagne,huile,bretagne,r_lieu>origine,generated,50.0
+huile dechampagne,huile,champagne,r_lieu>origine,generated,50.0
+huile d'italie,huile,italie,r_lieu>origine,generated,50.0
+jambon deparis,jambon,paris,r_lieu>origine,generated,50.0
+jambon d'afrique,jambon,afrique,r_lieu>origine,generated,50.0
+jambon defrance,jambon,france,r_lieu>origine,generated,50.0
+jambon d'europe,jambon,europe,r_lieu>origine,generated,50.0
+jambon derennes,jambon,rennes,r_lieu>origine,generated,50.0
+jambon d'amerique,jambon,amerique,r_lieu>origine,generated,50.0
+jambon d'espagne,jambon,espagne,r_lieu>origine,generated,50.0
+jambon dechampagne,jambon,champagne,r_lieu>origine,generated,50.0
+saucisson detoulouse,saucisson,toulouse,r_lieu>origine,generated,50.0
+saucisson delille,saucisson,lille,r_lieu>origine,generated,50.0
+saucisson defrance,saucisson,france,r_lieu>origine,generated,50.0
+saucisson denantes,saucisson,nantes,r_lieu>origine,generated,50.0
+saucisson d'alsace,saucisson,alsace,r_lieu>origine,generated,50.0
+saucisson dechampagne,saucisson,champagne,r_lieu>origine,generated,50.0
+saucisson destrasbourg,saucisson,strasbourg,r_lieu>origine,generated,50.0
+saucisson denormandie,saucisson,normandie,r_lieu>origine,generated,50.0
+moutarde denormandie,moutarde,normandie,r_lieu>origine,generated,50.0
+moutarde destrasbourg,moutarde,strasbourg,r_lieu>origine,generated,50.0
+moutarde dejapon,moutarde,japon,r_lieu>origine,generated,50.0
+moutarde detoulouse,moutarde,toulouse,r_lieu>origine,generated,50.0
+moutarde defrance,moutarde,france,r_lieu>origine,generated,50.0
+moutarde d'alsace,moutarde,alsace,r_lieu>origine,generated,50.0
+moutarde deprovence,moutarde,provence,r_lieu>origine,generated,50.0
+moutarde demontpellier,moutarde,montpellier,r_lieu>origine,generated,50.0
+champagne derennes,champagne,rennes,r_lieu>origine,generated,50.0
+champagne d'italie,champagne,italie,r_lieu>origine,generated,50.0
+champagne denormandie,champagne,normandie,r_lieu>origine,generated,50.0
+champagne dechampagne,champagne,champagne,r_lieu>origine,generated,50.0
+champagne denantes,champagne,nantes,r_lieu>origine,generated,50.0
+champagne debretagne,champagne,bretagne,r_lieu>origine,generated,50.0
+champagne dechine,champagne,chine,r_lieu>origine,generated,50.0
+champagne debourgogne,champagne,bourgogne,r_lieu>origine,generated,50.0
+cognac denormandie,cognac,normandie,r_lieu>origine,generated,50.0
+cognac deparis,cognac,paris,r_lieu>origine,generated,50.0
+cognac d'italie,cognac,italie,r_lieu>origine,generated,50.0
+cognac defrance,cognac,france,r_lieu>origine,generated,50.0
+cognac debourgogne,cognac,bourgogne,r_lieu>origine,generated,50.0
+cognac deprovence,cognac,provence,r_lieu>origine,generated,50.0
+cognac d'afrique,cognac,afrique,r_lieu>origine,generated,50.0
+cognac delyon,cognac,lyon,r_lieu>origine,generated,50.0
+cidre d'italie,cidre,italie,r_lieu>origine,generated,50.0
+cidre demontpellier,cidre,montpellier,r_lieu>origine,generated,50.0
+cidre demarseille,cidre,marseille,r_lieu>origine,generated,50.0
+cidre d'asie,cidre,asie,r_lieu>origine,generated,50.0
+cidre decorse,cidre,corse,r_lieu>origine,generated,50.0
+cidre denormandie,cidre,normandie,r_lieu>origine,generated,50.0
+cidre delyon,cidre,lyon,r_lieu>origine,generated,50.0
+cidre d'angleterre,cidre,angleterre,r_lieu>origine,generated,50.0
+calvados denice,calvados,nice,r_lieu>origine,generated,50.0
+calvados d'espagne,calvados,espagne,r_lieu>origine,generated,50.0
+calvados d'amerique,calvados,amerique,r_lieu>origine,generated,50.0
+calvados d'italie,calvados,italie,r_lieu>origine,generated,50.0
+calvados deparis,calvados,paris,r_lieu>origine,generated,50.0
+calvados demarseille,calvados,marseille,r_lieu>origine,generated,50.0
+calvados denantes,calvados,nantes,r_lieu>origine,generated,50.0
+calvados debretagne,calvados,bretagne,r_lieu>origine,generated,50.0
+livre d'isabelle,livre,isabelle,r_own-1,generated,50.0
+livre decatherine,livre,catherine,r_own-1,generated,50.0
+livre delouis,livre,louis,r_own-1,generated,50.0
+livre d'antoine,livre,antoine,r_own-1,generated,50.0
+livre denicolas,livre,nicolas,r_own-1,generated,50.0
+livre demarie,livre,marie,r_own-1,generated,50.0
+livre demichel,livre,michel,r_own-1,generated,50.0
+livre dephilippe,livre,philippe,r_own-1,generated,50.0
+voiture depierre,voiture,pierre,r_own-1,generated,50.0
+voiture d'henri,voiture,henri,r_own-1,generated,50.0
+voiture dejean,voiture,jean,r_own-1,generated,50.0
+voiture dejacques,voiture,jacques,r_own-1,generated,50.0
+voiture decharles,voiture,charles,r_own-1,generated,50.0
+voiture declaire,voiture,claire,r_own-1,generated,50.0
+voiture dejulie,voiture,julie,r_own-1,generated,50.0
+voiture desophie,voiture,sophie,r_own-1,generated,50.0
+maison denicolas,maison,nicolas,r_own-1,generated,50.0
+maison depierre,maison,pierre,r_own-1,generated,50.0
+maison demarie,maison,marie,r_own-1,generated,50.0
+maison depaul,maison,paul,r_own-1,generated,50.0
+maison declaire,maison,claire,r_own-1,generated,50.0
+maison decharles,maison,charles,r_own-1,generated,50.0
+maison d'henri,maison,henri,r_own-1,generated,50.0
+maison dejulie,maison,julie,r_own-1,generated,50.0
+chien dejulie,chien,julie,r_own-1,generated,50.0
+chien decatherine,chien,catherine,r_own-1,generated,50.0
+chien dephilippe,chien,philippe,r_own-1,generated,50.0
+chien declaire,chien,claire,r_own-1,generated,50.0
+chien demichel,chien,michel,r_own-1,generated,50.0
+chien dejacques,chien,jacques,r_own-1,generated,50.0
+chien defrancois,chien,francois,r_own-1,generated,50.0
+chien d'isabelle,chien,isabelle,r_own-1,generated,50.0
+chat dejean,chat,jean,r_own-1,generated,50.0
+chat denicolas,chat,nicolas,r_own-1,generated,50.0
+chat declaire,chat,claire,r_own-1,generated,50.0
+chat decatherine,chat,catherine,r_own-1,generated,50.0
+chat dephilippe,chat,philippe,r_own-1,generated,50.0
+chat d'isabelle,chat,isabelle,r_own-1,generated,50.0
+chat demarie,chat,marie,r_own-1,generated,50.0
+chat depierre,chat,pierre,r_own-1,generated,50.0
+velo decatherine,velo,catherine,r_own-1,generated,50.0
+velo denicolas,velo,nicolas,r_own-1,generated,50.0
+velo d'antoine,velo,antoine,r_own-1,generated,50.0
+velo dejulie,velo,julie,r_own-1,generated,50.0
+velo d'henri,velo,henri,r_own-1,generated,50.0
+velo dejean,velo,jean,r_own-1,generated,50.0
+velo depierre,velo,pierre,r_own-1,generated,50.0
+velo declaire,velo,claire,r_own-1,generated,50.0
+telephone depaul,telephone,paul,r_own-1,generated,50.0
+telephone d'antoine,telephone,antoine,r_own-1,generated,50.0
+telephone d'henri,telephone,henri,r_own-1,generated,50.0
+telephone depierre,telephone,pierre,r_own-1,generated,50.0
+telephone dephilippe,telephone,philippe,r_own-1,generated,50.0
+telephone dejulie,telephone,julie,r_own-1,generated,50.0
+telephone decatherine,telephone,catherine,r_own-1,generated,50.0
+telephone d'andre,telephone,andre,r_own-1,generated,50.0
+ordinateur dephilippe,ordinateur,philippe,r_own-1,generated,50.0
+ordinateur d'anne,ordinateur,anne,r_own-1,generated,50.0
+ordinateur dejulie,ordinateur,julie,r_own-1,generated,50.0
+ordinateur d'antoine,ordinateur,antoine,r_own-1,generated,50.0
+ordinateur demichel,ordinateur,michel,r_own-1,generated,50.0
+ordinateur dejean,ordinateur,jean,r_own-1,generated,50.0
+ordinateur d'andre,ordinateur,andre,r_own-1,generated,50.0
+ordinateur denicolas,ordinateur,nicolas,r_own-1,generated,50.0
+sac demichel,sac,michel,r_own-1,generated,50.0
+sac d'anne,sac,anne,r_own-1,generated,50.0
+sac depierre,sac,pierre,r_own-1,generated,50.0
+sac dejulie,sac,julie,r_own-1,generated,50.0
+sac depaul,sac,paul,r_own-1,generated,50.0
+sac denicolas,sac,nicolas,r_own-1,generated,50.0
+sac desophie,sac,sophie,r_own-1,generated,50.0
+sac dejean,sac,jean,r_own-1,generated,50.0
+montre dephilippe,montre,philippe,r_own-1,generated,50.0
+montre desophie,montre,sophie,r_own-1,generated,50.0
+montre d'isabelle,montre,isabelle,r_own-1,generated,50.0
+montre demichel,montre,michel,r_own-1,generated,50.0
+montre dejacques,montre,jacques,r_own-1,generated,50.0
+montre defrancois,montre,francois,r_own-1,generated,50.0
+montre depaul,montre,paul,r_own-1,generated,50.0
+montre decatherine,montre,catherine,r_own-1,generated,50.0
+chapeau dejulie,chapeau,julie,r_own-1,generated,50.0
+chapeau denicolas,chapeau,nicolas,r_own-1,generated,50.0
+chapeau d'isabelle,chapeau,isabelle,r_own-1,generated,50.0
+chapeau decharles,chapeau,charles,r_own-1,generated,50.0
+chapeau depaul,chapeau,paul,r_own-1,generated,50.0
+chapeau desophie,chapeau,sophie,r_own-1,generated,50.0
+chapeau demichel,chapeau,michel,r_own-1,generated,50.0
+chapeau declaire,chapeau,claire,r_own-1,generated,50.0
+jardin dejacques,jardin,jacques,r_own-1,generated,50.0
+jardin dephilippe,jardin,philippe,r_own-1,generated,50.0
+jardin depaul,jardin,paul,r_own-1,generated,50.0
+jardin desophie,jardin,sophie,r_own-1,generated,50.0
+jardin declaire,jardin,claire,r_own-1,generated,50.0
+jardin defrancois,jardin,francois,r_own-1,generated,50.0
+jardin demarie,jardin,marie,r_own-1,generated,50.0
+jardin demichel,jardin,michel,r_own-1,generated,50.0
+bureau d'isabelle,bureau,isabelle,r_own-1,generated,50.0
+bureau declaire,bureau,claire,r_own-1,generated,50.0
+bureau delouis,bureau,louis,r_own-1,generated,50.0
+bureau depierre,bureau,pierre,r_own-1,generated,50.0
+bureau decharles,bureau,charles,r_own-1,generated,50.0
+bureau dejacques,bureau,jacques,r_own-1,generated,50.0
+bureau dejulie,bureau,julie,r_own-1,generated,50.0
+bureau decatherine,bureau,catherine,r_own-1,generated,50.0
+appartement d'andre,appartement,andre,r_own-1,generated,50.0
+appartement dejulie,appartement,julie,r_own-1,generated,50.0
+appartement decharles,appartement,charles,r_own-1,generated,50.0
+appartement demichel,appartement,michel,r_own-1,generated,50.0
+appartement declaire,appartement,claire,r_own-1,generated,50.0
+appartement d'henri,appartement,henri,r_own-1,generated,50.0
+appartement delouis,appartement,louis,r_own-1,generated,50.0
+appartement depaul,appartement,paul,r_own-1,generated,50.0
+bateau d'anne,bateau,anne,r_own-1,generated,50.0
+bateau dejulie,bateau,julie,r_own-1,generated,50.0
+bateau d'andre,bateau,andre,r_own-1,generated,50.0
+bateau d'henri,bateau,henri,r_own-1,generated,50.0
+bateau demichel,bateau,michel,r_own-1,generated,50.0
+bateau depierre,bateau,pierre,r_own-1,generated,50.0
+bateau d'isabelle,bateau,isabelle,r_own-1,generated,50.0
+bateau decatherine,bateau,catherine,r_own-1,generated,50.0
+piano dejulie,piano,julie,r_own-1,generated,50.0
+piano d'antoine,piano,antoine,r_own-1,generated,50.0
+piano delouis,piano,louis,r_own-1,generated,50.0
+piano declaire,piano,claire,r_own-1,generated,50.0
+piano decatherine,piano,catherine,r_own-1,generated,50.0
+piano desophie,piano,sophie,r_own-1,generated,50.0
+piano dephilippe,piano,philippe,r_own-1,generated,50.0
+piano depaul,piano,paul,r_own-1,generated,50.0
+soeur dejacques,soeur,jacques,r_social_tie,generated,50.0
+soeur dejulie,soeur,julie,r_social_tie,generated,50.0
+soeur demarie,soeur,marie,r_social_tie,generated,50.0
+soeur demichel,soeur,michel,r_social_tie,generated,50.0
+soeur depierre,soeur,pierre,r_social_tie,generated,50.0
+soeur d'antoine,soeur,antoine,r_social_tie,generated,50.0
+soeur decatherine,soeur,catherine,r_social_tie,generated,50.0
+soeur decharles,soeur,charles,r_social_tie,generated,50.0
+professeur dejacques,professeur,jacques,r_social_tie,generated,50.0
+professeur delouis,professeur,louis,r_social_tie,generated,50.0
+professeur demarie,professeur,marie,r_social_tie,generated,50.0
+professeur depierre,professeur,pierre,r_social_tie,generated,50.0
+professeur dephilippe,professeur,philippe,r_social_tie,generated,50.0
+professeur d'antoine,professeur,antoine,r_social_tie,generated,50.0
+professeur decatherine,professeur,catherine,r_social_tie,generated,50.0
+professeur declaire,professeur,claire,r_social_tie,generated,50.0
+employe decharles,employe,charles,r_social_tie,generated,50.0
+employe demichel,employe,michel,r_social_tie,generated,50.0
+employe declaire,employe,claire,r_social_tie,generated,50.0
+employe d'anne,employe,anne,r_social_tie,generated,50.0
+employe d'henri,employe,henri,r_social_tie,generated,50.0
+employe dejean,employe,jean,r_social_tie,generated,50.0
+employe defrancois,employe,francois,r_social_tie,generated,50.0
+employe dejacques,employe,jacques,r_social_tie,generated,50.0
+collegue desophie,collegue,sophie,r_social_tie,generated,50.0
+collegue d'isabelle,collegue,isabelle,r_social_tie,generated,50.0
+collegue demarie,collegue,marie,r_social_tie,generated,50.0
+collegue dejean,collegue,jean,r_social_tie,generated,50.0
+collegue d'antoine,collegue,antoine,r_social_tie,generated,50.0
+collegue decharles,collegue,charles,r_social_tie,generated,50.0
+collegue dejulie,collegue,julie,r_social_tie,generated,50.0
+collegue dejacques,collegue,jacques,r_social_tie,generated,50.0
+voisin dejulie,voisin,julie,r_social_tie,generated,50.0
+voisin dejacques,voisin,jacques,r_social_tie,generated,50.0
+voisin decharles,voisin,charles,r_social_tie,generated,50.0
+voisin decatherine,voisin,catherine,r_social_tie,generated,50.0
+voisin d'isabelle,voisin,isabelle,r_social_tie,generated,50.0
+voisin desophie,voisin,sophie,r_social_tie,generated,50.0
+voisin d'antoine,voisin,antoine,r_social_tie,generated,50.0
+voisin depaul,voisin,paul,r_social_tie,generated,50.0
+eleve denicolas,eleve,nicolas,r_social_tie,generated,50.0
+eleve declaire,eleve,claire,r_social_tie,generated,50.0
+eleve desophie,eleve,sophie,r_social_tie,generated,50.0
+eleve depaul,eleve,paul,r_social_tie,generated,50.0
+eleve delouis,eleve,louis,r_social_tie,generated,50.0
+eleve decatherine,eleve,catherine,r_social_tie,generated,50.0
+eleve d'henri,eleve,henri,r_social_tie,generated,50.0
+eleve defrancois,eleve,francois,r_social_tie,generated,50.0
+patient declaire,patient,claire,r_social_tie,generated,50.0
+patient decharles,patient,charles,r_social_tie,generated,50.0
+patient d'anne,patient,anne,r_social_tie,generated,50.0
+patient depaul,patient,paul,r_social_tie,generated,50.0
+patient desophie,patient,sophie,r_social_tie,generated,50.0
+patient demarie,patient,marie,r_social_tie,generated,50.0
+patient dejulie,patient,julie,r_social_tie,generated,50.0
+patient decatherine,patient,catherine,r_social_tie,generated,50.0
+oncle d'anne,oncle,anne,r_social_tie,generated,50.0
+oncle dejacques,oncle,jacques,r_social_tie,generated,50.0
+oncle dephilippe,oncle,philippe,r_social_tie,generated,50.0
+oncle depierre,oncle,pierre,r_social_tie,generated,50.0
+oncle demarie,oncle,marie,r_social_tie,generated,50.0
+oncle decharles,oncle,charles,r_social_tie,generated,50.0
+oncle desophie,oncle,sophie,r_social_tie,generated,50.0
+oncle d'isabelle,oncle,isabelle,r_social_tie,generated,50.0
+ami d'henri,ami,henri,r_social_tie,generated,50.0
+ami depaul,ami,paul,r_social_tie,generated,50.0
+ami dejean,ami,jean,r_social_tie,generated,50.0
+ami depierre,ami,pierre,r_social_tie,generated,50.0
+ami defrancois,ami,francois,r_social_tie,generated,50.0
+ami demarie,ami,marie,r_social_tie,generated,50.0
+ami dejacques,ami,jacques,r_social_tie,generated,50.0
+ami d'anne,ami,anne,r_social_tie,generated,50.0
+pere d'isabelle,pere,isabelle,r_social_tie,generated,50.0
+pere d'henri,pere,henri,r_social_tie,generated,50.0
+pere d'anne,pere,anne,r_social_tie,generated,50.0
+pere defrancois,pere,francois,r_social_tie,generated,50.0
+pere desophie,pere,sophie,r_social_tie,generated,50.0
+pere demarie,pere,marie,r_social_tie,generated,50.0
+pere denicolas,pere,nicolas,r_social_tie,generated,50.0
+pere depaul,pere,paul,r_social_tie,generated,50.0
+voisine depaul,voisine,paul,r_social_tie,generated,50.0
+voisine denicolas,voisine,nicolas,r_social_tie,generated,50.0
+voisine depierre,voisine,pierre,r_social_tie,generated,50.0
+voisine d'andre,voisine,andre,r_social_tie,generated,50.0
+voisine d'anne,voisine,anne,r_social_tie,generated,50.0
+voisine dejulie,voisine,julie,r_social_tie,generated,50.0
+voisine d'isabelle,voisine,isabelle,r_social_tie,generated,50.0
+voisine decharles,voisine,charles,r_social_tie,generated,50.0
+tante defrancois,tante,francois,r_social_tie,generated,50.0
+tante d'antoine,tante,antoine,r_social_tie,generated,50.0
+tante dejean,tante,jean,r_social_tie,generated,50.0
+tante decharles,tante,charles,r_social_tie,generated,50.0
+tante desophie,tante,sophie,r_social_tie,generated,50.0
+tante demichel,tante,michel,r_social_tie,generated,50.0
+tante d'andre,tante,andre,r_social_tie,generated,50.0
+tante d'anne,tante,anne,r_social_tie,generated,50.0
+cousine desophie,cousine,sophie,r_social_tie,generated,50.0
+cousine dephilippe,cousine,philippe,r_social_tie,generated,50.0
+cousine d'henri,cousine,henri,r_social_tie,generated,50.0
+cousine declaire,cousine,claire,r_social_tie,generated,50.0
+cousine dejacques,cousine,jacques,r_social_tie,generated,50.0
+cousine depierre,cousine,pierre,r_social_tie,generated,50.0
+cousine delouis,cousine,louis,r_social_tie,generated,50.0
+cousine denicolas,cousine,nicolas,r_social_tie,generated,50.0
+cousin decharles,cousin,charles,r_social_tie,generated,50.0
+cousin denicolas,cousin,nicolas,r_social_tie,generated,50.0
+cousin dejacques,cousin,jacques,r_social_tie,generated,50.0
+cousin d'isabelle,cousin,isabelle,r_social_tie,generated,50.0
+cousin dephilippe,cousin,philippe,r_social_tie,generated,50.0
+cousin decatherine,cousin,catherine,r_social_tie,generated,50.0
+cousin defrancois,cousin,francois,r_social_tie,generated,50.0
+cousin d'antoine,cousin,antoine,r_social_tie,generated,50.0
+mere demichel,mere,michel,r_social_tie,generated,50.0
+mere dejulie,mere,julie,r_social_tie,generated,50.0
+mere depierre,mere,pierre,r_social_tie,generated,50.0
+mere decatherine,mere,catherine,r_social_tie,generated,50.0
+mere d'henri,mere,henri,r_social_tie,generated,50.0
+mere d'isabelle,mere,isabelle,r_social_tie,generated,50.0
+mere d'antoine,mere,antoine,r_social_tie,generated,50.0
+mere desophie,mere,sophie,r_social_tie,generated,50.0
+patron d'anne,patron,anne,r_social_tie,generated,50.0
+patron demarie,patron,marie,r_social_tie,generated,50.0
+patron depaul,patron,paul,r_social_tie,generated,50.0
+patron demichel,patron,michel,r_social_tie,generated,50.0
+patron defrancois,patron,francois,r_social_tie,generated,50.0
+patron declaire,patron,claire,r_social_tie,generated,50.0
+patron decatherine,patron,catherine,r_social_tie,generated,50.0
+patron denicolas,patron,nicolas,r_social_tie,generated,50.0
+medecin delouis,medecin,louis,r_social_tie,generated,50.0
+medecin depierre,medecin,pierre,r_social_tie,generated,50.0
+medecin dejacques,medecin,jacques,r_social_tie,generated,50.0
+medecin d'isabelle,medecin,isabelle,r_social_tie,generated,50.0
+medecin depaul,medecin,paul,r_social_tie,generated,50.0
+medecin dejean,medecin,jean,r_social_tie,generated,50.0
+medecin d'henri,medecin,henri,r_social_tie,generated,50.0
+medecin demarie,medecin,marie,r_social_tie,generated,50.0
+frere d'anne,frere,anne,r_social_tie,generated,50.0
+frere defrancois,frere,francois,r_social_tie,generated,50.0
+frere dejacques,frere,jacques,r_social_tie,generated,50.0
+frere denicolas,frere,nicolas,r_social_tie,generated,50.0
+frere declaire,frere,claire,r_social_tie,generated,50.0
+frere demarie,frere,marie,r_social_tie,generated,50.0
+frere dejean,frere,jean,r_social_tie,generated,50.0
+frere decharles,frere,charles,r_social_tie,generated,50.0
+groupe deriz,groupe,riz,r_quantificateur,generated,50.0
+groupe desucre,groupe,sucre,r_quantificateur,generated,50.0
+groupe delivres,groupe,livres,r_quantificateur,generated,50.0
+groupe defarine,groupe,farine,r_quantificateur,generated,50.0
+groupe d'eau,groupe,eau,r_quantificateur,generated,50.0
+groupe depierres,groupe,pierres,r_quantificateur,generated,50.0
+part desable,part,sable,r_quantificateur,generated,50.0
+part debonbons,part,bonbons,r_quantificateur,generated,50.0
+part dephotos,part,photos,r_quantificateur,generated,50.0
+part d'eau,part,eau,r_quantificateur,generated,50.0
+part defarine,part,farine,r_quantificateur,generated,50.0
+part delettres,part,lettres,r_quantificateur,generated,50.0
+gramme debilles,gramme,billes,r_quantificateur,generated,50.0
+gramme desable,gramme,sable,r_quantificateur,generated,50.0
+gramme delettres,gramme,lettres,r_quantificateur,generated,50.0
+gramme delivres,gramme,livres,r_quantificateur,generated,50.0
+gramme deriz,gramme,riz,r_quantificateur,generated,50.0
+gramme dephotos,gramme,photos,r_quantificateur,generated,50.0
+collection desel,collection,sel,r_quantificateur,generated,50.0
+collection defarine,collection,farine,r_quantificateur,generated,50.0
+collection deriz,collection,riz,r_quantificateur,generated,50.0
+collection depommes,collection,pommes,r_quantificateur,generated,50.0
+collection delait,collection,lait,r_quantificateur,generated,50.0
+collection debonbons,collection,bonbons,r_quantificateur,generated,50.0
+lot delait,lot,lait,r_quantificateur,generated,50.0
+lot debonbons,lot,bonbons,r_quantificateur,generated,50.0
+lot defleurs,lot,fleurs,r_quantificateur,generated,50.0
+lot defarine,lot,farine,r_quantificateur,generated,50.0
+lot d'oranges,lot,oranges,r_quantificateur,generated,50.0
+lot depommes,lot,pommes,r_quantificateur,generated,50.0
+bouteille delivres,bouteille,livres,r_quantificateur,generated,50.0
+bouteille depommes,bouteille,pommes,r_quantificateur,generated,50.0
+bouteille depierres,bouteille,pierres,r_quantificateur,generated,50.0
+bouteille desucre,bouteille,sucre,r_quantificateur,generated,50.0
+bouteille depieces,bouteille,pieces,r_quantificateur,generated,50.0
+bouteille defleurs,bouteille,fleurs,r_quantificateur,generated,50.0
+ensemble d'eau,ensemble,eau,r_quantificateur,generated,50.0
+ensemble desucre,ensemble,sucre,r_quantificateur,generated,50.0
+ensemble delettres,ensemble,lettres,r_quantificateur,generated,50.0
+ensemble deriz,ensemble,riz,r_quantificateur,generated,50.0
+ensemble d'oranges,ensemble,oranges,r_quantificateur,generated,50.0
+ensemble debonbons,ensemble,bonbons,r_quantificateur,generated,50.0
+paquet dephotos,paquet,photos,r_quantificateur,generated,50.0
+paquet defleurs,paquet,fleurs,r_quantificateur,generated,50.0
+paquet debonbons,paquet,bonbons,r_quantificateur,generated,50.0
+paquet delait,paquet,lait,r_quantificateur,generated,50.0
+paquet defarine,paquet,farine,r_quantificateur,generated,50.0
+paquet d'oranges,paquet,oranges,r_quantificateur,generated,50.0
+bout delait,bout,lait,r_quantificateur,generated,50.0
+bout desel,bout,sel,r_quantificateur,generated,50.0
+bout deriz,bout,riz,r_quantificateur,generated,50.0
+bout delivres,bout,livres,r_quantificateur,generated,50.0
+bout depommes,bout,pommes,r_quantificateur,generated,50.0
+bout debilles,bout,billes,r_quantificateur,generated,50.0
+tas debonbons,tas,bonbons,r_quantificateur,generated,50.0
+tas defarine,tas,farine,r_quantificateur,generated,50.0
+tas debilles,tas,billes,r_quantificateur,generated,50.0
+tas d'oranges,tas,oranges,r_quantificateur,generated,50.0
+tas d'eau,tas,eau,r_quantificateur,generated,50.0
+tas depieces,tas,pieces,r_quantificateur,generated,50.0
+verre defleurs,verre,fleurs,r_quantificateur,generated,50.0
+verre desucre,verre,sucre,r_quantificateur,generated,50.0
+verre delait,verre,lait,r_quantificateur,generated,50.0
+verre desel,verre,sel,r_quantificateur,generated,50.0
+verre delettres,verre,lettres,r_quantificateur,generated,50.0
+verre delivres,verre,livres,r_quantificateur,generated,50.0
+serie defleurs,serie,fleurs,r_quantificateur,generated,50.0
+serie delivres,serie,livres,r_quantificateur,generated,50.0
+serie debilles,serie,billes,r_quantificateur,generated,50.0
+serie desucre,serie,sucre,r_quantificateur,generated,50.0
+serie defarine,serie,farine,r_quantificateur,generated,50.0
+serie dephotos,serie,photos,r_quantificateur,generated,50.0
+tranche dephotos,tranche,photos,r_quantificateur,generated,50.0
+tranche d'oranges,tranche,oranges,r_quantificateur,generated,50.0
+tranche debonbons,tranche,bonbons,r_quantificateur,generated,50.0
+tranche desable,tranche,sable,r_quantificateur,generated,50.0
+tranche deriz,tranche,riz,r_quantificateur,generated,50.0
+tranche delait,tranche,lait,r_quantificateur,generated,50.0
+litre delivres,litre,livres,r_quantificateur,generated,50.0
+litre debilles,litre,billes,r_quantificateur,generated,50.0
+litre desel,litre,sel,r_quantificateur,generated,50.0
+litre d'oranges,litre,oranges,r_quantificateur,generated,50.0
+litre desucre,litre,sucre,r_quantificateur,generated,50.0
+litre depommes,litre,pommes,r_quantificateur,generated,50.0
+portion depieces,portion,pieces,r_quantificateur,generated,50.0
+portion desucre,portion,sucre,r_quantificateur,generated,50.0
+portion delivres,portion,livres,r_quantificateur,generated,50.0
+portion defarine,portion,farine,r_quantificateur,generated,50.0
+portion deriz,portion,riz,r_quantificateur,generated,50.0
+portion defleurs,portion,fleurs,r_quantificateur,generated,50.0
+morceau desel,morceau,sel,r_quantificateur,generated,50.0
+morceau desucre,morceau,sucre,r_quantificateur,generated,50.0
+morceau delettres,morceau,lettres,r_quantificateur,generated,50.0
+morceau depommes,morceau,pommes,r_quantificateur,generated,50.0
+morceau debilles,morceau,billes,r_quantificateur,generated,50.0
+morceau desable,morceau,sable,r_quantificateur,generated,50.0
+tonne dephotos,tonne,photos,r_quantificateur,generated,50.0
+tonne debonbons,tonne,bonbons,r_quantificateur,generated,50.0
+tonne delait,tonne,lait,r_quantificateur,generated,50.0
+tonne desucre,tonne,sucre,r_quantificateur,generated,50.0
+tonne defarine,tonne,farine,r_quantificateur,generated,50.0
+tonne defleurs,tonne,fleurs,r_quantificateur,generated,50.0
+centimetre d'oranges,centimetre,oranges,r_quantificateur,generated,50.0
+centimetre depierres,centimetre,pierres,r_quantificateur,generated,50.0
+centimetre delettres,centimetre,lettres,r_quantificateur,generated,50.0
+centimetre d'eau,centimetre,eau,r_quantificateur,generated,50.0
+centimetre desable,centimetre,sable,r_quantificateur,generated,50.0
+centimetre delait,centimetre,lait,r_quantificateur,generated,50.0
+metre defarine,metre,farine,r_quantificateur,generated,50.0
+metre desucre,metre,sucre,r_quantificateur,generated,50.0
+metre d'eau,metre,eau,r_quantificateur,generated,50.0
+metre desable,metre,sable,r_quantificateur,generated,50.0
+metre debonbons,metre,bonbons,r_quantificateur,generated,50.0
+metre defleurs,metre,fleurs,r_quantificateur,generated,50.0
+tasse delettres,tasse,lettres,r_quantificateur,generated,50.0
+tasse depierres,tasse,pierres,r_quantificateur,generated,50.0
+tasse d'eau,tasse,eau,r_quantificateur,generated,50.0
+tasse desucre,tasse,sucre,r_quantificateur,generated,50.0
+tasse debilles,tasse,billes,r_quantificateur,generated,50.0
+tasse depommes,tasse,pommes,r_quantificateur,generated,50.0
+kilo delettres,kilo,lettres,r_quantificateur,generated,50.0
+kilo depieces,kilo,pieces,r_quantificateur,generated,50.0
+kilo defarine,kilo,farine,r_quantificateur,generated,50.0
+kilo desucre,kilo,sucre,r_quantificateur,generated,50.0
+kilo depommes,kilo,pommes,r_quantificateur,generated,50.0
+kilo d'oranges,kilo,oranges,r_quantificateur,generated,50.0
+boite d'eau,boite,eau,r_quantificateur,generated,50.0
+boite deriz,boite,riz,r_quantificateur,generated,50.0
+boite desel,boite,sel,r_quantificateur,generated,50.0
+boite defarine,boite,farine,r_quantificateur,generated,50.0
+boite delettres,boite,lettres,r_quantificateur,generated,50.0
+boite desucre,boite,sucre,r_quantificateur,generated,50.0
+sac dephotos,sac,photos,r_quantificateur,generated,50.0
+sac defleurs,sac,fleurs,r_quantificateur,generated,50.0
+sac desable,sac,sable,r_quantificateur,generated,50.0
+sac delivres,sac,livres,r_quantificateur,generated,50.0
+sac depommes,sac,pommes,r_quantificateur,generated,50.0
+sac depieces,sac,pieces,r_quantificateur,generated,50.0
+portrait de lascene,portrait,scene,r_depic,generated,50.0
+portrait duroi,portrait,roi,r_depic,generated,50.0
+portrait de lamontagne,portrait,montagne,r_depic,generated,50.0
+portrait de lareine,portrait,reine,r_depic,generated,50.0
+portrait de lapaysage,portrait,paysage,r_depic,generated,50.0
+portrait de l'animal,portrait,animal,r_depic,generated,50.0
+portrait de laville,portrait,ville,r_depic,generated,50.0
+portrait de l'homme,portrait,homme,r_depic,generated,50.0
+representation de l'homme,representation,homme,r_depic,generated,50.0
+representation de lapaysage,representation,paysage,r_depic,generated,50.0
+representation de labataille,representation,bataille,r_depic,generated,50.0
+representation de lascene,representation,scene,r_depic,generated,50.0
+representation dumer,representation,mer,r_depic,generated,50.0
+representation de laville,representation,ville,r_depic,generated,50.0
+representation de lanature,representation,nature,r_depic,generated,50.0
+representation de l'animal,representation,animal,r_depic,generated,50.0
+sculpture de lareine,sculpture,reine,r_depic,generated,50.0
+sculpture dumer,sculpture,mer,r_depic,generated,50.0
+sculpture duroi,sculpture,roi,r_depic,generated,50.0
+sculpture duforet,sculpture,foret,r_depic,generated,50.0
+sculpture dujardin,sculpture,jardin,r_depic,generated,50.0
+sculpture de l'homme,sculpture,homme,r_depic,generated,50.0
+sculpture de lascene,sculpture,scene,r_depic,generated,50.0
+sculpture de lafemme,sculpture,femme,r_depic,generated,50.0
+dessin dumer,dessin,mer,r_depic,generated,50.0
+dessin de lareine,dessin,reine,r_depic,generated,50.0
+dessin de lamontagne,dessin,montagne,r_depic,generated,50.0
+dessin dujardin,dessin,jardin,r_depic,generated,50.0
+dessin de lapersonnage,dessin,personnage,r_depic,generated,50.0
+dessin de laville,dessin,ville,r_depic,generated,50.0
+dessin de lanature,dessin,nature,r_depic,generated,50.0
+dessin de l'homme,dessin,homme,r_depic,generated,50.0
+esquisse de lapersonnage,esquisse,personnage,r_depic,generated,50.0
+esquisse de lapaysage,esquisse,paysage,r_depic,generated,50.0
+esquisse de l'animal,esquisse,animal,r_depic,generated,50.0
+esquisse de l'enfant,esquisse,enfant,r_depic,generated,50.0
+esquisse dujardin,esquisse,jardin,r_depic,generated,50.0
+esquisse de lafemme,esquisse,femme,r_depic,generated,50.0
+esquisse de lascene,esquisse,scene,r_depic,generated,50.0
+esquisse dumer,esquisse,mer,r_depic,generated,50.0
+image dumer,image,mer,r_depic,generated,50.0
+image dujardin,image,jardin,r_depic,generated,50.0
+image de lanature,image,nature,r_depic,generated,50.0
+image de labataille,image,bataille,r_depic,generated,50.0
+image de l'homme,image,homme,r_depic,generated,50.0
+image de l'enfant,image,enfant,r_depic,generated,50.0
+image de lareine,image,reine,r_depic,generated,50.0
+image de lascene,image,scene,r_depic,generated,50.0
+peinture de lareine,peinture,reine,r_depic,generated,50.0
+peinture de lascene,peinture,scene,r_depic,generated,50.0
+peinture de lafemme,peinture,femme,r_depic,generated,50.0
+peinture de l'animal,peinture,animal,r_depic,generated,50.0
+peinture de l'enfant,peinture,enfant,r_depic,generated,50.0
+peinture de l'homme,peinture,homme,r_depic,generated,50.0
+peinture dujardin,peinture,jardin,r_depic,generated,50.0
+peinture de laville,peinture,ville,r_depic,generated,50.0
+croquis de lapersonnage,croquis,personnage,r_depic,generated,50.0
+croquis dujardin,croquis,jardin,r_depic,generated,50.0
+croquis de lapaysage,croquis,paysage,r_depic,generated,50.0
+croquis dumer,croquis,mer,r_depic,generated,50.0
+croquis de lafemme,croquis,femme,r_depic,generated,50.0
+croquis duroi,croquis,roi,r_depic,generated,50.0
+croquis de l'homme,croquis,homme,r_depic,generated,50.0
+croquis de labataille,croquis,bataille,r_depic,generated,50.0
+gravure de lapersonnage,gravure,personnage,r_depic,generated,50.0
+gravure de labataille,gravure,bataille,r_depic,generated,50.0
+gravure de l'homme,gravure,homme,r_depic,generated,50.0
+gravure de lanature,gravure,nature,r_depic,generated,50.0
+gravure de lamontagne,gravure,montagne,r_depic,generated,50.0
+gravure de l'enfant,gravure,enfant,r_depic,generated,50.0
+gravure de lapaysage,gravure,paysage,r_depic,generated,50.0
+gravure de l'animal,gravure,animal,r_depic,generated,50.0
+tableau de lamontagne,tableau,montagne,r_depic,generated,50.0
+tableau de laville,tableau,ville,r_depic,generated,50.0
+tableau de l'enfant,tableau,enfant,r_depic,generated,50.0
+tableau de lapersonnage,tableau,personnage,r_depic,generated,50.0
+tableau duroi,tableau,roi,r_depic,generated,50.0
+tableau de l'animal,tableau,animal,r_depic,generated,50.0
+tableau de lapaysage,tableau,paysage,r_depic,generated,50.0
+tableau dujardin,tableau,jardin,r_depic,generated,50.0
+statue de laville,statue,ville,r_depic,generated,50.0
+statue de lapersonnage,statue,personnage,r_depic,generated,50.0
+statue de lapaysage,statue,paysage,r_depic,generated,50.0
+statue de l'homme,statue,homme,r_depic,generated,50.0
+statue de lascene,statue,scene,r_depic,generated,50.0
+statue de labataille,statue,bataille,r_depic,generated,50.0
+statue de l'animal,statue,animal,r_depic,generated,50.0
+statue de lafemme,statue,femme,r_depic,generated,50.0
+photo duroi,photo,roi,r_depic,generated,50.0
+photo duforet,photo,foret,r_depic,generated,50.0
+photo de laville,photo,ville,r_depic,generated,50.0
+photo de l'homme,photo,homme,r_depic,generated,50.0
+photo de labataille,photo,bataille,r_depic,generated,50.0
+photo de l'enfant,photo,enfant,r_depic,generated,50.0
+photo de l'animal,photo,animal,r_depic,generated,50.0
+photo de lapaysage,photo,paysage,r_depic,generated,50.0
+illustration de labataille,illustration,bataille,r_depic,generated,50.0
+illustration de lapaysage,illustration,paysage,r_depic,generated,50.0
+illustration de l'animal,illustration,animal,r_depic,generated,50.0
+illustration de lanature,illustration,nature,r_depic,generated,50.0
+illustration de lascene,illustration,scene,r_depic,generated,50.0
+illustration de l'enfant,illustration,enfant,r_depic,generated,50.0
+illustration dumer,illustration,mer,r_depic,generated,50.0
+illustration de laville,illustration,ville,r_depic,generated,50.0
+retard duvent,retard,vent,r_has_causatif,generated,50.0
+retard de l'inondation,retard,inondation,r_has_causatif,generated,50.0
+retard de laseisme,retard,seisme,r_has_causatif,generated,50.0
+retard dutravail,retard,travail,r_has_causatif,generated,50.0
+retard de l'accident,retard,accident,r_has_causatif,generated,50.0
+retard de l'orage,retard,orage,r_has_causatif,generated,50.0
+retard dufroid,retard,froid,r_has_causatif,generated,50.0
+retard de laneige,retard,neige,r_has_causatif,generated,50.0
+retard de lafatigue,retard,fatigue,r_has_causatif,generated,50.0
+retard de lagreve,retard,greve,r_has_causatif,generated,50.0
+accident dustress,accident,stress,r_has_causatif,generated,50.0
+accident duchaleur,accident,chaleur,r_has_causatif,generated,50.0
+accident de laguerre,accident,guerre,r_has_causatif,generated,50.0
+accident de l'inondation,accident,inondation,r_has_causatif,generated,50.0
+accident dufroid,accident,froid,r_has_causatif,generated,50.0
+accident duvent,accident,vent,r_has_causatif,generated,50.0
+accident de l'accident,accident,accident,r_has_causatif,generated,50.0
+accident de l'orage,accident,orage,r_has_causatif,generated,50.0
+accident de laseisme,accident,seisme,r_has_causatif,generated,50.0
+accident de lapluie,accident,pluie,r_has_causatif,generated,50.0
+probleme de laseisme,probleme,seisme,r_has_causatif,generated,50.0
+probleme duvent,probleme,vent,r_has_causatif,generated,50.0
+probleme de l'inondation,probleme,inondation,r_has_causatif,generated,50.0
+probleme dustress,probleme,stress,r_has_causatif,generated,50.0
+probleme de lagreve,probleme,greve,r_has_causatif,generated,50.0
+probleme duchaleur,probleme,chaleur,r_has_causatif,generated,50.0
+probleme dufroid,probleme,froid,r_has_causatif,generated,50.0
+probleme de l'orage,probleme,orage,r_has_causatif,generated,50.0
+probleme de laneige,probleme,neige,r_has_causatif,generated,50.0
+probleme de lafatigue,probleme,fatigue,r_has_causatif,generated,50.0
+incident de laguerre,incident,guerre,r_has_causatif,generated,50.0
+incident de l'accident,incident,accident,r_has_causatif,generated,50.0
+incident de lamaladie,incident,maladie,r_has_causatif,generated,50.0
+incident dufroid,incident,froid,r_has_causatif,generated,50.0
+incident de lagreve,incident,greve,r_has_causatif,generated,50.0
+incident de l'incendie,incident,incendie,r_has_causatif,generated,50.0
+incident de lapluie,incident,pluie,r_has_causatif,generated,50.0
+incident de latempete,incident,tempete,r_has_causatif,generated,50.0
+incident de l'orage,incident,orage,r_has_causatif,generated,50.0
+incident dutravail,incident,travail,r_has_causatif,generated,50.0
+effet de latempete,effet,tempete,r_has_causatif,generated,50.0
+effet de laguerre,effet,guerre,r_has_causatif,generated,50.0
+effet de l'orage,effet,orage,r_has_causatif,generated,50.0
+effet duchaleur,effet,chaleur,r_has_causatif,generated,50.0
+effet dutravail,effet,travail,r_has_causatif,generated,50.0
+effet de l'accident,effet,accident,r_has_causatif,generated,50.0
+effet de lafatigue,effet,fatigue,r_has_causatif,generated,50.0
+effet duvent,effet,vent,r_has_causatif,generated,50.0
+effet de laneige,effet,neige,r_has_causatif,generated,50.0
+effet de lapluie,effet,pluie,r_has_causatif,generated,50.0
+difficulte de l'orage,difficulte,orage,r_has_causatif,generated,50.0
+difficulte dustress,difficulte,stress,r_has_causatif,generated,50.0
+difficulte de laguerre,difficulte,guerre,r_has_causatif,generated,50.0
+difficulte de lagreve,difficulte,greve,r_has_causatif,generated,50.0
+difficulte de l'incendie,difficulte,incendie,r_has_causatif,generated,50.0
+difficulte de l'inondation,difficulte,inondation,r_has_causatif,generated,50.0
+difficulte dutravail,difficulte,travail,r_has_causatif,generated,50.0
+difficulte duvent,difficulte,vent,r_has_causatif,generated,50.0
+difficulte de l'accident,difficulte,accident,r_has_causatif,generated,50.0
+difficulte de latempete,difficulte,tempete,r_has_causatif,generated,50.0
+resultat de l'accident,resultat,accident,r_has_causatif,generated,50.0
+resultat de l'incendie,resultat,incendie,r_has_causatif,generated,50.0
+resultat de lamaladie,resultat,maladie,r_has_causatif,generated,50.0
+resultat de laguerre,resultat,guerre,r_has_causatif,generated,50.0
+resultat de l'inondation,resultat,inondation,r_has_causatif,generated,50.0
+resultat de lagreve,resultat,greve,r_has_causatif,generated,50.0
+resultat dufroid,resultat,froid,r_has_causatif,generated,50.0
+resultat de latempete,resultat,tempete,r_has_causatif,generated,50.0
+resultat de laseisme,resultat,seisme,r_has_causatif,generated,50.0
+resultat de lafatigue,resultat,fatigue,r_has_causatif,generated,50.0
+suite de laguerre,suite,guerre,r_has_causatif,generated,50.0
+suite de laneige,suite,neige,r_has_causatif,generated,50.0
+suite de l'inondation,suite,inondation,r_has_causatif,generated,50.0
+suite dustress,suite,stress,r_has_causatif,generated,50.0
+suite de laseisme,suite,seisme,r_has_causatif,generated,50.0
+suite de lafatigue,suite,fatigue,r_has_causatif,generated,50.0
+suite dufroid,suite,froid,r_has_causatif,generated,50.0
+suite de lamaladie,suite,maladie,r_has_causatif,generated,50.0
+suite de latempete,suite,tempete,r_has_causatif,generated,50.0
+suite de l'incendie,suite,incendie,r_has_causatif,generated,50.0
+impact de lapluie,impact,pluie,r_has_causatif,generated,50.0
+impact de latempete,impact,tempete,r_has_causatif,generated,50.0
+impact dustress,impact,stress,r_has_causatif,generated,50.0
+impact dutravail,impact,travail,r_has_causatif,generated,50.0
+impact de lafatigue,impact,fatigue,r_has_causatif,generated,50.0
+impact de lamaladie,impact,maladie,r_has_causatif,generated,50.0
+impact duchaleur,impact,chaleur,r_has_causatif,generated,50.0
+impact duvent,impact,vent,r_has_causatif,generated,50.0
+impact de laguerre,impact,guerre,r_has_causatif,generated,50.0
+impact de l'accident,impact,accident,r_has_causatif,generated,50.0
+consequence de laguerre,consequence,guerre,r_has_causatif,generated,50.0
+consequence de lagreve,consequence,greve,r_has_causatif,generated,50.0
+consequence duvent,consequence,vent,r_has_causatif,generated,50.0
+consequence dutravail,consequence,travail,r_has_causatif,generated,50.0
+consequence duchaleur,consequence,chaleur,r_has_causatif,generated,50.0
+consequence dustress,consequence,stress,r_has_causatif,generated,50.0
+consequence de laseisme,consequence,seisme,r_has_causatif,generated,50.0
+consequence de l'orage,consequence,orage,r_has_causatif,generated,50.0
+consequence de lamaladie,consequence,maladie,r_has_causatif,generated,50.0
+consequence dufroid,consequence,froid,r_has_causatif,generated,50.0

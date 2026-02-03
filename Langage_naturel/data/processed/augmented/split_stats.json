@@ -1,0 +1,27 @@
+{
+  "total_samples": 783,
+  "train_samples": 547,
+  "val_samples": 118,
+  "test_samples": 118,
+  "train_ratio": 0.698595146871009,
+  "val_ratio": 0.15070242656449553,
+  "test_ratio": 0.15070242656449553,
+  "num_classes": 15,
+  "class_distribution": {
+    "r_depic": 91,
+    "r_topic": 82,
+    "r_has_causatif": 81,
+    "r_has_property-1": 78,
+    "r_lieu": 75,
+    "r_holo": 70,
+    "r_processus_agent": 68,
+    "r_lieu>origine": 43,
+    "r_social_tie": 41,
+    "r_own-1": 32,
+    "r_quantificateur": 27,
+    "r_processus>instr-1": 26,
+    "r_objet>matiere": 24,
+    "r_product_of": 24,
+    "r_processus_patient": 21
+  }
+}

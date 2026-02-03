@@ -11,37 +11,40 @@ Ce projet développe un système capable d'identifier automatiquement le type de
 - "le livre de Marie" → **r_own-1** (Possession)
 - "le train de Paris" → **r_lieu>origine** (Origine)
 
-## 🎯 Objectifs
+## Objectifs
 
-- ✅ Classifier 15 types de relations sémantiques
-- ✅ Comparer différentes approches (ML classique, deep learning)
-- ✅ Évaluer les performances face aux LLM
-- ⚙️ Exploiter la ressource JeuxDeMots pour l'enrichissement
+- Classifier 15 types de relations semantiques
+- Comparer differentes approches (ML classique, deep learning)
+- Evaluer les performances face aux LLM
+- Exploiter la ressource JeuxDeMots pour l'enrichissement semantique
 
-## 🗂️ Structure du Projet
+## Structure du Projet
 
 ```
 .
 ├── data/
 │   ├── raw/                    # Corpus initial (2250 exemples)
-│   └── processed/              # Données prétraitées (train/val/test)
+│   ├── processed/              # Donnees pretraitees (train/val/test)
+│   └── generated/              # Donnees generees via JDM
 ├── src/
 │   ├── preprocessing/          # Nettoyage et normalisation
-│   ├── features/               # Extraction de features
-│   ├── models/                 # Modèles de classification
-│   └── evaluation/             # Métriques et analyse
+│   ├── features/               # Extraction de features (basique + JDM)
+│   ├── models/                 # Modeles de classification
+│   ├── data/                   # Generateur de donnees JDM
+│   └── utils/                  # Client API JeuxDeMots
 ├── models/
-│   └── baseline/               # Modèles entraînés (.joblib)
+│   └── baseline/               # Modeles entraines (.joblib)
 ├── results/
-│   ├── test_results.csv        # Résultats sur test set
+│   ├── test_results.csv        # Resultats sur test set
 │   ├── cross_validation_detailed.csv
 │   └── plots/                  # Visualisations
-├── run_preprocessing.py        # Prétraitement du corpus
-├── run_feature_extraction.py  # Extraction de features
-├── run_train_baseline.py      # Entraînement des modèles
-├── run_evaluate_test.py       # Évaluation sur test set
-├── run_cross_validation.py    # Validation croisée 10-fold
-└── run_chatgpt_simple.py      # Comparaison avec ChatGPT
+├── run_preprocessing.py        # Pretraitement du corpus
+├── run_feature_extraction.py   # Extraction de features
+├── run_generate_jdm_data.py    # Generation de donnees via JDM
+├── run_train_baseline.py       # Entrainement des modeles
+├── run_evaluate_test.py        # Evaluation sur test set
+├── run_cross_validation.py     # Validation croisee 10-fold
+└── run_chatgpt_simple.py       # Comparaison avec ChatGPT
 ```
 
 ## 🚀 Installation
@@ -150,12 +153,19 @@ print(prediction)  # → 'r_holo'
 **✅ Aucun overfitting détecté** - Performance stable train/test
 **✅ Variance faible** - Robustesse confirmée sur tous les folds
 
-### Features Utilisées (21)
+### Features Utilisees (102 avec JDM)
 
+**Features basiques (21):**
 - **Morphologiques** : voyelle initiale, terminaison (-e, -s)
-- **Lexicales** : détection personne/lieu/temporel/matière
-- **Structurelles** : longueur, ratio, présence déterminant
-- **Sémantiques basiques** : catégories prédéfinies
+- **Lexicales** : detection personne/lieu/temporel/matiere
+- **Structurelles** : longueur, ratio, presence determinant
+
+**Features JDM semantiques (81):**
+- **Existence** : `nom1_exists_jdm`, `nom2_exists_jdm`, `both_exist_jdm`
+- **Hyperonymes** : `nom1_hypernym_count`, `shared_hypernym_count`, `hypernym_overlap_ratio`
+- **Types semantiques** : `nom1_is_person_jdm`, `nom2_is_location_jdm`, etc. (9 categories)
+- **Relations** : `nom1_has_r_holo`, `nom2_r_lieu_count`, etc. (8 types de relations)
+- **Compatibilite** : `nom2_is_hypernym_of_nom1`, `has_hierarchical_relation`
 
 ### Comparaison avec LLM
 
@@ -251,21 +261,59 @@ Les 5 erreurs révèlent des **ambiguïtés sémantiques légitimes** :
 Random Forest offre le meilleur compromis. GPT serait préférable 
 sur corpus réel avec forte ambiguïté contextuelle.
 
-## 🛠️ Technologies
+## Integration JeuxDeMots
+
+L'API JeuxDeMots (https://jdm-api.demo.lirmm.fr) est utilisee pour:
+
+### Enrichissement des features
+```bash
+# Extraction avec features JDM (102 features)
+python run_feature_extraction.py
+
+# Extraction sans JDM (21 features basiques)
+python run_feature_extraction.py --no-jdm
+```
+
+### Generation de donnees d'entrainement
+```bash
+# Generer 100 exemples/classe depuis JDM
+python run_generate_jdm_data.py
+
+# Generer 200 exemples/classe
+python run_generate_jdm_data.py --n-per-class 200
+
+# Extraire features du corpus augmente
+python run_feature_extraction_augmented.py
+```
+
+### Utilisation directe de l'API
+```python
+from src.utils.jdm_api import get_jdm_api
+
+api = get_jdm_api()
+api.term_exists("maison")           # True
+api.get_hypernyms("chien")          # ['animal', 'mammifere', ...]
+api.get_semantic_types("voiture")   # {'vehicule', 'transport', ...}
+api.get_signature("livre")          # Dict complet
+```
+
+## Technologies
 
 - **Python 3.11**
-- **scikit-learn** - Modèles ML classiques
-- **pandas, numpy** - Manipulation de données
+- **scikit-learn** - Modeles ML classiques
+- **pandas, numpy** - Manipulation de donnees
 - **matplotlib, seaborn** - Visualisation
 - **OpenAI API** - Comparaison avec ChatGPT (optionnel)
-- **JeuxDeMots API** - Enrichissement sémantique (en cours)
+- **JeuxDeMots API** - Enrichissement semantique (integre)
 
-## 📚 Ressources
+## Ressources
 
-- **Corpus** : 2250 constructions "A de B" (150/classe)
+- **Corpus initial** : 2250 constructions "A de B" (150/classe)
+- **Corpus augmente** : 3000+ exemples (avec generation JDM)
+- **JeuxDeMots API** : https://jdm-api.demo.lirmm.fr
 - **JeuxDeMots** : http://www.jeuxdemots.org/
-- **Article de référence** : 
-  - *Extraction automatique de règles pour la détermination de types de relations sémantiques dans les constructions génitives en français*
+- **Article de reference** :
+  - *Extraction automatique de regles pour la determination de types de relations semantiques dans les constructions genitives en francais*
   - H. Guenoune, M. Lafourcade (LIRMM, 2024)
   - [Lien PDF](https://pfia2024.univ-lr.fr/assets/files/Conf%C3%A9rence-IC/IC_2024_paper_20.pdf)
 
@@ -278,49 +326,55 @@ sur corpus réel avec forte ambiguïté contextuelle.
 
 _À définir_
 
-## 🔄 Statut du Projet
+## Statut du Projet
 
-✅ **Phase 1 : Modèles Baseline Complétée**
+**Phase 1 : Modeles Baseline - Complete**
+**Phase 2 : Integration JeuxDeMots - Complete**
 
-### ✅ Étapes réalisées
-- [x] Architecture du projet définie
-- [x] Structure de dossiers créée
-- [x] Préprocessing du corpus (2250 exemples)
-- [x] Extraction de features (21 features numériques)
-- [x] Data splitting stratifié (70/15/15)
-- [x] 5 modèles baseline entraînés
-- [x] Évaluation sur test set
-- [x] Validation croisée 10-fold
-- [x] Matrices de confusion générées
-- [x] Scripts de comparaison ChatGPT prêts
-
-### ✅ Récemment complété
+### Etapes realisees
+- [x] Architecture du projet definie
+- [x] Structure de dossiers creee
+- [x] Preprocessing du corpus (2250 exemples)
+- [x] Extraction de features (21 features basiques)
+- [x] Data splitting stratifie (70/15/15)
+- [x] 5 modeles baseline entraines (RF: 100%, GB: 100%)
+- [x] Evaluation sur test set
+- [x] Validation croisee 10-fold
+- [x] Matrices de confusion generees
 - [x] Comparaison avec ChatGPT (GPT-3.5-turbo : 95%)
-- [x] Graphiques comparatifs générés
-- [x] Analyse des erreurs LLM
 
-### 🚧 En cours
-- [ ] Analyse de l'importance des features
-- [ ] Intégration API JeuxDeMots pour enrichissement
+### Recemment complete
+- [x] **Integration API JeuxDeMots REST** (https://jdm-api.demo.lirmm.fr)
+- [x] **102 features** (21 basiques + 81 JDM semantiques)
+- [x] **Generateur de donnees** depuis JDM (`run_generate_jdm_data.py`)
+- [x] Corpus augmente (783 exemples generes)
+- [x] Pipeline complet avec features JDM
 
-### 📋 À venir
-- [ ] Modèles Deep Learning (CamemBERT)
+### A venir
+- [ ] Modeles Deep Learning (CamemBERT)
 - [ ] Test sur corpus externe
 - [ ] Gestion des cas ambigus (multi-label)
-- [ ] Interface de démonstration
+- [ ] Interface de demonstration
 - [ ] Rapport final et documentation
 
-## 📊 Reproductibilité
+## Reproductibilite
 
-Tous les résultats sont reproductibles avec `random_state=42` :
+Tous les resultats sont reproductibles avec `random_state=42` :
+
 ```bash
-# Reproduire les résultats exacts
+# Pipeline standard (corpus original)
 python run_preprocessing.py
 python run_feature_extraction.py
 python run_train_baseline.py
 python run_evaluate_test.py
+
+# Pipeline avec augmentation JDM
+python run_generate_jdm_data.py --n-per-class 100
+python run_feature_extraction_augmented.py
+python run_train_baseline.py --data-dir data/processed/augmented
+python run_evaluate_test.py --data-dir data/processed/augmented
 ```
 
-Les modèles entraînés sont sauvegardés dans `models/baseline/`.
+Les modeles entraines sont sauvegardes dans `models/baseline/`.
 
 ---
