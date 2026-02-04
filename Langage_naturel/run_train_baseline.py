@@ -9,6 +9,7 @@ from pathlib import Path
 import warnings
 warnings.filterwarnings('ignore')
 import numpy as np
+import argparse
 
 sys.path.append('src')
 
@@ -16,16 +17,30 @@ from src.models.baseline_models import BaselineClassifier
 from src.evaluation.evaluator import ModelEvaluator
 
 def main():
+    # Parse arguments
+    parser = argparse.ArgumentParser(description='Entraînement des modèles baseline')
+    parser.add_argument('--data-dir', default='data/processed',
+                        help='Répertoire contenant train.csv et val.csv (default: data/processed)')
+    parser.add_argument('--no-regularization', action='store_true',
+                        help='Désactive la régularisation (risque de surapprentissage)')
+    args = parser.parse_args()
+
     print("🚀 Entraînement des modèles baseline")
     print("=" * 60)
-    
+    print(f"📂 Répertoire des données: {args.data_dir}")
+    print(f"🛡️  Régularisation: {'DÉSACTIVÉE' if args.no_regularization else 'ACTIVÉE (anti-overfitting)'}")
+
     # Chargement des données
-    train = pd.read_csv('data/processed/train.csv')
-    val = pd.read_csv('data/processed/val.csv')
+    train = pd.read_csv(f'{args.data_dir}/train.csv')
+    val = pd.read_csv(f'{args.data_dir}/val.csv')
     
     # ========== CORRECTION : Filtrage robuste des features ==========
-    # On exclut explicitement les colonnes non-numériques
-    excluded_cols = ['phrase_originale', 'nom1_lemme', 'nom2_lemme', 'type_jdm', 'definitude']
+    # On exclut explicitement les colonnes de preprocessing (pas des features)
+    excluded_cols = [
+        'phrase_originale', 'nom1', 'nom2', 'determinant',
+        'nom1_lemme', 'nom2_lemme', 'type_jdm', 'definitude',
+        'est_valide', 'notes'
+    ]
     
     # Sélection automatique des colonnes numériques uniquement
     numeric_cols = train.select_dtypes(include=['int64', 'float64', 'int32', 'float32', 'bool']).columns.tolist()
@@ -94,8 +109,11 @@ def main():
         print("-" * 60)
         
         try:
-            # Train
-            classifier = BaselineClassifier(model_name=model_name)
+            # Train (avec ou sans régularisation)
+            classifier = BaselineClassifier(
+                model_name=model_name,
+                use_regularization=not args.no_regularization
+            )
             classifier.train(X_train, y_train)
             
             print(f"  ✓ Temps d'entraînement: {classifier.training_history['training_time_seconds']:.2f}s")

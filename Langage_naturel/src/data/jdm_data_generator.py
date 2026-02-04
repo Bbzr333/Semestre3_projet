@@ -18,6 +18,31 @@ from utils.jdm_api import get_jdm_api, JeuxDeMotsAPI
 class JDMDataGenerator:
     """Genere des donnees d'entrainement depuis JeuxDeMots."""
 
+    # Termes ambigus qui peuvent appartenir à plusieurs classes
+    AMBIGUOUS_TERMS = {
+        'peinture': ['r_processus_patient', 'r_depic', 'r_objet>matiere'],  # action, tableau, ou matière
+        'carte': ['r_depic', 'r_lieu', 'r_topic'],  # représentation, lieu, ou sujet
+        'sculpture': ['r_processus_patient', 'r_depic', 'r_product_of'],  # action, objet, ou création
+        'photo': ['r_depic', 'r_processus_patient', 'r_own-1'],  # image, action, ou possession
+        'construction': ['r_processus_patient', 'r_holo', 'r_lieu'],  # action, partie, ou lieu
+        'histoire': ['r_topic', 'r_processus_patient', 'r_product_of'],  # sujet, récit, ou création
+        'portrait': ['r_depic', 'r_product_of', 'r_own-1'],  # représentation, création, possession
+        'dessin': ['r_depic', 'r_processus_patient', 'r_product_of'],
+        'tableau': ['r_depic', 'r_product_of', 'r_own-1', 'r_objet>matiere'],
+        'ecriture': ['r_processus_patient', 'r_topic', 'r_has_property-1'],
+    }
+
+    # Patterns de paraphrase pour diversité syntaxique
+    PARAPHRASE_PATTERNS = [
+        lambda n1, n2, det: f"{det}{n1} de {n2}",
+        lambda n1, n2, det: f"{det}{n1} du {n2}" if not n2[0] in 'aeiouh' else f"{det}{n1} de l'{n2}",
+        lambda n1, n2, det: f"ce {n1} de {n2}",
+        lambda n1, n2, det: f"un certain {n1} de {n2}",
+        lambda n1, n2, det: f"tout {n1} de {n2}",
+        lambda n1, n2, det: f"chaque {n1} de {n2}",
+        lambda n1, n2, det: f"quel {n1} de {n2}",
+    ]
+
     # Mapping classe projet -> ID relation JDM
     CLASS_TO_JDM_RELATION = {
         'r_holo': 10,              # r_holo (partie-tout)
@@ -48,47 +73,162 @@ class JDMDataGenerator:
                     'documentaire', 'these', 'etude', 'recherche'],
     }
 
-    # Listes pour les classes sans mapping direct
+    # Listes enrichies pour les classes sans mapping direct
     MATERIALS = {'bois', 'pierre', 'metal', 'verre', 'plastique', 'or', 'argent',
                  'fer', 'acier', 'cuivre', 'bronze', 'marbre', 'granit', 'beton',
-                 'cuir', 'tissu', 'laine', 'coton', 'soie', 'papier', 'carton'}
+                 'cuir', 'tissu', 'laine', 'coton', 'soie', 'papier', 'carton',
+                 'aluminium', 'platine', 'titane', 'zinc', 'etain', 'plomb',
+                 'cristal', 'porcelaine', 'ceramique', 'terre cuite', 'ardoise',
+                 'caoutchouc', 'resine', 'fibre', 'bambou', 'osier', 'rotin',
+                 'ivoire', 'nacre', 'corne', 'email', 'faience', 'gres',
+                 'velours', 'satin', 'lin', 'chanvre', 'jute', 'nylon', 'polyester'}
 
     LOCATIONS = {'paris', 'france', 'lyon', 'marseille', 'bordeaux', 'toulouse',
                  'nice', 'nantes', 'strasbourg', 'montpellier', 'lille', 'rennes',
                  'italie', 'espagne', 'allemagne', 'angleterre', 'japon', 'chine',
                  'afrique', 'amerique', 'europe', 'asie', 'bretagne', 'normandie',
-                 'provence', 'alsace', 'bourgogne', 'champagne', 'corse'}
+                 'provence', 'alsace', 'bourgogne', 'champagne', 'corse',
+                 'suisse', 'belgique', 'canada', 'mexique', 'bresil', 'argentine',
+                 'grece', 'turquie', 'inde', 'russie', 'australie', 'egypte',
+                 'maroc', 'tunisie', 'senegal', 'vietnam', 'thailande', 'coree',
+                 'perigord', 'savoie', 'vendee', 'auvergne', 'aquitaine', 'lorraine',
+                 'touraine', 'gascogne', 'languedoc', 'roussillon', 'limousin',
+                 'londres', 'rome', 'berlin', 'madrid', 'lisbonne', 'vienne',
+                 'amsterdam', 'bruxelles', 'geneve', 'zurich', 'milan', 'florence'}
 
     PERSONS = {'marie', 'jean', 'pierre', 'paul', 'jacques', 'philippe', 'michel',
                'andre', 'louis', 'henri', 'charles', 'francois', 'nicolas', 'antoine',
-               'sophie', 'isabelle', 'catherine', 'anne', 'claire', 'julie'}
+               'sophie', 'isabelle', 'catherine', 'anne', 'claire', 'julie',
+               'thomas', 'marc', 'luc', 'mathieu', 'david', 'alexandre', 'olivier',
+               'vincent', 'sylvain', 'bruno', 'alain', 'bernard', 'claude', 'daniel',
+               'eric', 'fabrice', 'guillaume', 'julien', 'laurent', 'pascal',
+               'nathalie', 'sandrine', 'valerie', 'christine', 'martine', 'monique',
+               'laurence', 'veronique', 'patricia', 'sylvie', 'brigitte', 'helene',
+               'emma', 'lea', 'chloe', 'camille', 'lucas', 'hugo', 'nathan', 'theo',
+               'artiste', 'auteur', 'ecrivain', 'peintre', 'musicien', 'sculpteur'}
 
     SOCIAL_RELATIONS = {'ami', 'frere', 'soeur', 'pere', 'mere', 'oncle', 'tante',
                         'cousin', 'cousine', 'voisin', 'voisine', 'collegue',
-                        'patron', 'employe', 'professeur', 'eleve', 'medecin', 'patient'}
+                        'patron', 'employe', 'professeur', 'eleve', 'medecin', 'patient',
+                        'grand-pere', 'grand-mere', 'neveu', 'niece', 'beau-frere',
+                        'belle-soeur', 'gendre', 'belle-fille', 'parrain', 'marraine',
+                        'filleul', 'filleule', 'compagnon', 'compagne', 'epoux', 'epouse',
+                        'associe', 'partenaire', 'collaborateur', 'superieur', 'subalterne',
+                        'mentor', 'tuteur', 'eleve', 'disciple', 'maitre', 'apprenti',
+                        'client', 'fournisseur', 'avocat', 'notaire', 'banquier',
+                        'colocataire', 'camarade', 'condisciple', 'rival', 'adversaire'}
 
     QUANTIFIERS = {'kilo', 'gramme', 'litre', 'metre', 'centimetre', 'tonne',
                    'tas', 'groupe', 'ensemble', 'serie', 'collection', 'lot',
                    'paquet', 'boite', 'sac', 'bouteille', 'verre', 'tasse',
-                   'portion', 'part', 'morceau', 'tranche', 'bout'}
+                   'portion', 'part', 'morceau', 'tranche', 'bout',
+                   'pincee', 'poignee', 'brassee', 'goutte', 'filet', 'nuage',
+                   'cuillere', 'assiette', 'bol', 'corbeille', 'caisse', 'carton',
+                   'douzaine', 'centaine', 'millier', 'million', 'milliard',
+                   'moitie', 'tiers', 'quart', 'cinquieme', 'dixieme',
+                   'pile', 'amas', 'monticule', 'foule', 'multitude', 'masse',
+                   'bande', 'equipe', 'troupe', 'escouade', 'escadron', 'regiment'}
 
     DEPICTION_TERMS = {'portrait', 'photo', 'image', 'tableau', 'dessin',
                        'peinture', 'sculpture', 'statue', 'representation',
-                       'illustration', 'gravure', 'esquisse', 'croquis'}
+                       'illustration', 'gravure', 'esquisse', 'croquis',
+                       'photographie', 'cliche', 'instantane', 'selfie',
+                       'fresque', 'mosaique', 'vitrail', 'tapisserie',
+                       'caricature', 'silhouette', 'effigie', 'buste', 'masque',
+                       'figurine', 'maquette', 'modele', 'reproduction', 'copie',
+                       'affiche', 'poster', 'carte postale', 'vignette', 'miniature'}
 
     CAUSE_EFFECT_TERMS = {'consequence', 'resultat', 'effet', 'impact', 'suite',
-                          'retard', 'probleme', 'difficulte', 'accident', 'incident'}
+                          'retard', 'probleme', 'difficulte', 'accident', 'incident',
+                          'dommage', 'degat', 'destruction', 'perte', 'prejudice',
+                          'benefice', 'avantage', 'progres', 'amelioration', 'succes',
+                          'echec', 'fiasco', 'desastre', 'catastrophe', 'crise',
+                          'sequelle', 'repercussion', 'contrecoup', 'reaction', 'reponse',
+                          'symptome', 'signe', 'manifestation', 'expression', 'marque'}
 
-    def __init__(self, min_weight: int = 10):
+    # Objets supplementaires pour plus de diversite
+    OBJECTS_EXTENDED = {'table', 'chaise', 'porte', 'fenetre', 'escalier', 'pont',
+                        'statue', 'bijou', 'couteau', 'bol', 'vase', 'cadre',
+                        'banc', 'armoire', 'coffre', 'bateau', 'maison', 'mur',
+                        'lit', 'bureau', 'etagere', 'commode', 'buffet', 'bahut',
+                        'lampe', 'lustre', 'miroir', 'horloge', 'pendule', 'tableau',
+                        'tapis', 'rideau', 'coussin', 'couverture', 'drap', 'oreiller',
+                        'assiette', 'plat', 'casserole', 'poele', 'marmite', 'theiere',
+                        'fourchette', 'cuillere', 'louche', 'spatule', 'rape', 'passoire',
+                        'bracelet', 'collier', 'bague', 'boucle', 'pendentif', 'broche',
+                        'violon', 'piano', 'guitare', 'flute', 'harpe', 'orgue'}
+
+    def __init__(self, min_weight: int = 10, enrich_with_jdm: bool = True):
         """
         Initialise le generateur.
 
         Args:
             min_weight: Poids minimum des relations JDM a considerer
+            enrich_with_jdm: Enrichit les listes avec synonymes/hyponymes JDM
         """
         self.api = get_jdm_api()
         self.min_weight = min_weight
         self.generated_pairs: Set[Tuple[str, str, str]] = set()
+        self.enrich_with_jdm = enrich_with_jdm
+        self._enriched_cache: Dict[str, Set[str]] = {}
+
+    def _enrich_terms_jdm(self, terms: Set[str], max_additions: int = 50) -> Set[str]:
+        """
+        Enrichit une liste de termes avec synonymes et hyponymes via JDM.
+
+        Args:
+            terms: Set de termes a enrichir
+            max_additions: Nombre max de termes a ajouter
+
+        Returns:
+            Set enrichi de termes
+        """
+        if not self.enrich_with_jdm:
+            return terms
+
+        cache_key = frozenset(terms)
+        if cache_key in self._enriched_cache:
+            return self._enriched_cache[cache_key]
+
+        enriched = set(terms)
+        additions = 0
+
+        for term in list(terms)[:20]:  # Limite pour eviter trop d'appels API
+            if additions >= max_additions:
+                break
+
+            try:
+                # Recupere synonymes (r_syn = relation type 5)
+                syn_response = self.api.get_outgoing_relations(
+                    term, types_ids='5', min_weight=5, limit=10
+                )
+                if syn_response:
+                    for rel in syn_response.relations:
+                        node = syn_response.get_node_by_id(rel.node2)
+                        if node and self._is_valid_term(node.name):
+                            enriched.add(node.name.lower())
+                            additions += 1
+                            if additions >= max_additions:
+                                break
+
+                # Recupere hyponymes (r_hypo = relation type 8)
+                hypo_response = self.api.get_outgoing_relations(
+                    term, types_ids='8', min_weight=5, limit=10
+                )
+                if hypo_response:
+                    for rel in hypo_response.relations:
+                        node = hypo_response.get_node_by_id(rel.node2)
+                        if node and self._is_valid_term(node.name):
+                            enriched.add(node.name.lower())
+                            additions += 1
+                            if additions >= max_additions:
+                                break
+
+            except Exception:
+                continue
+
+        self._enriched_cache[cache_key] = enriched
+        return enriched
 
     def generate_for_class(
         self,
@@ -214,25 +354,27 @@ class JDMDataGenerator:
     def _generate_material_class(self, n_samples: int) -> List[Dict]:
         """Genere des exemples pour r_objet>matiere."""
         results = []
-        objects = ['table', 'chaise', 'porte', 'fenetre', 'escalier', 'pont',
-                   'statue', 'bijou', 'couteau', 'bol', 'vase', 'cadre',
-                   'banc', 'armoire', 'coffre', 'bateau', 'maison', 'mur']
+
+        # Utilise la liste etendue d'objets
+        objects = list(self.OBJECTS_EXTENDED)
+        random.shuffle(objects)
+
+        # Enrichit les materiaux avec JDM
+        materials = self._enrich_terms_jdm(self.MATERIALS, max_additions=30)
+        materials_list = list(materials)
+        random.shuffle(materials_list)
 
         for obj in objects:
-            for material in random.sample(list(self.MATERIALS), min(5, len(self.MATERIALS))):
+            for material in materials_list[:15]:  # Plus de materiaux par objet
                 if len(results) >= n_samples:
                     break
-                if (obj, material, 'r_objet>matiere') not in self.generated_pairs:
-                    phrase = self._generate_phrase(obj, material, definite=False)
-                    self.generated_pairs.add((obj, material, 'r_objet>matiere'))
-                    results.append({
-                        'phrase': phrase,
-                        'nom1': obj,
-                        'nom2': material,
-                        'type_jdm': 'r_objet>matiere',
-                        'source': 'generated',
-                        'weight': 50
-                    })
+
+                # Genere plusieurs variations pour chaque paire
+                variations = self._generate_phrase_variations(
+                    obj, material, 'r_objet>matiere', max_variations=2
+                )
+                results.extend(variations)
+
             if len(results) >= n_samples:
                 break
 
@@ -243,23 +385,26 @@ class JDMDataGenerator:
         results = []
         products = ['vin', 'fromage', 'chocolat', 'parfum', 'voiture', 'montre',
                     'biere', 'cafe', 'the', 'huile', 'jambon', 'saucisson',
-                    'moutarde', 'champagne', 'cognac', 'cidre', 'calvados']
+                    'moutarde', 'champagne', 'cognac', 'cidre', 'calvados',
+                    'whisky', 'vodka', 'rhum', 'tequila', 'sake', 'porto',
+                    'dentelle', 'porcelaine', 'soie', 'tapis', 'epice', 'safran',
+                    'olive', 'orange', 'citron', 'banane', 'mangue', 'ananas']
+
+        # Enrichit les lieux
+        locations = self._enrich_terms_jdm(self.LOCATIONS, max_additions=40)
+        locations_list = list(locations)
+        random.shuffle(locations_list)
 
         for product in products:
-            for location in random.sample(list(self.LOCATIONS), min(8, len(self.LOCATIONS))):
+            for location in locations_list[:15]:
                 if len(results) >= n_samples:
                     break
-                if (product, location, 'r_lieu>origine') not in self.generated_pairs:
-                    phrase = self._generate_phrase(product, location, definite=False)
-                    self.generated_pairs.add((product, location, 'r_lieu>origine'))
-                    results.append({
-                        'phrase': phrase,
-                        'nom1': product,
-                        'nom2': location,
-                        'type_jdm': 'r_lieu>origine',
-                        'source': 'generated',
-                        'weight': 50
-                    })
+
+                variations = self._generate_phrase_variations(
+                    product, location, 'r_lieu>origine', max_variations=2
+                )
+                results.extend(variations)
+
             if len(results) >= n_samples:
                 break
 
@@ -270,23 +415,27 @@ class JDMDataGenerator:
         results = []
         possessions = ['livre', 'voiture', 'maison', 'chien', 'chat', 'velo',
                        'telephone', 'ordinateur', 'sac', 'montre', 'chapeau',
-                       'jardin', 'bureau', 'appartement', 'bateau', 'piano']
+                       'jardin', 'bureau', 'appartement', 'bateau', 'piano',
+                       'moto', 'camion', 'tracteur', 'yacht', 'avion', 'villa',
+                       'chalet', 'studio', 'loft', 'ferme', 'domaine', 'chateau',
+                       'camera', 'tablette', 'console', 'imprimante', 'robot',
+                       'perroquet', 'hamster', 'lapin', 'cheval', 'poney', 'tortue']
+
+        # Enrichit les personnes
+        persons = self._enrich_terms_jdm(self.PERSONS, max_additions=30)
+        persons_list = list(persons)
+        random.shuffle(persons_list)
 
         for possession in possessions:
-            for person in random.sample(list(self.PERSONS), min(8, len(self.PERSONS))):
+            for person in persons_list[:12]:
                 if len(results) >= n_samples:
                     break
-                if (possession, person, 'r_own-1') not in self.generated_pairs:
-                    phrase = self._generate_phrase(possession, person, definite=False)
-                    self.generated_pairs.add((possession, person, 'r_own-1'))
-                    results.append({
-                        'phrase': phrase,
-                        'nom1': possession,
-                        'nom2': person,
-                        'type_jdm': 'r_own-1',
-                        'source': 'generated',
-                        'weight': 50
-                    })
+
+                variations = self._generate_phrase_variations(
+                    possession, person, 'r_own-1', max_variations=2
+                )
+                results.extend(variations)
+
             if len(results) >= n_samples:
                 break
 
@@ -296,21 +445,25 @@ class JDMDataGenerator:
         """Genere des exemples pour r_social_tie."""
         results = []
 
-        for relation in self.SOCIAL_RELATIONS:
-            for person in random.sample(list(self.PERSONS), min(8, len(self.PERSONS))):
+        # Enrichit les relations sociales et les personnes
+        relations = self._enrich_terms_jdm(self.SOCIAL_RELATIONS, max_additions=20)
+        relations_list = list(relations)
+        random.shuffle(relations_list)
+
+        persons = self._enrich_terms_jdm(self.PERSONS, max_additions=30)
+        persons_list = list(persons)
+        random.shuffle(persons_list)
+
+        for relation in relations_list:
+            for person in persons_list[:10]:
                 if len(results) >= n_samples:
                     break
-                if (relation, person, 'r_social_tie') not in self.generated_pairs:
-                    phrase = self._generate_phrase(relation, person, definite=False)
-                    self.generated_pairs.add((relation, person, 'r_social_tie'))
-                    results.append({
-                        'phrase': phrase,
-                        'nom1': relation,
-                        'nom2': person,
-                        'type_jdm': 'r_social_tie',
-                        'source': 'generated',
-                        'weight': 50
-                    })
+
+                variations = self._generate_phrase_variations(
+                    relation, person, 'r_social_tie', max_variations=2
+                )
+                results.extend(variations)
+
             if len(results) >= n_samples:
                 break
 
@@ -321,23 +474,29 @@ class JDMDataGenerator:
         results = []
         countables = ['pommes', 'oranges', 'livres', 'fleurs', 'pierres',
                       'bonbons', 'billes', 'lettres', 'photos', 'pieces',
-                      'farine', 'sucre', 'sel', 'eau', 'lait', 'riz', 'sable']
+                      'farine', 'sucre', 'sel', 'eau', 'lait', 'riz', 'sable',
+                      'tomates', 'cerises', 'fraises', 'raisins', 'noix', 'amandes',
+                      'chocolat', 'cafe', 'the', 'vin', 'biere', 'jus',
+                      'pain', 'gateau', 'biscuit', 'croissant', 'brioche',
+                      'viande', 'poisson', 'poulet', 'boeuf', 'porc', 'agneau',
+                      'legumes', 'fruits', 'cereales', 'pates', 'soupe', 'salade',
+                      'argent', 'or', 'monnaie', 'billets', 'cartes', 'jetons']
 
-        for quantifier in self.QUANTIFIERS:
-            for item in random.sample(countables, min(6, len(countables))):
+        # Enrichit les quantificateurs
+        quantifiers = self._enrich_terms_jdm(self.QUANTIFIERS, max_additions=20)
+        quantifiers_list = list(quantifiers)
+        random.shuffle(quantifiers_list)
+
+        for quantifier in quantifiers_list:
+            for item in random.sample(countables, min(10, len(countables))):
                 if len(results) >= n_samples:
                     break
-                if (quantifier, item, 'r_quantificateur') not in self.generated_pairs:
-                    phrase = self._generate_phrase(quantifier, item, definite=False)
-                    self.generated_pairs.add((quantifier, item, 'r_quantificateur'))
-                    results.append({
-                        'phrase': phrase,
-                        'nom1': quantifier,
-                        'nom2': item,
-                        'type_jdm': 'r_quantificateur',
-                        'source': 'generated',
-                        'weight': 50
-                    })
+
+                variations = self._generate_phrase_variations(
+                    quantifier, item, 'r_quantificateur', max_variations=2
+                )
+                results.extend(variations)
+
             if len(results) >= n_samples:
                 break
 
@@ -348,23 +507,29 @@ class JDMDataGenerator:
         results = []
         subjects = ['roi', 'reine', 'femme', 'homme', 'enfant', 'paysage',
                     'nature', 'bataille', 'scene', 'personnage', 'animal',
-                    'ville', 'montagne', 'mer', 'foret', 'jardin']
+                    'ville', 'montagne', 'mer', 'foret', 'jardin',
+                    'saint', 'ange', 'demon', 'dieu', 'deesse', 'heros',
+                    'chevalier', 'soldat', 'paysan', 'noble', 'marchand',
+                    'coucher de soleil', 'lever de soleil', 'tempete', 'orage',
+                    'printemps', 'ete', 'automne', 'hiver', 'nuit', 'jour',
+                    'chasse', 'peche', 'danse', 'fete', 'mariage', 'funerailles',
+                    'christ', 'vierge', 'napoleon', 'cesar', 'alexandre']
 
-        for depiction in self.DEPICTION_TERMS:
-            for subject in random.sample(subjects, min(8, len(subjects))):
+        # Enrichit les termes de depiction
+        depictions = self._enrich_terms_jdm(self.DEPICTION_TERMS, max_additions=15)
+        depictions_list = list(depictions)
+        random.shuffle(depictions_list)
+
+        for depiction in depictions_list:
+            for subject in random.sample(subjects, min(12, len(subjects))):
                 if len(results) >= n_samples:
                     break
-                if (depiction, subject, 'r_depic') not in self.generated_pairs:
-                    phrase = self._generate_phrase(depiction, subject, definite=True)
-                    self.generated_pairs.add((depiction, subject, 'r_depic'))
-                    results.append({
-                        'phrase': phrase,
-                        'nom1': depiction,
-                        'nom2': subject,
-                        'type_jdm': 'r_depic',
-                        'source': 'generated',
-                        'weight': 50
-                    })
+
+                variations = self._generate_phrase_variations(
+                    depiction, subject, 'r_depic', max_variations=2
+                )
+                results.extend(variations)
+
             if len(results) >= n_samples:
                 break
 
@@ -375,23 +540,29 @@ class JDMDataGenerator:
         results = []
         causes = ['pluie', 'neige', 'vent', 'orage', 'tempete', 'greve',
                   'accident', 'incendie', 'inondation', 'seisme', 'guerre',
-                  'maladie', 'fatigue', 'stress', 'travail', 'chaleur', 'froid']
+                  'maladie', 'fatigue', 'stress', 'travail', 'chaleur', 'froid',
+                  'secheresse', 'gel', 'verglas', 'brouillard', 'tsunami', 'cyclone',
+                  'epidemie', 'pandemie', 'famine', 'pollution', 'deforestation',
+                  'chomage', 'inflation', 'recession', 'faillite', 'scandale',
+                  'corruption', 'negligence', 'erreur', 'incompetence', 'sabotage',
+                  'explosion', 'effondrement', 'collision', 'naufrage', 'crash',
+                  'surmenage', 'depression', 'anxiete', 'insomnie', 'addiction']
 
-        for effect in self.CAUSE_EFFECT_TERMS:
-            for cause in random.sample(causes, min(10, len(causes))):
+        # Enrichit les termes d'effet
+        effects = self._enrich_terms_jdm(self.CAUSE_EFFECT_TERMS, max_additions=20)
+        effects_list = list(effects)
+        random.shuffle(effects_list)
+
+        for effect in effects_list:
+            for cause in random.sample(causes, min(12, len(causes))):
                 if len(results) >= n_samples:
                     break
-                if (effect, cause, 'r_has_causatif') not in self.generated_pairs:
-                    phrase = self._generate_phrase(effect, cause, definite=True)
-                    self.generated_pairs.add((effect, cause, 'r_has_causatif'))
-                    results.append({
-                        'phrase': phrase,
-                        'nom1': effect,
-                        'nom2': cause,
-                        'type_jdm': 'r_has_causatif',
-                        'source': 'generated',
-                        'weight': 50
-                    })
+
+                variations = self._generate_phrase_variations(
+                    effect, cause, 'r_has_causatif', max_variations=2
+                )
+                results.extend(variations)
+
             if len(results) >= n_samples:
                 break
 
@@ -402,26 +573,34 @@ class JDMDataGenerator:
         results = []
         products = ['tableau', 'livre', 'film', 'chanson', 'poeme', 'roman',
                     'sculpture', 'symphonie', 'opera', 'piece', 'oeuvre',
-                    'invention', 'decouverte', 'theorie', 'recette']
+                    'invention', 'decouverte', 'theorie', 'recette',
+                    'sonate', 'concerto', 'quatuor', 'requiem', 'messe', 'cantate',
+                    'nouvelle', 'conte', 'fable', 'essai', 'memoire', 'these',
+                    'brevet', 'formule', 'equation', 'theoreme', 'loi', 'principe',
+                    'album', 'single', 'clip', 'spectacle', 'ballet', 'comedie',
+                    'tragedie', 'drame', 'farce', 'sketch', 'monologue', 'dialogue',
+                    'fresque', 'portrait', 'nature morte', 'paysage', 'autoportrait']
         creators = ['picasso', 'mozart', 'einstein', 'hugo', 'balzac', 'monet',
                     'renoir', 'beethoven', 'bach', 'moliere', 'voltaire',
-                    'rousseau', 'descartes', 'pasteur', 'curie']
+                    'rousseau', 'descartes', 'pasteur', 'curie',
+                    'rembrandt', 'vermeer', 'dali', 'warhol', 'kandinsky', 'manet',
+                    'cezanne', 'gauguin', 'van gogh', 'klimt', 'munch', 'caravage',
+                    'chopin', 'liszt', 'brahms', 'schubert', 'vivaldi', 'handel',
+                    'zola', 'flaubert', 'proust', 'camus', 'sartre', 'baudelaire',
+                    'rimbaud', 'verlaine', 'mallarme', 'apollinaire', 'prevert',
+                    'edison', 'tesla', 'darwin', 'newton', 'galilee', 'lavoisier',
+                    'spielberg', 'hitchcock', 'kubrick', 'godard', 'truffaut']
 
         for product in products:
-            for creator in random.sample(creators, min(8, len(creators))):
+            for creator in random.sample(creators, min(15, len(creators))):
                 if len(results) >= n_samples:
                     break
-                if (product, creator, 'r_product_of') not in self.generated_pairs:
-                    phrase = self._generate_phrase(product, creator, definite=False)
-                    self.generated_pairs.add((product, creator, 'r_product_of'))
-                    results.append({
-                        'phrase': phrase,
-                        'nom1': product,
-                        'nom2': creator,
-                        'type_jdm': 'r_product_of',
-                        'source': 'generated',
-                        'weight': 50
-                    })
+
+                variations = self._generate_phrase_variations(
+                    product, creator, 'r_product_of', max_variations=2
+                )
+                results.extend(variations)
+
             if len(results) >= n_samples:
                 break
 
@@ -431,7 +610,8 @@ class JDMDataGenerator:
         self,
         nom1: str,
         nom2: str,
-        definite: Optional[bool] = None
+        definite: Optional[bool] = None,
+        add_article_nom1: bool = True
     ) -> str:
         """
         Genere une phrase "A de B" avec le bon determinant.
@@ -440,6 +620,7 @@ class JDMDataGenerator:
             nom1: Premier nom (tete)
             nom2: Deuxieme nom (complement)
             definite: Force la definitude (None = aleatoire)
+            add_article_nom1: Ajoute un article devant nom1
 
         Returns:
             Phrase generee
@@ -450,7 +631,7 @@ class JDMDataGenerator:
         if definite is None:
             definite = random.choice([True, False])
 
-        # Choisit le determinant
+        # Choisit le determinant pour nom2
         if nom2_lower[0] in 'aeiouhàâäéèêëïîôùûü':
             det = "d'" if not definite else "de l'"
         elif definite:
@@ -463,7 +644,88 @@ class JDMDataGenerator:
         else:
             det = "de"
 
+        # Ajoute optionnellement un article devant nom1 pour plus de diversite
+        if add_article_nom1:
+            nom1_lower = nom1.lower()
+            article_choices = ['le', 'la', 'un', 'une', 'les', 'des']
+            # Choix intelligent base sur la terminaison
+            if nom1_lower[0] in 'aeiouhàâäéèêëïîôùûü':
+                article = random.choice(["l'", "un ", "une "])
+            elif nom1_lower.endswith('s') or nom1_lower.endswith('x'):
+                article = random.choice(['les ', 'des '])
+            elif nom1_lower.endswith('e') or nom1_lower.endswith('ie') or nom1_lower.endswith('ee'):
+                article = random.choice(['la ', 'une '])
+            else:
+                article = random.choice(['le ', 'un '])
+            return f"{article}{nom1} {det}{nom2}"
+
         return f"{nom1} {det}{nom2}"
+
+    def _generate_phrase_variations(
+        self,
+        nom1: str,
+        nom2: str,
+        class_name: str,
+        max_variations: int = 3
+    ) -> List[Dict]:
+        """
+        Genere plusieurs variations d'une meme paire de termes.
+
+        Returns:
+            Liste de dictionnaires avec les variations
+        """
+        variations = []
+
+        # Variation 1: avec article defini
+        phrase1 = self._generate_phrase(nom1, nom2, definite=True)
+        if (nom1, nom2, class_name) not in self.generated_pairs:
+            self.generated_pairs.add((nom1, nom2, class_name))
+            variations.append({
+                'phrase': phrase1,
+                'nom1': nom1,
+                'nom2': nom2,
+                'type_jdm': class_name,
+                'source': 'generated_variation',
+                'weight': 50
+            })
+
+        if len(variations) >= max_variations:
+            return variations
+
+        # Variation 2: avec article indefini
+        phrase2 = self._generate_phrase(nom1, nom2, definite=False)
+        key2 = (nom1 + "_indef", nom2, class_name)
+        if key2 not in self.generated_pairs and phrase2 != phrase1:
+            self.generated_pairs.add(key2)
+            variations.append({
+                'phrase': phrase2,
+                'nom1': nom1,
+                'nom2': nom2,
+                'type_jdm': class_name,
+                'source': 'generated_variation',
+                'weight': 45
+            })
+
+        if len(variations) >= max_variations:
+            return variations
+
+        # Variation 3: pluriel de nom1 si applicable
+        if not nom1.endswith('s') and not nom1.endswith('x'):
+            nom1_plural = nom1 + 's'
+            phrase3 = self._generate_phrase(nom1_plural, nom2, definite=True)
+            key3 = (nom1_plural, nom2, class_name)
+            if key3 not in self.generated_pairs:
+                self.generated_pairs.add(key3)
+                variations.append({
+                    'phrase': phrase3,
+                    'nom1': nom1_plural,
+                    'nom2': nom2,
+                    'type_jdm': class_name,
+                    'source': 'generated_variation',
+                    'weight': 40
+                })
+
+        return variations
 
     def _is_valid_term(self, term: str) -> bool:
         """Verifie si un terme est valide pour la generation."""
@@ -476,6 +738,214 @@ class JDMDataGenerator:
         if any(c in term for c in ['>', '<', ':', '|', '/']):
             return False
         return True
+
+    def generate_ambiguous_examples(
+        self,
+        n_samples: int = 100,
+        verbose: bool = True
+    ) -> List[Dict]:
+        """
+        Genere des exemples ambigus pour tester la robustesse des modeles.
+        Ces exemples utilisent des termes qui peuvent appartenir a plusieurs classes.
+
+        Args:
+            n_samples: Nombre d'exemples a generer
+            verbose: Affiche la progression
+
+        Returns:
+            Liste de dictionnaires avec les exemples ambigus
+        """
+        results = []
+
+        if verbose:
+            print(f"  Generation de {n_samples} exemples ambigus...")
+
+        ambiguous_items = list(self.AMBIGUOUS_TERMS.items())
+        random.shuffle(ambiguous_items)
+
+        # Complements varies pour chaque terme ambigu
+        complements = {
+            'personne': list(self.PERSONS)[:20],
+            'lieu': list(self.LOCATIONS)[:20],
+            'objet': list(self.OBJECTS_EXTENDED)[:20],
+            'abstrait': ['liberte', 'justice', 'amour', 'guerre', 'paix', 'vie', 'mort',
+                        'beaute', 'verite', 'nature', 'temps', 'espace', 'histoire'],
+        }
+
+        for term, possible_classes in ambiguous_items:
+            if len(results) >= n_samples:
+                break
+
+            # Choisit une classe aleatoire parmi les possibles
+            chosen_class = random.choice(possible_classes)
+
+            # Choisit un complement approprie
+            if chosen_class in ['r_own-1', 'r_product_of', 'r_social_tie']:
+                complement_list = complements['personne']
+            elif chosen_class in ['r_lieu', 'r_lieu>origine']:
+                complement_list = complements['lieu']
+            elif chosen_class in ['r_objet>matiere', 'r_holo']:
+                complement_list = complements['objet']
+            else:
+                complement_list = complements['abstrait'] + complements['personne']
+
+            for complement in random.sample(complement_list, min(5, len(complement_list))):
+                if len(results) >= n_samples:
+                    break
+
+                phrase = self._generate_phrase(term, complement)
+
+                # Marque comme ambigu
+                results.append({
+                    'phrase': phrase,
+                    'nom1': term,
+                    'nom2': complement,
+                    'type_jdm': chosen_class,
+                    'source': 'ambiguous',
+                    'weight': 30,
+                    'is_ambiguous': True,
+                    'possible_classes': possible_classes
+                })
+
+        if verbose:
+            print(f"    -> {len(results)} exemples ambigus generes")
+
+        return results
+
+    def add_noise_to_data(
+        self,
+        data: List[Dict],
+        noise_ratio: float = 0.1,
+        verbose: bool = True
+    ) -> List[Dict]:
+        """
+        Ajoute du bruit aux donnees pour ameliorer la robustesse.
+
+        Types de bruit:
+        - Fautes de frappe simulees
+        - Variations orthographiques
+        - Ajout/suppression d'accents
+
+        Args:
+            data: Liste de dictionnaires d'exemples
+            noise_ratio: Proportion d'exemples a bruiter (0.0 - 1.0)
+            verbose: Affiche la progression
+
+        Returns:
+            Donnees avec bruit ajoute
+        """
+        if verbose:
+            print(f"  Ajout de bruit ({noise_ratio*100:.0f}% des donnees)...")
+
+        noisy_data = []
+        n_to_noise = int(len(data) * noise_ratio)
+        indices_to_noise = set(random.sample(range(len(data)), n_to_noise))
+
+        # Mappings pour le bruit
+        accent_variations = {
+            'e': ['e', 'é', 'è', 'ê'],
+            'a': ['a', 'à', 'â'],
+            'u': ['u', 'ù', 'û'],
+            'i': ['i', 'î', 'ï'],
+            'o': ['o', 'ô'],
+            'c': ['c', 'ç'],
+        }
+
+        for i, item in enumerate(data):
+            if i in indices_to_noise:
+                noisy_item = item.copy()
+                phrase = item['phrase']
+
+                # Type de bruit aleatoire
+                noise_type = random.choice(['accent', 'typo', 'spacing'])
+
+                if noise_type == 'accent':
+                    # Change aleatoirement un accent
+                    for char, variants in accent_variations.items():
+                        if char in phrase.lower():
+                            phrase = phrase.replace(char, random.choice(variants), 1)
+                            break
+
+                elif noise_type == 'typo':
+                    # Supprime ou duplique une lettre
+                    if len(phrase) > 10:
+                        pos = random.randint(3, len(phrase) - 3)
+                        if random.random() < 0.5:
+                            phrase = phrase[:pos] + phrase[pos+1:]  # Suppression
+                        else:
+                            phrase = phrase[:pos] + phrase[pos] + phrase[pos:]  # Duplication
+
+                elif noise_type == 'spacing':
+                    # Ajoute ou supprime un espace
+                    if '  ' not in phrase and random.random() < 0.5:
+                        pos = phrase.find(' ')
+                        if pos > 0:
+                            phrase = phrase[:pos] + '  ' + phrase[pos+1:]
+
+                noisy_item['phrase'] = phrase
+                noisy_item['has_noise'] = True
+                noisy_data.append(noisy_item)
+            else:
+                noisy_data.append(item)
+
+        if verbose:
+            print(f"    -> {n_to_noise} exemples bruites")
+
+        return noisy_data
+
+    def generate_paraphrases(
+        self,
+        data: List[Dict],
+        n_paraphrases: int = 2,
+        verbose: bool = True
+    ) -> List[Dict]:
+        """
+        Genere des paraphrases syntaxiques pour augmenter la diversite.
+
+        Args:
+            data: Liste de dictionnaires d'exemples
+            n_paraphrases: Nombre de paraphrases par exemple
+            verbose: Affiche la progression
+
+        Returns:
+            Donnees originales + paraphrases
+        """
+        if verbose:
+            print(f"  Generation de paraphrases ({n_paraphrases} par exemple)...")
+
+        augmented_data = list(data)  # Garde les originaux
+        patterns = self.PARAPHRASE_PATTERNS
+
+        for item in data:
+            nom1 = item.get('nom1', '')
+            nom2 = item.get('nom2', '')
+
+            if not nom1 or not nom2:
+                continue
+
+            # Genere n paraphrases avec des patterns differents
+            selected_patterns = random.sample(patterns, min(n_paraphrases, len(patterns)))
+
+            for pattern in selected_patterns:
+                try:
+                    det = random.choice(['le ', 'la ', 'un ', 'une ', ''])
+                    new_phrase = pattern(nom1, nom2, det)
+
+                    # Evite les doublons exacts
+                    if new_phrase != item['phrase']:
+                        new_item = item.copy()
+                        new_item['phrase'] = new_phrase
+                        new_item['source'] = 'paraphrase'
+                        new_item['original_phrase'] = item['phrase']
+                        augmented_data.append(new_item)
+                except Exception:
+                    continue
+
+        if verbose:
+            print(f"    -> {len(augmented_data) - len(data)} paraphrases generees")
+            print(f"    -> Total: {len(augmented_data)} exemples")
+
+        return augmented_data
 
     def generate_all_classes(
         self,

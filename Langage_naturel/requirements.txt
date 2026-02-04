@@ -10,3 +10,8 @@ tqdm>=4.65.0
 
 # Interface de démonstration
 gradio>=4.0.0
+pyvis>=0.3.0
+
+# API REST
+fastapi>=0.100.0
+uvicorn>=0.23.0

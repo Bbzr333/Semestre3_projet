@@ -159,6 +159,8 @@ class JDMFeatureExtractor:
         'r_patient',       # Patient
         'r_carac',         # Caractéristique
         'r_domain',        # Domaine
+        'r_hypo',          # Hyponymes
+        'r_syn',           # Synonymes
     ]
 
     def __init__(self, use_jdm: bool = True, cache_signatures: bool = True):

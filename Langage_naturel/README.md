@@ -47,7 +47,10 @@ Ce projet développe un système capable d'identifier automatiquement le type de
 ├── run_cross_validation.py     # Validation croisee 10-fold
 ├── run_chatgpt_simple.py       # Comparaison avec ChatGPT
 ├── run_train_camembert.py      # Entrainement CamemBERT
-└── run_evaluate_camembert.py   # Evaluation CamemBERT
+├── run_evaluate_camembert.py   # Evaluation CamemBERT
+├── demo.py                     # Interface Gradio interactive
+├── api.py                      # API FastAPI (REST)
+└── EVOLUTION_PROJET.md         # Historique et comparaisons
 ```
 
 ## 🚀 Installation
@@ -157,19 +160,35 @@ print(prediction)  # → 'r_holo'
 **✅ Aucun overfitting détecté** - Performance stable train/test
 **✅ Variance faible** - Robustesse confirmée sur tous les folds
 
-### Features Utilisees (102 avec JDM)
+### Features Utilisees (102+ avec JDM)
 
 **Features basiques (21):**
 - **Morphologiques** : voyelle initiale, terminaison (-e, -s)
 - **Lexicales** : detection personne/lieu/temporel/matiere
 - **Structurelles** : longueur, ratio, presence determinant
 
-**Features JDM semantiques (81):**
+**Features JDM semantiques (81+):**
 - **Existence** : `nom1_exists_jdm`, `nom2_exists_jdm`, `both_exist_jdm`
 - **Hyperonymes** : `nom1_hypernym_count`, `shared_hypernym_count`, `hypernym_overlap_ratio`
 - **Types semantiques** : `nom1_is_person_jdm`, `nom2_is_location_jdm`, etc. (9 categories)
-- **Relations** : `nom1_has_r_holo`, `nom2_r_lieu_count`, etc. (8 types de relations)
+- **Relations** : `nom1_has_r_holo`, `nom2_r_lieu_count`, etc. (10 types de relations)
 - **Compatibilite** : `nom2_is_hypernym_of_nom1`, `has_hierarchical_relation`
+
+**Relations JDM extraites:**
+```python
+RELEVANT_RELATIONS = [
+    'r_isa',       # Hyperonymie
+    'r_holo',      # Holonymie (partie-tout)
+    'r_has_part',  # Meronymie (tout-partie)
+    'r_lieu',      # Lieu
+    'r_agent',     # Agent
+    'r_patient',   # Patient
+    'r_carac',     # Caracteristique
+    'r_domain',    # Domaine
+    'r_hypo',      # Hyponymes (NOUVEAU)
+    'r_syn',       # Synonymes (NOUVEAU)
+]
+```
 
 ### Comparaison avec LLM
 
@@ -302,6 +321,43 @@ api.get_semantic_types("voiture")   # {'vehicule', 'transport', ...}
 api.get_signature("livre")          # Dict complet
 ```
 
+## Demo Interactive (Gradio)
+
+Une interface web interactive permet de tester les modeles en temps reel.
+
+### Lancement
+
+```bash
+python demo.py
+# Ouvre http://localhost:7860
+```
+
+### Fonctionnalites
+
+**Onglet 1 - Comparaison Modeles:**
+- Entrez une phrase genitive ("A de B")
+- Comparaison cote-a-cote CamemBERT vs Random Forest
+- Affichage des probabilites pour chaque classe
+- Extraction JDM en temps reel pour les nouvelles phrases
+
+**Onglet 2 - Knowledge Graph:**
+- Entrez plusieurs phrases (une par ligne)
+- Visualisation interactive du graphe de relations
+- Navigation zoom/pan, nœuds cliquables
+- Legende des types de relations
+
+### Extraction JDM Temps Reel
+
+La demo extrait maintenant les features JDM a la volee pour les phrases non presentes dans le corpus :
+
+```
+Phrase entree → Preprocessing → Features JDM → Prediction RF
+```
+
+Cela permet de tester Random Forest sur **n'importe quelle phrase**, pas seulement celles du test set.
+
+---
+
 ## Deep Learning avec CamemBERT
 
 ### Entrainement
@@ -370,6 +426,12 @@ print(predictions)  # ['r_holo', 'r_own-1', 'r_lieu>origine']
   - H. Guenoune, M. Lafourcade (LIRMM, 2024)
   - [Lien PDF](https://pfia2024.univ-lr.fr/assets/files/Conf%C3%A9rence-IC/IC_2024_paper_20.pdf)
 
+## Documentation
+
+- **[EVOLUTION_PROJET.md](EVOLUTION_PROJET.md)** : Historique detaille du projet, comparaison avant/apres JDM
+- **[API JDM](src/utils/jdm_api.py)** : Client Python pour JeuxDeMots
+- **[Feature Extractor](src/features/feature_extractor.py)** : Extraction des 102+ features
+
 ## 👥 Contributeurs
 
 - **Rivals Leonard** - Development & ML
@@ -384,6 +446,8 @@ _À définir_
 **Phase 1 : Modeles Baseline - Complete**
 **Phase 2 : Integration JeuxDeMots - Complete**
 **Phase 3 : Deep Learning (CamemBERT) - Complete**
+**Phase 4 : Demo Interactive - Complete**
+**Phase 5 : Ameliorations Pipeline - Complete**
 
 ### Etapes realisees
 - [x] Architecture du projet definie
@@ -397,19 +461,28 @@ _À définir_
 - [x] Matrices de confusion generees
 - [x] Comparaison avec ChatGPT (GPT-3.5-turbo : 95%)
 - [x] Integration API JeuxDeMots REST
-- [x] 102 features (21 basiques + 81 JDM semantiques)
-- [x] Generateur de donnees depuis JDM
-- [x] Corpus augmente (783 exemples generes)
+- [x] 102+ features (21 basiques + 81+ JDM semantiques)
+- [x] Generateur de donnees depuis JDM (1900+ exemples)
+- [x] Corpus augmente avec deduplication
+- [x] Relations JDM etendues (r_hypo, r_syn)
+- [x] Demo Gradio interactive
+- [x] Extraction features JDM temps reel
+- [x] Knowledge Graph interactif
+- [x] Amelioration diversite augmentation
 
 ### Recemment complete
 - [x] **CamemBERT** : classifieur deep learning (100% accuracy)
 - [x] **Pipeline complet** : entrainement + evaluation CamemBERT
 - [x] **Inference sur texte brut** : pas besoin de features manuelles
+- [x] **Demo interactive Gradio** : comparaison CamemBERT vs Random Forest
+- [x] **Extraction JDM temps reel** : prediction sur n'importe quelle phrase
+- [x] **Knowledge Graph interactif** : visualisation des relations
+- [x] **Amelioration augmentation** : +100 termes, enrichissement JDM dynamique
 
 ### A venir
-- [ ] Test sur corpus externe
+- [ ] Test sur corpus externe (Wikipedia, journaux)
 - [ ] Gestion des cas ambigus (multi-label)
-- [ ] Interface de demonstration
+- [ ] API FastAPI de production
 - [ ] Rapport final et documentation
 
 ## Reproductibilite

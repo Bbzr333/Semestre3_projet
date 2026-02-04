@@ -1,0 +1,6 @@
+model,accuracy,f1_macro,n_correct,n_total,n_errors,test_type
+logistic_regression,0.3125,0.3125,25,80,55,external
+gradient_boosting,0.2875,0.2875,23,80,57,external
+random_forest,0.2875,0.2875,23,80,57,external
+svm_linear,0.275,0.275,22,80,58,external
+svm_rbf,0.275,0.275,22,80,58,external
