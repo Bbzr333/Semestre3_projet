@@ -16,14 +16,24 @@ dist/
 *.ipynb_checkpoints
 
 # Models et données volumineuses
+models/baseline/*
+models/camembert/
+
 models/**/*.pkl
 models/**/*.h5
 models/**/*.pt
 models/**/*.pth
 models/**/*.bin
+models/**/*.safetensors
+
+models/camembert/best_model/model.safetensors
+models/**/*.joblib
 data/raw/**/*.csv
 data/raw/**/*.json
 !data/raw/.gitkeep
+
+# OpenAI API keys
+data/apiKey/config.json
 
 # IDE
 .vscode/
@@ -42,6 +52,7 @@ logs/
 # Temporary files
 tmp/
 temp/
+temp_graphs/
 *.tmp
 
 # Environment variables

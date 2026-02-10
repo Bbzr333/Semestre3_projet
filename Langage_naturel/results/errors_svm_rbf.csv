@@ -1,0 +1,23 @@
+true,pred,phrase
+r_lieu,r_product_of,le marché de marrakech
+r_lieu>origine,r_topic,le chocolat de belgique
+r_lieu>origine,r_topic,le chocolat de belgique
+r_own-1,r_holo,la bague de la mariée
+r_own-1,r_holo,la bague de la mariée
+r_lieu>origine,r_product_of,le café de brésil
+r_product_of,r_lieu>origine,le dessin de cézanne
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_own-1,r_holo,la bague de la mariée
+r_lieu>origine,r_product_of,le café de brésil
+r_own-1,r_holo,la bague de la mariée
+r_own-1,r_holo,la bague de la mariée
+r_has_causatif,r_holo,les retards de la pluie
+r_has_causatif,r_holo,les pannes de la tempête
+r_lieu>origine,r_topic,le chocolat de belgique
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_processus>instr-1,r_lieu>origine,le laser de gravure
+r_lieu>origine,r_product_of,le café de brésil
+r_lieu>origine,r_product_of,le café de brésil
+r_lieu,r_product_of,le marché de marrakech
+r_own-1,r_holo,la bague de la mariée
+r_processus>instr-1,r_lieu>origine,le laser de gravure

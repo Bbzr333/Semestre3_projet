@@ -1,13 +1,63 @@
-# Classification des Relations Sémantiques dans les Constructions Génitives
+# Documentation Technique Détaillée
+
+Ce document fournit une analyse approfondie du projet, des méthodologies utilisées, des résultats détaillés et des instructions de reproductibilité complètes.
+
+---
+
+# Pipeline de Classification des Relations Sémantiques
 
 Classification automatique des relations sémantiques dans les constructions génitives françaises ("A de B").
+
+## Description
+
+Ce projet développe un système capable d'identifier automatiquement le type de relation sémantique entre deux noms dans une construction génitive française.
 
 **Exemples** : 
 - "la porte de la maison" → **r_holo** (Partie-Tout)
 - "le livre de Marie" → **r_own-1** (Possession)
 - "le train de Paris" → **r_lieu>origine** (Origine)
 
-Pour une documentation technique complète (analyse des features, comparaison détaillée des modèles, intégration JDM, etc.), veuillez consulter le **[README_exhaustif.md](README_exhaustif.md)**.
+## Objectifs
+
+- Classifier 15 types de relations semantiques
+- Comparer differentes approches (ML classique, deep learning)
+- Evaluer les performances face aux LLM
+- Exploiter la ressource JeuxDeMots pour l'enrichissement semantique
+
+## Structure du Projet
+
+```
+.
+├── data/
+│   ├── raw/                    # Corpus initial (2250 exemples)
+│   ├── processed/              # Donnees pretraitees (train/val/test)
+│   └── generated/              # Donnees generees via JDM
+├── src/
+│   ├── preprocessing/          # Nettoyage et normalisation
+│   ├── features/               # Extraction de features (basique + JDM)
+│   ├── models/                 # Modeles de classification
+│   ├── data/                   # Generateur de donnees JDM
+│   └── utils/                  # Client API JeuxDeMots
+├── models/
+│   ├── baseline/               # Modeles entraines (.joblib)
+│   └── camembert/              # Modele CamemBERT (PyTorch)
+├── results/
+│   ├── test_results.csv        # Resultats sur test set
+│   ├── cross_validation_detailed.csv
+│   └── plots/                  # Visualisations
+├── run_preprocessing.py        # Pretraitement du corpus
+├── run_feature_extraction.py   # Extraction de features
+├── run_generate_jdm_data.py    # Generation de donnees via JDM
+├── run_train_baseline.py       # Entrainement des modeles
+├── run_evaluate_test.py        # Evaluation sur test set
+├── run_cross_validation.py     # Validation croisee 10-fold
+├── run_chatgpt_simple.py       # Comparaison avec ChatGPT
+├── run_train_camembert.py      # Entrainement CamemBERT
+├── run_evaluate_camembert.py   # Evaluation CamemBERT
+├── demo.py                     # Interface Gradio interactive
+├── api.py                      # API FastAPI (REST)
+└── EVOLUTION_PROJET.md         # Historique et comparaisons
+```
 
 ## Installation
 
@@ -18,7 +68,7 @@ cd Langage_naturel
 
 # Créer un environnement virtuel
 python -m venv venv
-source venv/bin/activate  # Sur Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # Installer les dépendances
 pip install -r requirements.txt
@@ -167,6 +217,7 @@ RELEVANT_RELATIONS = [
 ### Pourquoi 100% ?
 
 Le corpus actuel est **linéairement séparable** :
+
 - Patterns morpho-syntaxiques distincts entre classes
 - 150 exemples/classe bien equilibres
 - Peu d'ambiguite semantique
@@ -382,13 +433,13 @@ print(predictions)  # ['r_holo', 'r_own-1', 'r_lieu>origine']
 - **Article de reference** :
   - *Extraction automatique de regles pour la determination de types de relations semantiques dans les constructions genitives en francais*
   - H. Guenoune, M. Lafourcade (LIRMM, 2024)
-  - [Lien PDF](https://pfia2024.univ-lr.fr/assets/files/Conf%C3%A9rence-IC/IC_2024_paper_20.pdf)
+  - Lien PDF
 
 ## Documentation
 
-- **[EVOLUTION_PROJET.md](EVOLUTION_PROJET.md)** : Historique detaille du projet, comparaison avant/apres JDM
-- **[API JDM](src/utils/jdm_api.py)** : Client Python pour JeuxDeMots
-- **[Feature Extractor](src/features/feature_extractor.py)** : Extraction des 102+ features
+- **EVOLUTION_PROJET.md** : Historique detaille du projet, comparaison avant/apres JDM
+- **API JDM** : Client Python pour JeuxDeMots
+- **Feature Extractor** : Extraction des 102+ features
 
 ## Contributeurs
 

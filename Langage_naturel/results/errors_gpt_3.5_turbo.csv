@@ -1,0 +1,6 @@
+phrase,true,pred
+la carte d'une égion,r_depic,r_lieu
+la peinture de la porte,r_processus_patient,r_depic
+la carte d'une égion,r_depic,r_lieu
+la peinture de la porte,r_processus_patient,r_depic
+le tableau de monet,r_product_of,r_depic

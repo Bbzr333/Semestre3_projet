@@ -1,0 +1,5 @@
+Modèle,Accuracy,Temps/exemple,N échantillon
+gradient_boosting,1.000,0.000s,338
+random_forest,1.000,0.000s,338
+gpt-3.5-turbo,0.950,0.700s,100
+svm_linear,0.947,0.000s,338
