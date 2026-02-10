@@ -80,11 +80,11 @@ def plot_cv_scores(cv_results, save_path):
     plt.tight_layout()
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
     plt.close()
-    print(f"  📊 Graphique sauvegardé: {save_path}")
+    print(f"  Graphique sauvegarde: {save_path}")
 
 def analyze_fold_difficulty(cv_results):
     """Analyse la difficulté de chaque fold"""
-    print("\n🔍 ANALYSE DE LA DIFFICULTÉ DES FOLDS")
+    print("\nANALYSE DE LA DIFFICULTE DES FOLDS")
     print("=" * 70)
     
     # Calculer le score moyen de tous les modèles pour chaque fold
@@ -106,7 +106,7 @@ def analyze_fold_difficulty(cv_results):
     df_folds = pd.DataFrame(fold_difficulties)
     df_folds = df_folds.sort_values('avg_score')
     
-    print("\n📋 Classement des Folds (du plus difficile au plus facile):")
+    print("\nClassement des Folds (du plus difficile au plus facile):")
     print(df_folds.to_string(index=False))
     
     # Identifier les folds problématiques
@@ -116,28 +116,28 @@ def analyze_fold_difficulty(cv_results):
     difficult_folds = df_folds[df_folds['avg_score'] < mean_difficulty - std_difficulty]
     
     if len(difficult_folds) > 0:
-        print(f"\n⚠️  Folds particulièrement difficiles:")
+        print(f"\n[ATTENTION] Folds particulierement difficiles:")
         for _, fold in difficult_folds.iterrows():
             print(f"  • Fold {fold['fold']}: {fold['avg_score']:.3f} (écart-type: {fold['std_score']:.3f})")
     else:
-        print(f"\n✅ Tous les folds ont une difficulté similaire (variance faible)")
+        print(f"\n[OK] Tous les folds ont une difficulte similaire (variance faible)")
     
     return df_folds
 
 def main():
     print("=" * 70)
-    print("🔄 VALIDATION CROISÉE 10-FOLD")
+    print("VALIDATION CROISEE 10-FOLD")
     print("=" * 70)
     
     # Chargement de tout le dataset (train + val + test)
-    print("\n📂 Chargement des données...")
+    print("\nChargement des donnees...")
     train = pd.read_csv('data/processed/train.csv')
     val = pd.read_csv('data/processed/val.csv')
     test = pd.read_csv('data/processed/test.csv')
     
     # Combiner tous les datasets
     full_data = pd.concat([train, val, test], ignore_index=True)
-    print(f"✓ Dataset complet: {len(full_data)} exemples")
+    print(f"[OK] Dataset complet: {len(full_data)} exemples")
     
     # Préparation des features
     excluded_cols = ['phrase_originale', 'nom1_lemme', 'nom2_lemme', 'type_jdm', 'definitude',
@@ -154,9 +154,9 @@ def main():
         X = X.drop(columns=constant_cols)
     X = X.replace([np.inf, -np.inf], np.nan).fillna(0)
     
-    print(f"✓ Features: {X.shape[1]}")
-    print(f"✓ Classes: {y.nunique()}")
-    print(f"✓ Distribution: {y.value_counts().min()} à {y.value_counts().max()} exemples/classe")
+    print(f"[OK] Features: {X.shape[1]}")
+    print(f"[OK] Classes: {y.nunique()}")
+    print(f"[OK] Distribution: {y.value_counts().min()} a {y.value_counts().max()} exemples/classe")
     
     # Encodage des labels
     le = LabelEncoder()
@@ -193,11 +193,11 @@ def main():
     cv_results = {}
     
     print("\n" + "=" * 70)
-    print("🔄 EXÉCUTION DE LA VALIDATION CROISÉE")
+    print("EXECUTION DE LA VALIDATION CROISEE")
     print("=" * 70)
     
     for model_name, model in models.items():
-        print(f"\n📊 {model_name}")
+        print(f"\n{model_name}")
         print("-" * 70)
         
         # Cross-validation avec métriques détaillées
@@ -216,35 +216,35 @@ def main():
         test_acc = scores['test_accuracy']
         train_acc = scores['train_accuracy']
         
-        print(f"  📈 Test Accuracy:")
+        print(f"  Test Accuracy:")
         print(f"    • Mean:  {test_acc.mean():.3f}")
         print(f"    • Std:   {test_acc.std():.3f}")
         print(f"    • Min:   {test_acc.min():.3f} (Fold {test_acc.argmin() + 1})")
         print(f"    • Max:   {test_acc.max():.3f} (Fold {test_acc.argmax() + 1})")
         
-        print(f"\n  📊 Train Accuracy:")
+        print(f"\n  Train Accuracy:")
         print(f"    • Mean:  {train_acc.mean():.3f}")
         print(f"    • Std:   {train_acc.std():.3f}")
         
         # Détection d'overfitting
         overfit = train_acc.mean() - test_acc.mean()
-        print(f"\n  🔍 Overfitting:")
+        print(f"\n  Overfitting:")
         print(f"    • Train - Test: {overfit:+.3f}")
         if overfit > 0.1:
-            print(f"    • ⚠️  Overfitting détecté!")
+            print(f"    • [ATTENTION] Overfitting detecte!")
         elif overfit < -0.05:
-            print(f"    • ⚠️  Underfitting possible")
+            print(f"    • [ATTENTION] Underfitting possible")
         else:
-            print(f"    • ✅ Bonne généralisation")
+            print(f"    • [OK] Bonne generalisation")
         
         # Autres métriques
-        print(f"\n  📋 Autres Métriques (Test):")
+        print(f"\n  Autres Metriques (Test):")
         print(f"    • Precision: {scores['test_precision_macro'].mean():.3f} ± {scores['test_precision_macro'].std():.3f}")
         print(f"    • Recall:    {scores['test_recall_macro'].mean():.3f} ± {scores['test_recall_macro'].std():.3f}")
         print(f"    • F1-Score:  {scores['test_f1_macro'].mean():.3f} ± {scores['test_f1_macro'].std():.3f}")
         
         # Temps
-        print(f"\n  ⏱️  Temps:")
+        print(f"\n  Temps:")
         print(f"    • Fit:   {scores['fit_time'].mean():.2f}s ± {scores['fit_time'].std():.2f}s")
         print(f"    • Score: {scores['score_time'].mean():.2f}s ± {scores['score_time'].std():.2f}s")
     
@@ -253,7 +253,7 @@ def main():
     
     # Comparaison finale
     print("\n" + "=" * 70)
-    print("🏆 COMPARAISON FINALE")
+    print("COMPARAISON FINALE")
     print("=" * 70)
     
     comparison = []
@@ -298,17 +298,17 @@ def main():
     df_detailed = pd.DataFrame(detailed_results)
     csv_path = results_dir / 'cross_validation_detailed.csv'
     df_detailed.to_csv(csv_path, index=False)
-    print(f"\n💾 Résultats détaillés: {csv_path}")
+    print(f"\nResultats detailles: {csv_path}")
     
     # Analyse finale
     print("\n" + "=" * 70)
-    print("🔬 ANALYSE FINALE")
+    print("ANALYSE FINALE")
     print("=" * 70)
     
     # Vérifier la cohérence avec les résultats précédents
     test_results = pd.read_csv('results/test_results.csv', index_col=0)
     
-    print("\n📊 Comparaison CV vs Test Set:")
+    print("\nComparaison CV vs Test Set:")
     print(f"{'Modèle':<25} {'CV Mean':<12} {'Test Set':<12} {'Diff':<10} {'Cohérence'}")
     print("-" * 70)
     
@@ -322,43 +322,43 @@ def main():
             diff = cv_mean - test_acc
             
             if abs(diff) < 0.05:
-                status = "✅ Cohérent"
+                status = "[OK] Coherent"
             elif diff > 0:
-                status = "⚠️ CV > Test"
+                status = "[ATTENTION] CV > Test"
             else:
-                status = "⚠️ Test > CV"
+                status = "[ATTENTION] Test > CV"
             
             print(f"{model_name:<25} {cv_mean:<12.3f} {test_acc:<12.3f} {diff:+.3f}     {status}")
     
     # Conclusion
     print("\n" + "=" * 70)
-    print("💡 CONCLUSIONS")
+    print("CONCLUSIONS")
     print("=" * 70)
     
     best_model = max(cv_results.keys(), key=lambda m: cv_results[m]['test_accuracy'].mean())
     best_score = cv_results[best_model]['test_accuracy'].mean()
     best_std = cv_results[best_model]['test_accuracy'].std()
     
-    print(f"\n🥇 Meilleur modèle: {best_model}")
+    print(f"\n>> Meilleur modele: {best_model}")
     print(f"   Accuracy: {best_score:.3f} ± {best_std:.3f}")
     
     if best_score > 0.98 and best_std < 0.02:
-        print(f"\n✅ CORPUS TRÈS FACILE")
+        print(f"\n[OK] CORPUS TRES FACILE")
         print(f"   • Score élevé ({best_score:.1%}) avec faible variance")
         print(f"   • Les features actuelles suffisent largement")
         print(f"   • Recommandation: Augmenter la complexité du corpus")
     elif best_std > 0.05:
-        print(f"\n⚠️  VARIANCE ÉLEVÉE")
+        print(f"\n[ATTENTION] VARIANCE ELEVEE")
         print(f"   • Performance instable entre folds")
         print(f"   • Certains folds plus difficiles")
-        print(f"   • Recommandation: Vérifier la distribution des classes")
+        print(f"   * Recommandation: Verifier la distribution des classes")
     else:
-        print(f"\n✅ PERFORMANCE ROBUSTE")
+        print(f"\n[OK] PERFORMANCE ROBUSTE")
         print(f"   • Score stable entre folds")
         print(f"   • Bonne généralisation")
     
     print("\n" + "=" * 70)
-    print("✅ VALIDATION CROISÉE TERMINÉE")
+    print("VALIDATION CROISEE TERMINEE")
     print("=" * 70)
 
 if __name__ == '__main__':

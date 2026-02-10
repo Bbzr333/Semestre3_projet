@@ -30,7 +30,7 @@ def plot_confusion_matrix(cm, labels, model_name, save_path):
     plt.tight_layout()
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
     plt.close()
-    print(f"  💾 Matrice sauvegardée: {save_path}")
+    print(f"  Matrice sauvegardee: {save_path}")
 
 def analyze_errors(y_true, y_pred, X_test, test_df, model_name):
     """Analyse les erreurs de prédiction"""
@@ -38,10 +38,10 @@ def analyze_errors(y_true, y_pred, X_test, test_df, model_name):
     n_errors = errors.sum()
     
     if n_errors == 0:
-        print(f"  🎯 Aucune erreur ! Performance parfaite sur le test set.")
+        print(f"  Aucune erreur ! Performance parfaite sur le test set.")
         return
     
-    print(f"  ❌ {n_errors} erreurs sur {len(y_true)} ({n_errors/len(y_true)*100:.1f}%)")
+    print(f"  {n_errors} erreurs sur {len(y_true)} ({n_errors/len(y_true)*100:.1f}%)")
     
     # Analyser les confusions les plus fréquentes
     error_df = pd.DataFrame({
@@ -53,9 +53,9 @@ def analyze_errors(y_true, y_pred, X_test, test_df, model_name):
     confusion_pairs = error_df.groupby(['true', 'pred']).size().sort_values(ascending=False).head(5)
     
     if len(confusion_pairs) > 0:
-        print(f"\n  🔍 Top 5 confusions:")
+        print(f"\n  Top 5 confusions:")
         for (true_label, pred_label), count in confusion_pairs.items():
-            print(f"    • {true_label} → {pred_label}: {count} fois")
+            print(f"    * {true_label} -> {pred_label}: {count} fois")
             # Afficher un exemple
             example = error_df[(error_df['true'] == true_label) & (error_df['pred'] == pred_label)].iloc[0]
             if example['phrase']:
@@ -65,13 +65,13 @@ def analyze_errors(y_true, y_pred, X_test, test_df, model_name):
 
 def main():
     print("=" * 70)
-    print("🧪 ÉVALUATION SUR LE TEST SET")
+    print("EVALUATION SUR LE TEST SET")
     print("=" * 70)
     
     # Chargement du test set
-    print("\n📂 Chargement des données...")
+    print("\nChargement des donnees...")
     test = pd.read_csv('data/processed/test.csv')
-    print(f"✓ Test: {len(test)} exemples")
+    print(f"[OK] Test: {len(test)} exemples")
     
     # Préparation des features (même traitement que training)
     excluded_cols = ['phrase_originale', 'nom1_lemme', 'nom2_lemme', 'type_jdm', 'definitude',
@@ -88,8 +88,8 @@ def main():
         X_test = X_test.drop(columns=constant_cols)
     X_test = X_test.replace([np.inf, -np.inf], np.nan).fillna(0)
     
-    print(f"✓ Features: {X_test.shape[1]}")
-    print(f"✓ Classes: {y_test.nunique()}")
+    print(f"[OK] Features: {X_test.shape[1]}")
+    print(f"[OK] Classes: {y_test.nunique()}")
     
     # Créer les dossiers de sortie
     results_dir = Path('results')
@@ -101,10 +101,10 @@ def main():
     model_files = list(models_dir.glob('*.joblib'))
     
     if not model_files:
-        print("\n❌ Aucun modèle trouvé dans models/baseline/")
+        print("\n[ERREUR] Aucun modele trouve dans models/baseline/")
         return
     
-    print(f"\n✓ {len(model_files)} modèles trouvés")
+    print(f"\n[OK] {len(model_files)} modeles trouves")
     
     # Évaluation de chaque modèle
     all_results = {}
@@ -112,7 +112,7 @@ def main():
     for model_path in sorted(model_files):
         model_name = model_path.stem
         print(f"\n{'='*70}")
-        print(f"📊 Évaluation: {model_name}")
+        print(f"Evaluation: {model_name}")
         print(f"{'='*70}")
         
         try:
@@ -126,7 +126,7 @@ def main():
             evaluator = ModelEvaluator()
             metrics = evaluator.evaluate(classifier, X_test, y_test)
             
-            print(f"\n📈 Métriques Globales:")
+            print(f"\nMetriques Globales:")
             print(f"  • Accuracy:  {metrics['accuracy']:.3f}")
             print(f"  • Precision: {metrics['precision_macro']:.3f}")
             print(f"  • Recall:    {metrics['recall_macro']:.3f}")
@@ -140,14 +140,14 @@ def main():
             plot_confusion_matrix(cm, labels, model_name, plot_path)
             
             # Analyse des erreurs
-            print(f"\n🔍 Analyse des Erreurs:")
+            print(f"\nAnalyse des Erreurs:")
             error_df = analyze_errors(y_test, y_pred, X_test, test, model_name)
             
             # Sauvegarder les erreurs
             if error_df is not None and len(error_df) > 0:
                 error_path = results_dir / f'errors_{model_name}.csv'
                 error_df.to_csv(error_path, index=False)
-                print(f"  💾 Erreurs sauvegardées: {error_path}")
+                print(f"  Erreurs sauvegardees: {error_path}")
             
             # Stocker les résultats
             all_results[model_name] = {
@@ -159,11 +159,11 @@ def main():
             }
             
             # Rapport détaillé par classe
-            print(f"\n📋 Rapport par Classe:")
+            print(f"\nRapport par Classe:")
             print(metrics['classification_report'])
             
         except Exception as e:
-            print(f"  ❌ Erreur: {e}")
+            print(f"  [ERREUR] {e}")
             all_results[model_name] = {
                 'accuracy': 0.0,
                 'precision': 0.0,
@@ -175,19 +175,19 @@ def main():
     
     # Comparaison finale
     print(f"\n{'='*70}")
-    print("🏆 COMPARAISON FINALE SUR TEST SET")
+    print("COMPARAISON FINALE SUR TEST SET")
     print(f"{'='*70}")
     
     df_results = pd.DataFrame(all_results).T
     df_results = df_results.sort_values('accuracy', ascending=False)
     
-    print("\n📊 Classement des Modèles:")
+    print("\nClassement des Modeles:")
     print(df_results[['accuracy', 'f1_score', 'precision', 'recall', 'n_errors']].to_string())
     
     # Sauvegarder les résultats
     results_path = results_dir / 'test_results.csv'
     df_results.to_csv(results_path)
-    print(f"\n💾 Résultats sauvegardés: {results_path}")
+    print(f"\nResultats sauvegardes: {results_path}")
     
     # Meilleur modèle
     best_model = df_results.index[0]
@@ -195,7 +195,7 @@ def main():
     best_errors = int(df_results.iloc[0]['n_errors'])
     
     print(f"\n{'='*70}")
-    print(f"🥇 MEILLEUR MODÈLE: {best_model}")
+    print(f">> MEILLEUR MODELE: {best_model}")
     print(f"{'='*70}")
     print(f"  • Accuracy: {best_acc:.3f}")
     print(f"  • Erreurs:  {best_errors}/{len(y_test)}")
@@ -204,7 +204,7 @@ def main():
     # Vérification de l'overfitting
     val_results = pd.read_csv('results/baseline_comparison.csv', index_col=0)
     
-    print(f"\n🔍 Analyse Overfitting:")
+    print(f"\nAnalyse Overfitting:")
     print(f"{'Modèle':<25} {'Val Acc':<10} {'Test Acc':<10} {'Diff':<10} {'Status'}")
     print("-" * 70)
     
@@ -215,18 +215,18 @@ def main():
             diff = val_acc - test_acc
             
             if diff > 0.05:
-                status = "⚠️ Overfitting"
+                status = "[ATTENTION] Overfitting"
             elif diff < -0.05:
-                status = "🎯 Bonne généralisation"
+                status = "Bonne generalisation"
             else:
-                status = "✅ Stable"
+                status = "[OK] Stable"
             
             print(f"{model:<25} {val_acc:<10.3f} {test_acc:<10.3f} {diff:+.3f}     {status}")
     
     print(f"\n{'='*70}")
-    print("✅ ÉVALUATION TERMINÉE")
+    print("EVALUATION TERMINEE")
     print(f"{'='*70}")
-    print(f"\n📁 Résultats disponibles dans:")
+    print(f"\nResultats disponibles dans:")
     print(f"  • {results_path}")
     print(f"  • {plots_dir}/")
 

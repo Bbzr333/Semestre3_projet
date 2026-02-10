@@ -106,10 +106,10 @@ def query_chatgpt(client, phrase, system_prompt, model="gpt-4", max_retries=3):
         
         except Exception as e:
             if attempt < max_retries - 1:
-                print(f"  ⚠️  Erreur (tentative {attempt + 1}/{max_retries}): {e}")
+                print(f"  [ATTENTION] Erreur (tentative {attempt + 1}/{max_retries}): {e}")
                 time.sleep(2 ** attempt)  # Exponential backoff
             else:
-                print(f"  ❌ Échec après {max_retries} tentatives: {e}")
+                print(f"  [ERREUR] Echec apres {max_retries} tentatives: {e}")
                 return "ERROR"
     
     return "ERROR"
@@ -119,25 +119,25 @@ def evaluate_chatgpt(client, test_df, train_df, model="gpt-4", n_samples=None):
     Évalue ChatGPT sur le test set
     """
     print(f"\n{'='*70}")
-    print(f"🤖 ÉVALUATION DE {model.upper()}")
+    print(f"EVALUATION DE {model.upper()}")
     print(f"{'='*70}")
     
     # Échantillonner si nécessaire
     if n_samples and n_samples < len(test_df):
         test_sample = test_df.sample(n_samples, random_state=42)
-        print(f"\n📊 Échantillon: {n_samples} exemples (pour économiser les tokens)")
+        print(f"\nEchantillon: {n_samples} exemples (pour economiser les tokens)")
     else:
         test_sample = test_df
-        print(f"\n📊 Test complet: {len(test_sample)} exemples")
+        print(f"\nTest complet: {len(test_sample)} exemples")
     
     # Créer le prompt few-shot
-    print(f"\n🔧 Création du prompt few-shot...")
+    print(f"\nCreation du prompt few-shot...")
     system_prompt = create_few_shot_prompt(train_df, n_examples_per_class=2)
     prompt_tokens = len(system_prompt.split())
-    print(f"  ✓ Prompt: ~{prompt_tokens} mots ({len(system_prompt)} caractères)")
+    print(f"  [OK] Prompt: ~{prompt_tokens} mots ({len(system_prompt)} caracteres)")
     
     # Interroger ChatGPT pour chaque exemple
-    print(f"\n🚀 Interrogation de {model}...")
+    print(f"\nInterrogation de {model}...")
     predictions = []
     y_true = []
     errors = []
@@ -166,7 +166,7 @@ def evaluate_chatgpt(client, test_df, train_df, model="gpt-4", n_samples=None):
     elapsed_time = time.time() - start_time
     
     # Calcul des métriques
-    print(f"\n📊 RÉSULTATS")
+    print(f"\nRESULTATS")
     print(f"{'='*70}")
     
     # Filtrer les erreurs
@@ -174,17 +174,17 @@ def evaluate_chatgpt(client, test_df, train_df, model="gpt-4", n_samples=None):
     valid_true = [y_true[i] for i, p in enumerate(predictions) if p != "ERROR"]
     
     if len(valid_predictions) < len(predictions):
-        print(f"⚠️  {len(predictions) - len(valid_predictions)} erreurs API (réponses invalides)")
+        print(f"[ATTENTION] {len(predictions) - len(valid_predictions)} erreurs API (reponses invalides)")
     
     # Accuracy
     accuracy = accuracy_score(valid_true, valid_predictions)
-    print(f"\n✅ Accuracy: {accuracy:.3f} ({accuracy*100:.1f}%)")
-    
+    print(f"\n[OK] Accuracy: {accuracy:.3f} ({accuracy*100:.1f}%)")
+
     # Temps
-    print(f"⏱️  Temps total: {elapsed_time:.1f}s ({elapsed_time/len(test_sample):.2f}s/exemple)")
-    
+    print(f"Temps total: {elapsed_time:.1f}s ({elapsed_time/len(test_sample):.2f}s/exemple)")
+
     # Rapport détaillé
-    print(f"\n📋 Rapport par Classe:")
+    print(f"\nRapport par Classe:")
     report = classification_report(valid_true, valid_predictions, zero_division=0)
     print(report)
     
@@ -193,7 +193,7 @@ def evaluate_chatgpt(client, test_df, train_df, model="gpt-4", n_samples=None):
     
     # Analyse des erreurs
     if errors:
-        print(f"\n🔍 Analyse des Erreurs ({len(errors)} erreurs):")
+        print(f"\nAnalyse des Erreurs ({len(errors)} erreurs):")
         
         # Top confusions
         error_df = pd.DataFrame(errors)
@@ -256,11 +256,11 @@ def plot_comparison(results_dict, save_path):
     plt.tight_layout()
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
     plt.close()
-    print(f"  📊 Comparaison sauvegardée: {save_path}")
+    print(f"  Comparaison sauvegardee: {save_path}")
 
 def main():
     print("=" * 70)
-    print("🤖 COMPARAISON AVEC CHATGPT")
+    print("COMPARAISON AVEC CHATGPT")
     print("=" * 70)
     
     # Vérifier la clé API
@@ -272,25 +272,25 @@ def main():
             config = json.load(f)
             api_key = config.get('openai_api_key')
             if api_key:
-                print(f"✅ Clé API chargée depuis config.json")
+                print(f"[OK] Cle API chargee depuis config.json")
     except FileNotFoundError:
-        print("⚠️  Fichier config.json non trouvé")
+        print("[ATTENTION] Fichier config.json non trouve")
     except json.JSONDecodeError:
-        print("⚠️  Erreur de lecture du fichier config.json")
-    
+        print("[ATTENTION] Erreur de lecture du fichier config.json")
+
     if not api_key:
-        print("\n🔑 Clé API OpenAI non trouvée dans les variables d'environnement")
+        print("\nCle API OpenAI non trouvee dans les variables d'environnement")
         api_key = input("Entrez votre clé API OpenAI (sk-...): ").strip()
         
         if not api_key.startswith('sk-'):
-            print("❌ Clé API invalide (doit commencer par 'sk-')")
+            print("[ERREUR] Cle API invalide (doit commencer par 'sk-')")
             return
     
-    print(f"✅ Clé API configurée")
-    
+    print(f"[OK] Cle API configuree")
+
     if not api_key:
-        print("\n❌ ERREUR: Clé API OpenAI non trouvée!")
-        print("\n📝 Pour configurer la clé API:")
+        print("\n[ERREUR] Cle API OpenAI non trouvee!")
+        print("\nPour configurer la cle API:")
         print("   export OPENAI_API_KEY='votre-clé-api'")
         print("\nOu créer un fichier .env avec:")
         print("   OPENAI_API_KEY=votre-clé-api")
@@ -298,15 +298,15 @@ def main():
     
     # Initialiser le client OpenAI
     client = OpenAI(api_key=api_key)
-    print(f"✅ Client OpenAI initialisé")
+    print(f"[OK] Client OpenAI initialise")
     
     # Charger les données
-    print(f"\n📂 Chargement des données...")
+    print(f"\nChargement des donnees...")
     train = pd.read_csv('data/processed/train.csv')
     test = pd.read_csv('data/processed/test.csv')
-    
-    print(f"✓ Train: {len(train)} exemples")
-    print(f"✓ Test: {len(test)} exemples")
+
+    print(f"[OK] Train: {len(train)} exemples")
+    print(f"[OK] Test: {len(test)} exemples")
     
     # Charger les résultats des modèles baseline
     baseline_results = pd.read_csv('results/test_results.csv', index_col=0)
@@ -315,15 +315,15 @@ def main():
     MODELS_TO_TEST = ['gpt-3.5-turbo']
     N_SAMPLES = 100  # Échantillon pour économiser les tokens (modifiable)
     
-    print(f"\n⚙️  Configuration:")
+    print(f"\nConfiguration:")
     print(f"  • Modèles: {', '.join(MODELS_TO_TEST)}")
     print(f"  • Échantillon de test: {N_SAMPLES} exemples")
     print(f"  • Coût estimé: ~${(N_SAMPLES * 0.002 * len(MODELS_TO_TEST)):.2f}")
     
     # Demander confirmation
-    response = input("\n▶️  Continuer? (y/n): ")
+    response = input("\nContinuer? (y/n): ")
     if response.lower() != 'y':
-        print("❌ Annulé")
+        print("Annule.")
         return
     
     # Évaluer chaque modèle
@@ -345,14 +345,14 @@ def main():
                 error_df = pd.DataFrame(results['errors'])
                 error_path = Path('results') / f'errors_{model_name.replace("-", "_")}.csv'
                 error_df.to_csv(error_path, index=False)
-                print(f"  💾 Erreurs sauvegardées: {error_path}")
+                print(f"  Erreurs sauvegardees: {error_path}")
         
         except Exception as e:
-            print(f"\n❌ Erreur avec {model_name}: {e}")
+            print(f"\n[ERREUR] Erreur avec {model_name}: {e}")
             continue
     
     # Ajouter les résultats baseline pour comparaison
-    print(f"\n📊 Ajout des résultats baseline...")
+    print(f"\nAjout des resultats baseline...")
     for model in baseline_results.index:
         if model in ['random_forest', 'gradient_boosting', 'svm_linear']:
             all_results[model] = {
@@ -363,7 +363,7 @@ def main():
     
     # Comparaison finale
     print(f"\n{'='*70}")
-    print(f"🏆 COMPARAISON FINALE")
+    print(f"COMPARAISON FINALE")
     print(f"{'='*70}")
     
     comparison = []
@@ -386,7 +386,7 @@ def main():
     
     comparison_path = results_dir / 'chatgpt_comparison.csv'
     df_comparison.to_csv(comparison_path, index=False)
-    print(f"\n💾 Comparaison sauvegardée: {comparison_path}")
+    print(f"\nComparaison sauvegardee: {comparison_path}")
     
     # Graphique de comparaison
     plot_path = plots_dir / 'chatgpt_vs_baseline.png'
@@ -394,23 +394,23 @@ def main():
     
     # Conclusion
     print(f"\n{'='*70}")
-    print(f"💡 CONCLUSIONS")
+    print(f"CONCLUSIONS")
     print(f"{'='*70}")
     
     best_model = df_comparison.iloc[0]['Modèle']
     best_acc = float(df_comparison.iloc[0]['Accuracy'])
     
-    print(f"\n🥇 Meilleur modèle: {best_model} ({best_acc:.3f})")
+    print(f"\nMeilleur modele: {best_model} ({best_acc:.3f})")
     
     if 'gpt' in best_model.lower():
-        print(f"\n✅ ChatGPT surpasse les modèles classiques!")
+        print(f"\nChatGPT surpasse les modeles classiques!")
         print(f"   Mais au prix d'un temps d'exécution ~100x plus lent")
     else:
-        print(f"\n✅ Les modèles classiques restent compétitifs!")
+        print(f"\nLes modeles classiques restent competitifs!")
         print(f"   Avec l'avantage d'être beaucoup plus rapides et gratuits")
     
     print(f"\n{'='*70}")
-    print(f"✅ ÉVALUATION TERMINÉE")
+    print(f"EVALUATION TERMINEE")
     print(f"{'='*70}")
 
 if __name__ == '__main__':

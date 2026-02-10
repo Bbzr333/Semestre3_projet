@@ -147,16 +147,16 @@ def load_models(models_dir: str = 'models/baseline') -> Dict[str, BaselineClassi
     models_path = Path(models_dir)
 
     if not models_path.exists():
-        print(f"⚠️  Répertoire {models_dir} non trouvé")
+        print(f"[ATTENTION] Repertoire {models_dir} non trouve")
         return models
 
     for model_file in models_path.glob('*.joblib'):
         model_name = model_file.stem
         try:
             models[model_name] = BaselineClassifier.load(model_file)
-            print(f"  ✓ Chargé: {model_name}")
+            print(f"  [OK] Charge: {model_name}")
         except Exception as e:
-            print(f"  ✗ Erreur {model_name}: {e}")
+            print(f"  [ECHEC] Erreur {model_name}: {e}")
 
     return models
 
@@ -236,7 +236,7 @@ def extract_features_for_corpus(
     features_df['phrase_originale'] = df_preprocessed['phrase_originale']
 
     if verbose:
-        print(f"  ✓ {len(features_df)} exemples, {len(features_df.columns) - 2} features extraites")
+        print(f"  [OK] {len(features_df)} exemples, {len(features_df.columns) - 2} features extraites")
 
     return features_df
 
@@ -298,7 +298,7 @@ def evaluate_on_corpus(
                 print(f"    → Accuracy: {accuracy*100:.1f}% ({n_errors} erreurs)")
 
         except Exception as e:
-            print(f"  ✗ {model_name}: {e}")
+            print(f"  [ECHEC] {model_name}: {e}")
             import traceback
             traceback.print_exc()
 
@@ -316,13 +316,13 @@ def test_with_jdm_generated(
     Teste les modèles sur des données générées dynamiquement depuis JDM.
     """
     print("\n" + "=" * 60)
-    print("📊 TEST SUR DONNÉES JDM GÉNÉRÉES")
+    print("TEST SUR DONNEES JDM GENEREES")
     print("=" * 60)
 
     generator = JDMDataGenerator(min_weight=5, enrich_with_jdm=True)
 
     # Génère des données variées
-    print("\n🔄 Génération des données de test...")
+    print("\nGeneration des donnees de test...")
     test_data = generator.generate_all_classes(n_per_class=n_samples // 15, verbose=verbose)
 
     # Ajoute des cas ambigus
@@ -334,14 +334,14 @@ def test_with_jdm_generated(
     if add_noise:
         test_data = generator.add_noise_to_data(test_data, noise_ratio=0.15, verbose=verbose)
 
-    print(f"\n✓ Total: {len(test_data)} exemples de test")
+    print(f"\n[OK] Total: {len(test_data)} exemples de test")
 
     # Extrait les features
-    print("\n📐 Extraction des features...")
+    print("\nExtraction des features...")
     df = extract_features_for_corpus(test_data, use_jdm=True, verbose=verbose)
 
     # Évalue
-    print("\n📈 Évaluation des modèles...")
+    print("\nEvaluation des modeles...")
     results = evaluate_on_corpus(models, df, verbose=verbose)
 
     return results
@@ -355,17 +355,17 @@ def test_with_external_corpus(
     Teste les modèles sur le corpus externe prédéfini.
     """
     print("\n" + "=" * 60)
-    print("📊 TEST SUR CORPUS EXTERNE")
+    print("TEST SUR CORPUS EXTERNE")
     print("=" * 60)
 
-    print(f"\n✓ {len(EXTERNAL_TEST_CORPUS)} exemples dans le corpus externe")
+    print(f"\n[OK] {len(EXTERNAL_TEST_CORPUS)} exemples dans le corpus externe")
 
     # Extrait les features
-    print("\n📐 Extraction des features...")
+    print("\nExtraction des features...")
     df = extract_features_for_corpus(EXTERNAL_TEST_CORPUS, use_jdm=True, verbose=verbose)
 
     # Évalue
-    print("\n📈 Évaluation des modèles...")
+    print("\nEvaluation des modeles...")
     results = evaluate_on_corpus(models, df, verbose=verbose)
 
     return results
@@ -425,15 +425,15 @@ def main():
                         help='Affiche les erreurs détaillées')
     args = parser.parse_args()
 
-    print("🔬 TEST DE GÉNÉRALISATION DES MODÈLES")
+    print("TEST DE GENERALISATION DES MODELES")
     print("=" * 60)
 
     # Charge les modèles
-    print("\n📦 Chargement des modèles...")
+    print("\nChargement des modeles...")
     models = load_models(args.models_dir)
 
     if not models:
-        print("❌ Aucun modèle trouvé. Exécutez d'abord run_train_baseline.py")
+        print("[ERREUR] Aucun modele trouve. Executez d'abord run_train_baseline.py")
         return
 
     all_results = []
@@ -461,11 +461,11 @@ def main():
         combined = pd.concat(all_results, ignore_index=True)
 
         print("\n" + "=" * 60)
-        print("📊 RÉSUMÉ DES RÉSULTATS")
+        print("RESUME DES RESULTATS")
         print("=" * 60)
 
         if combined.empty or 'accuracy' not in combined.columns:
-            print("\n⚠️  Aucun résultat disponible (features incompatibles?)")
+            print("\n[ATTENTION] Aucun resultat disponible (features incompatibles?)")
         else:
             # Affiche les résultats directement si pivot échoue
             try:
@@ -485,12 +485,12 @@ def main():
         results_path = Path('results/external_test_results.csv')
         results_path.parent.mkdir(parents=True, exist_ok=True)
         combined.to_csv(results_path, index=False)
-        print(f"\n💾 Résultats sauvegardés: {results_path}")
+        print(f"\nResultats sauvegardes: {results_path}")
 
         # Analyse des erreurs si demandé
         if args.show_errors and 'random_forest' in models:
             print("\n" + "=" * 60)
-            print("🔍 ANALYSE DES ERREURS (Random Forest)")
+            print("ANALYSE DES ERREURS (Random Forest)")
             print("=" * 60)
 
             df_ext = extract_features_for_corpus(EXTERNAL_TEST_CORPUS, use_jdm=True, verbose=False)
@@ -504,7 +504,7 @@ def main():
                 print("  Aucune erreur détectée!")
 
     print("\n" + "=" * 60)
-    print("✅ TEST TERMINÉ")
+    print("TEST TERMINE")
     print("=" * 60)
 
 

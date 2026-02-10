@@ -80,7 +80,7 @@ def generate_augmented_corpus(
     df = pd.DataFrame(final_data)
 
     if verbose:
-        print(f"\n✓ Total: {len(df)} exemples générés")
+        print(f"\n[OK] Total: {len(df)} exemples generes")
         print(f"\nDistribution des classes:")
         print(df['type_jdm'].value_counts().head(10))
 
@@ -121,7 +121,7 @@ def preprocess_generated_data(df: pd.DataFrame, verbose: bool = True) -> pd.Data
     df_valid = df_preprocessed[df_preprocessed['est_valide']].copy()
 
     if verbose:
-        print(f"✓ Exemples valides: {len(df_valid)}/{len(df_preprocessed)}")
+        print(f"[OK] Exemples valides: {len(df_valid)}/{len(df_preprocessed)}")
 
     return df_valid
 
@@ -151,12 +151,12 @@ def merge_with_original(df_augmented: pd.DataFrame, verbose: bool = True) -> pd.
 
         if verbose:
             print(f"Corpus augmenté: {len(df_augmented)} exemples")
-            print(f"✓ Corpus fusionné: {len(df_merged)} exemples (après déduplication)")
+            print(f"[OK] Corpus fusionne: {len(df_merged)} exemples (apres deduplication)")
 
         return df_merged
     else:
         if verbose:
-            print("⚠️  Corpus original non trouvé, utilisation des données augmentées seules")
+            print("[ATTENTION] Corpus original non trouve, utilisation des donnees augmentees seules")
         return df_augmented
 
 
@@ -178,7 +178,7 @@ def extract_features_and_split(
     features_df['type_jdm'] = df['type_jdm'].values
 
     if verbose:
-        print(f"✓ {len(features_df.columns) - 1} features extraites")
+        print(f"[OK] {len(features_df.columns) - 1} features extraites")
 
     # Split stratifié
     train_df, temp_df = train_test_split(
@@ -189,7 +189,7 @@ def extract_features_and_split(
     )
 
     if verbose:
-        print(f"\n✓ Split: train={len(train_df)}, val={len(val_df)}, test={len(test_df)}")
+        print(f"\n[OK] Split: train={len(train_df)}, val={len(val_df)}, test={len(test_df)}")
 
     return train_df, val_df, test_df
 
@@ -235,7 +235,7 @@ def train_models(train_df: pd.DataFrame, val_df: pd.DataFrame, verbose: bool = T
             results[model_name] = accuracy
 
             if verbose:
-                print(f"    → Val accuracy: {accuracy*100:.1f}%")
+                print(f"    -> Val accuracy: {accuracy*100:.1f}%")
 
             # Sauvegarde
             model_path = Path(f'models/baseline/{model_name}.joblib')
@@ -243,7 +243,7 @@ def train_models(train_df: pd.DataFrame, val_df: pd.DataFrame, verbose: bool = T
             classifier.save(model_path)
 
         except Exception as e:
-            print(f"    ✗ Erreur: {e}")
+            print(f"    [ECHEC] Erreur: {e}")
 
     return models, results
 
@@ -282,7 +282,7 @@ def main():
                         help='Skip la génération (utilise corpus existant)')
     args = parser.parse_args()
 
-    print("🚀 PIPELINE D'AUGMENTATION ET RÉ-ENTRAÎNEMENT")
+    print("PIPELINE D'AUGMENTATION ET RE-ENTRAINEMENT")
     print("=" * 60)
     print(f"Paramètres:")
     print(f"  - Exemples/classe: {args.n_per_class}")
@@ -308,14 +308,14 @@ def main():
         # Sauvegarde
         augmented_path = Path('data/processed/corpus_augmented_full.csv')
         df_final.to_csv(augmented_path, index=False)
-        print(f"\n💾 Corpus sauvegardé: {augmented_path}")
+        print(f"\nCorpus sauvegarde: {augmented_path}")
     else:
         augmented_path = Path('data/processed/corpus_augmented_full.csv')
         if augmented_path.exists():
             df_final = pd.read_csv(augmented_path)
-            print(f"✓ Corpus chargé: {len(df_final)} exemples")
+            print(f"[OK] Corpus charge: {len(df_final)} exemples")
         else:
-            print("❌ Corpus augmenté non trouvé!")
+            print("[ERREUR] Corpus augmente non trouve!")
             return
 
     # 4. Features et split
@@ -337,7 +337,7 @@ def main():
 
     # Résumé final
     print("\n" + "=" * 60)
-    print("📊 RÉSUMÉ FINAL")
+    print("RESUME FINAL")
     print("=" * 60)
 
     print("\nAccuracy sur validation (corpus augmenté):")
@@ -351,9 +351,9 @@ def main():
 
         # Sauvegarde
         external_results.to_csv('results/augmented_external_test.csv', index=False)
-        print("\n💾 Résultats sauvegardés: results/augmented_external_test.csv")
+        print("\nResultats sauvegardes: results/augmented_external_test.csv")
 
-    print("\n✅ PIPELINE TERMINÉ!")
+    print("\nPIPELINE TERMINE!")
 
 
 if __name__ == '__main__':

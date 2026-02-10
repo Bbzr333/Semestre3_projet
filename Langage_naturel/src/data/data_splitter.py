@@ -63,5 +63,5 @@ class DataSplitter:
         with open(f'{output_dir}/split_stats.json', 'w') as f:
             json.dump(stats, f, indent=2, ensure_ascii=False)
         
-        print(f"\n✅ Splits sauvegardés dans {output_dir}/")
-        print(f"📊 Train: {len(train)} | Val: {len(val)} | Test: {len(test)}")
+        print(f"\nSplits sauvegardes dans {output_dir}/")
+        print(f"Train: {len(train)} | Val: {len(val)} | Test: {len(test)}")

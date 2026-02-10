@@ -40,9 +40,9 @@ for model_name in MODEL_NAMES:
     try:
         model_path = f'models/baseline/{model_name}.joblib'
         baseline_models[model_name] = BaselineClassifier.load(model_path)
-        print(f"    ✓ {model_name}")
+        print(f"    [OK] {model_name}")
     except Exception as e:
-        print(f"    ✗ {model_name}: {e}")
+        print(f"    [ECHEC] {model_name}: {e}")
 
 # Noms lisibles pour l'affichage
 MODEL_DISPLAY_NAMES = {
@@ -233,10 +233,10 @@ def format_prediction_html(pred: str, proba: list, labels: list, true_label: str
         # Indicateur correct/incorrect
         if true_label:
             if label == true_label:
-                indicator = "<span style='color: #27ae60; font-weight: bold;'>✓</span>"
+                indicator = "<span style='color: #27ae60; font-weight: bold;'>OK</span>"
                 bg_color = "#d4edda"  # Vert clair
             else:
-                indicator = "<span style='color: #e74c3c;'>✗</span>"
+                indicator = "<span style='color: #e74c3c;'>X</span>"
                 bg_color = "#f8f9fa" if i > 0 else "#f8d7da"  # Rouge clair pour top-1 incorrect
         else:
             indicator = ""
@@ -314,7 +314,7 @@ def predict_with_label(phrase: str, true_label: str) -> tuple[str, str, str]:
         features = extract_features_realtime(phrase)
         realtime_indicator = """
         <div style='padding: 5px 10px; background: #d1ecf1; border-radius: 5px; margin-bottom: 10px; font-size: 12px; color: #0c5460;'>
-            ⚡ Features JDM extraites en temps réel
+            Features JDM extraites en temps reel
         </div>
         """
 
@@ -353,21 +353,21 @@ def predict_with_label(phrase: str, true_label: str) -> tuple[str, str, str]:
             # Ajouter un header indiquant quel modèle a été sélectionné
             model_header = f"""
             <div style='padding: 8px 12px; background: #e8f5e9; border-radius: 5px; margin-bottom: 10px; font-size: 13px; color: #2e7d32;'>
-                🏆 <strong>{best_display_name}</strong> (confiance: {best['confidence']*100:.1f}%)
+                <strong>{best_display_name}</strong> (confiance: {best['confidence']*100:.1f}%)
             </div>
             """
             best_html = realtime_indicator + model_header + best_html
         else:
             best_html = """
             <div style='padding: 20px; background: #f8d7da; border-radius: 8px; text-align: center;'>
-                <div style='font-size: 24px;'>❌</div>
+                <div style='font-size: 24px; color: #e74c3c; font-weight: bold;'>ERREUR</div>
                 <div style='margin-top: 10px; color: #721c24;'>Aucun modèle baseline disponible</div>
             </div>
             """
     else:
         best_html = """
         <div style='padding: 20px; background: #f8d7da; border-radius: 8px; text-align: center;'>
-            <div style='font-size: 24px;'>❌</div>
+            <div style='font-size: 24px; color: #e74c3c; font-weight: bold;'>ERREUR</div>
             <div style='margin-top: 10px; color: #721c24;'>
                 Impossible d'extraire les features<br>
                 <small>Vérifiez que la phrase suit le format "A de B"</small>
@@ -563,7 +563,7 @@ with gr.Blocks(title="Classification Sémantique") as demo:
     # Classification des Relations Sémantiques
     **Comparaison CamemBERT vs Meilleur Modèle Baseline** sur les constructions génitives françaises
 
-    ✓ = Prédiction correcte | Sélectionnez la vraie classe pour évaluer les prédictions
+    Correct/Incorrect indicators shown | Selectionnez la vraie classe pour evaluer les predictions
     """)
 
     with gr.Tabs():
@@ -607,11 +607,11 @@ with gr.Blocks(title="Classification Sémantique") as demo:
 
                     with gr.Row():
                         with gr.Column():
-                            gr.Markdown("### 🤖 CamemBERT")
+                            gr.Markdown("### CamemBERT")
                             camembert_output = gr.HTML()
 
                         with gr.Column():
-                            gr.Markdown("### 🏆 Meilleur Baseline")
+                            gr.Markdown("### Meilleur Baseline")
                             best_baseline_output = gr.HTML()
 
             # Event handlers

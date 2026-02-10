@@ -34,13 +34,13 @@ def test_extraction():
     for phrase in test_cases:
         result = preprocessor.preprocess_construction(phrase)
         if result.est_valide:
-            print(f"\n✓ '{phrase}'")
+            print(f"\n[OK] '{phrase}'")
             print(f"  → Nom1: {result.nom1_lemme}")
             print(f"  → Nom2: {result.nom2_lemme}")
             print(f"  → Déterminant: {result.determinant}")
             print(f"  → Définitude: {result.definitude}")
         else:
-            print(f"\n✗ '{phrase}' - Échec: {result.notes}")
+            print(f"\n[ECHEC] '{phrase}' - Echec: {result.notes}")
 
 
 def test_lemmatization():
@@ -60,7 +60,7 @@ def test_lemmatization():
     
     for word, expected in test_words:
         result = preprocessor.lemmatize(word)
-        status = "✓" if result == expected else "✗"
+        status = "[OK]" if result == expected else "[ECHEC]"
         print(f"{status} {word} → {result} (attendu: {expected})")
 
 
@@ -76,27 +76,27 @@ def test_jdm_api():
         # Test existence
         test_terms = ["désert", "maison", "termeInexistant123"]
         
-        print("\n🔍 Test d'existence des termes:")
+        print("\nTest d'existence des termes:")
         for term in test_terms:
             exists = jdm.term_exists(term)
-            status = "✓" if exists else "✗"
+            status = "[OK]" if exists else "[ECHEC]"
             print(f"{status} '{term}': {exists}")
         
         # Test hyperonymes
-        print("\n📚 Hyperonymes de 'désert':")
+        print("\nHyperonymes de 'desert':")
         hypernyms = jdm.get_hypernyms("désert", max_results=5)
         for i, hyp in enumerate(hypernyms, 1):
             print(f"  {i}. {hyp}")
         
         # Test signature complète
-        print("\n🔖 Signature de 'désert':")
+        print("\nSignature de 'desert':")
         signature = jdm.get_signature("désert")
         print(f"  Hyperonymes: {signature['hypernyms'][:3]}")
         print(f"  Types sémantiques: {signature['semantic_types']}")
         print(f"  Types relations: {list(signature['relation_types'].keys())[:5]}")
         
     except Exception as e:
-        print(f"⚠️  Erreur API JDM: {e}")
+        print(f"[ATTENTION] Erreur API JDM: {e}")
         print("   (Assurez-vous d'avoir une connexion internet)")
 
 
@@ -116,36 +116,36 @@ def test_full_preprocessing():
     ]
     
     for phrase, type_jdm in exemples:
-        print(f"\n📝 '{phrase}' ({type_jdm})")
+        print(f"\n'{phrase}' ({type_jdm})")
         try:
             result = preprocessor.preprocess_construction(phrase, type_jdm)
             if result.est_valide:
-                print(f"  ✓ Extraction réussie")
+                print(f"  [OK] Extraction reussie")
                 print(f"    A: {result.nom1_lemme}")
                 print(f"    B: {result.nom2_lemme}")
                 print(f"    DEF: {result.definitude}")
             else:
-                print(f"  ✗ Échec: {result.notes}")
+                print(f"  [ECHEC] {result.notes}")
         except Exception as e:
-            print(f"  ⚠️  Erreur: {e}")
+            print(f"  [ATTENTION] Erreur: {e}")
 
 
 def main():
     """Lance tous les tests."""
-    print("\n🧪 TESTS DU MODULE DE PREPROCESSING\n")
+    print("\nTESTS DU MODULE DE PREPROCESSING\n")
     
-    # test_extraction()
-    # test_lemmatization()
-    
-    # Tests JDM (nécessite connexion internet)
+    test_extraction()
+    test_lemmatization()
+
+    # Tests JDM (necessite connexion internet)
     try:
         test_jdm_api()
-        # test_full_preprocessing()
+        test_full_preprocessing()
     except Exception as e:
-        print(f"\n⚠️  Tests JDM ignorés (pas de connexion): {e}")
+        print(f"\n[ATTENTION] Tests JDM ignores (pas de connexion): {e}")
     
     print("\n" + "="*60)
-    print("✅ Tests terminés !")
+    print("Tests termines.")
     print("="*60)
 
 

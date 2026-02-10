@@ -102,17 +102,17 @@ def query_chatgpt_api(api_key, phrase, system_prompt, model="gpt-3.5-turbo", max
         
         except requests.exceptions.RequestException as e:
             if attempt < max_retries - 1:
-                print(f"  ⚠️  Erreur (tentative {attempt + 1}/{max_retries}): {e}")
+                print(f"  [ATTENTION] Erreur (tentative {attempt + 1}/{max_retries}): {e}")
                 time.sleep(2 ** attempt)
             else:
-                print(f"  ❌ Échec: {e}")
+                print(f"  [ERREUR] Echec: {e}")
                 return "ERROR"
     
     return "ERROR"
 
 def main():
     print("=" * 70)
-    print("🤖 COMPARAISON AVEC CHATGPT (Version Simplifiée)")
+    print("COMPARAISON AVEC CHATGPT (Version Simplifiee)")
     print("=" * 70)
     
     # Demander la clé API
@@ -125,53 +125,53 @@ def main():
             config = json.load(f)
             api_key = config.get('openai_api_key')
             if api_key:
-                print(f"✅ Clé API chargée depuis config.json")
+                print(f"[OK] Cle API chargee depuis config.json")
     except FileNotFoundError:
-        print("⚠️  Fichier config.json non trouvé")
+        print("[ATTENTION] Fichier config.json non trouve")
     except json.JSONDecodeError:
-        print("⚠️  Erreur de lecture du fichier config.json")
-    
+        print("[ATTENTION] Erreur de lecture du fichier config.json")
+
     if not api_key:
-        print("\n🔑 Clé API OpenAI non trouvée dans les variables d'environnement")
+        print("\nCle API OpenAI non trouvee dans les variables d'environnement")
         api_key = input("Entrez votre clé API OpenAI (sk-...): ").strip()
         
         if not api_key.startswith('sk-'):
-            print("❌ Clé API invalide (doit commencer par 'sk-')")
+            print("[ERREUR] Cle API invalide (doit commencer par 'sk-')")
             return
     
-    print(f"✅ Clé API configurée")
+    print(f"[OK] Cle API configuree")
     
     # Charger les données
-    print(f"\n📂 Chargement des données...")
+    print(f"\nChargement des donnees...")
     train = pd.read_csv('data/processed/train.csv')
     test = pd.read_csv('data/processed/test.csv')
-    
-    print(f"✓ Train: {len(train)} exemples")
-    print(f"✓ Test: {len(test)} exemples")
+
+    print(f"[OK] Train: {len(train)} exemples")
+    print(f"[OK] Test: {len(test)} exemples")
     
     # Configuration
     MODEL = 'gpt-3.5-turbo'  # Moins cher pour commencer
     N_SAMPLES = 50  # Petit échantillon
     
-    print(f"\n⚙️  Configuration:")
+    print(f"\nConfiguration:")
     print(f"  • Modèle: {MODEL}")
     print(f"  • Échantillon: {N_SAMPLES} exemples")
     print(f"  • Coût estimé: ~${(N_SAMPLES * 0.002):.2f}")
     
-    response = input("\n▶️  Continuer? (y/n): ")
+    response = input("\nContinuer? (y/n): ")
     if response.lower() != 'y':
-        print("❌ Annulé")
+        print("Annule.")
         return
     
     # Échantillonner
     test_sample = test.sample(N_SAMPLES, random_state=42)
     
     # Créer le prompt
-    print(f"\n🔧 Création du prompt few-shot...")
+    print(f"\nCreation du prompt few-shot...")
     system_prompt = create_few_shot_prompt(train, n_examples_per_class=2)
     
     # Évaluer
-    print(f"\n🚀 Interrogation de {MODEL}...")
+    print(f"\nInterrogation de {MODEL}...")
     predictions = []
     y_true = []
     errors = []
@@ -200,19 +200,19 @@ def main():
     
     # Résultats
     print(f"\n{'='*70}")
-    print(f"📊 RÉSULTATS")
+    print(f"RESULTATS")
     print(f"{'='*70}")
     
     valid_predictions = [p for p in predictions if p != "ERROR"]
     valid_true = [y_true[i] for i, p in enumerate(predictions) if p != "ERROR"]
     
     accuracy = accuracy_score(valid_true, valid_predictions)
-    print(f"\n✅ Accuracy: {accuracy:.3f} ({accuracy*100:.1f}%)")
-    print(f"⏱️  Temps: {elapsed_time:.1f}s ({elapsed_time/N_SAMPLES:.2f}s/exemple)")
-    print(f"❌ Erreurs: {len(errors)}/{N_SAMPLES}")
+    print(f"\n[OK] Accuracy: {accuracy:.3f} ({accuracy*100:.1f}%)")
+    print(f"Temps: {elapsed_time:.1f}s ({elapsed_time/N_SAMPLES:.2f}s/exemple)")
+    print(f"Erreurs: {len(errors)}/{N_SAMPLES}")
     
     if errors:
-        print(f"\n🔍 Exemples d'erreurs:")
+        print(f"\nExemples d'erreurs:")
         for i, err in enumerate(errors[:5]):
             print(f"  {i+1}. \"{err['phrase']}\"")
             print(f"     Vrai: {err['true']} | Prédit: {err['pred']}")
@@ -221,23 +221,23 @@ def main():
     baseline_results = pd.read_csv('results/test_results.csv', index_col=0)
     
     print(f"\n{'='*70}")
-    print(f"🏆 COMPARAISON AVEC BASELINE")
+    print(f"COMPARAISON AVEC BASELINE")
     print(f"{'='*70}")
     print(f"\nModèle                Accuracy    Temps/exemple")
     print(f"-" * 50)
     print(f"Random Forest         1.000       0.001s")
     print(f"{MODEL:20s}  {accuracy:.3f}       {elapsed_time/N_SAMPLES:.3f}s")
     
-    print(f"\n💡 Conclusion:")
+    print(f"\nConclusion:")
     if accuracy > 0.95:
-        print(f"✅ ChatGPT excellent ({accuracy:.1%}) mais {elapsed_time/N_SAMPLES/0.001:.0f}x plus lent")
+        print(f"ChatGPT excellent ({accuracy:.1%}) mais {elapsed_time/N_SAMPLES/0.001:.0f}x plus lent")
     elif accuracy > 0.85:
-        print(f"✅ ChatGPT bon ({accuracy:.1%}) mais moins performant que RF (100%)")
+        print(f"ChatGPT bon ({accuracy:.1%}) mais moins performant que RF (100%)")
     else:
-        print(f"⚠️  ChatGPT sous-performe ({accuracy:.1%}) vs RF (100%)")
+        print(f"[ATTENTION] ChatGPT sous-performe ({accuracy:.1%}) vs RF (100%)")
     
     print(f"\n{'='*70}")
-    print(f"✅ ÉVALUATION TERMINÉE")
+    print(f"EVALUATION TERMINEE")
     print(f"{'='*70}")
 
 if __name__ == '__main__':

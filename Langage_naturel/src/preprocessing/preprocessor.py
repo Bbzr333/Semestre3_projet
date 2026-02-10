@@ -248,8 +248,7 @@ class GenitivePreprocessor:
         Returns:
             Terme désambiguïsé (pour l'instant, retourne le terme tel quel)
         """
-        # TODO: Implémenter la désambiguïsation avec JDM
-        # Pour l'instant, retourne le terme normalisé
+        # Retourne le terme normalise (desambiguisation non implementee)
         return self.normalize_case(term)
     
     def handle_named_entities(self, term: str) -> str:
@@ -270,8 +269,7 @@ class GenitivePreprocessor:
             # Stratégies de remplacement
             # 1. Si c'est un prénom/nom propre, remplacer par un équivalent connu
             if term[0].isupper():
-                # TODO: Implémenter mapping prénoms/noms connus
-                # Pour l'instant, on garde le terme tel quel
+                # Terme avec majuscule : garde tel quel
                 self.stats['entites_remplacees'] += 1
                 return term
         
@@ -354,7 +352,7 @@ class GenitivePreprocessor:
         Returns:
             DataFrame preprocessé
         """
-        print(f"📖 Lecture du CSV : {csv_path}")
+        print(f"Lecture du CSV : {csv_path}")
         
         # Lecture du CSV avec gestion de différents séparateurs
         df = None
@@ -369,7 +367,7 @@ class GenitivePreprocessor:
         if df is None or len(df) == 0:
             raise FileNotFoundError(f"Impossible de lire le CSV : {csv_path}")
 
-        print(f"✓ {len(df)} lignes chargées")
+        print(f"[OK] {len(df)} lignes chargees")
         
         # Détecte les noms des colonnes
         col_phrase = self._find_column(df, ['phrase', 'construction', 'texte', 'exemple'])
@@ -378,7 +376,7 @@ class GenitivePreprocessor:
         if not col_phrase:
             raise ValueError("Aucune colonne 'phrase' trouvée dans le CSV")
         
-        print(f"📝 Preprocessing des constructions...")
+        print(f"Preprocessing des constructions...")
         
         # Preprocess chaque ligne
         constructions = []
@@ -415,7 +413,7 @@ class GenitivePreprocessor:
         # Sauvegarde si chemin fourni
         if output_path:
             df_result.to_csv(output_path, index=False, encoding='utf-8')
-            print(f"\n💾 Résultats sauvegardés : {output_path}")
+            print(f"\nResultats sauvegardes : {output_path}")
         
         return df_result
     
@@ -429,7 +427,7 @@ class GenitivePreprocessor:
     def _print_stats(self, df: pd.DataFrame):
         """Affiche les statistiques de preprocessing."""
         print("\n" + "="*60)
-        print("📊 STATISTIQUES DE PREPROCESSING")
+        print("STATISTIQUES DE PREPROCESSING")
         print("="*60)
         print(f"Total traité:              {self.stats['total_traites']}")
         print(f"Extractions réussies:      {self.stats['extractions_reussies']}")
@@ -439,7 +437,7 @@ class GenitivePreprocessor:
         print(f"Taux de réussite:          {df['est_valide'].sum() / len(df) * 100:.1f}%")
         
         if 'type_jdm' in df.columns:
-            print(f"\n📈 Distribution des types:")
+            print(f"\nDistribution des types:")
             print(df[df['est_valide']]['type_jdm'].value_counts())
         
         print("="*60)
@@ -462,10 +460,10 @@ def main():
     # Lance le preprocessing
     df_result = preprocessor.preprocess_csv(args.input_csv, args.output)
     
-    print("\n✅ Preprocessing terminé !")
+    print("\nPreprocessing termine.")
     
     # Affiche quelques exemples
-    print("\n📋 Aperçu des résultats:")
+    print("\nApercu des resultats:")
     print(df_result[df_result['est_valide']].head(10))
 
 
